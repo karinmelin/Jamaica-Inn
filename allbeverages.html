@@ -2,6 +2,7 @@
     <head>
         <link href="style.css" rel="stylesheet">
         <title>Jamaican inn</title>
+		<script src="script.js"></script>
     </head>
     
     <body>
@@ -26,38 +27,38 @@
         <br>
         
         
-        <div id=  "container">
+        <div id=  "container"  >
             
-           <div id= "table_all">
+           <div id= "table_all" >
             <table id = "All beverages">
                     <tr>
-                        <td>Drink</td>
-                        <td>Drink</td> 
-                        <td>Drink</td>
-                        <td>Drink</td>
-                    </tr>
-                    <tr>
-                        <td>Drink</td>
-                        <td>Drink</td> 
-                        <td>Drink</td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken1" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken2" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken3" >  </td>
                         <td>Drink</td>
                     </tr>
                     <tr>
-                        <td>Drink</td>
-                        <td>Drink</td> 
-                        <td>Drink</td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken1" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken2" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken3" >  </td>
                         <td>Drink</td>
                     </tr>
                     <tr>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken1" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken2" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken3" >  </td>
                         <td>Drink</td>
-                        <td>Drink</td> 
-                        <td>Drink</td>
+                    </tr>
+                    <tr>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken1" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken2" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken3" >  </td>
                         <td>Drink</td>
                     </tr>
                   <tr>
-                        <td>Drink</td>
-                        <td>Drink</td> 
-                        <td>Drink</td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken1" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken2" >  </td>
+                        <td style="height:15%;  width:15%;" align="center">  <img width="40%" height="60%" src="heineken.png"  draggable="true" ondragstart="drag(event)" id="heineken3" >  </td>
                         <td>Drink</td>
                     </tr>
 
@@ -65,12 +66,10 @@
                 </div>
              
                 
-                <div class ="shopping_cart"> 
-                      <div id ="Heading_cart">
-                            Shopping cart
-                        </div>
-                        <p>1 Heiniken</p>
-                         <button> Purchase </button>
+                <div class ="shopping_cart"  ondrop="drop(event)" ondragover="allowDrop(event)"> 
+                      <div id ="Heading_cart"> Shopping cart </div>
+                         <button type="submit" id="purchase_button"> Purchase </button>
+						 <button type="reset" id="undo_button">Empty shopping cart</button>
                 </div>
             
                
