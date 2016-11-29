@@ -1,3 +1,4 @@
+
 html {
     font-size: 20px;
     color: white;
@@ -7,6 +8,15 @@ body{
     background-color: #0B231C;
   
     
+}
+
+label{
+    color:white;
+    
+}
+
+.login p{
+    text-align: center;
 }
 
 h1{
@@ -22,6 +32,7 @@ h1{
     height: 200px;
     width: 50%;
     text-align:center;
+    
 }
 
 a.button {
@@ -68,6 +79,7 @@ td {
     background-color: white;
     color:#0B231C;
     text-align: center;
+    
 }
 
 #table_all{
@@ -76,6 +88,7 @@ td {
     height: 400px;
     float: left;
     margin-left: 2em;
+    
 }
 
 #table_alco{
@@ -98,16 +111,19 @@ table{
     width: 100%;
     height: 100%;
     float:left;
-    
+    border-spacing: 10px;
 }
 
 .shopping_cart{
     background-color: white;
     width:200px;
-    height: 400px;
+    height: 350px;
     float:left;  
     margin-left:6.5em;
     display: table; 
+    vertical-align: text-top;
+    overflow:auto;
+    
 }
 
 #Heading_cart{
@@ -116,30 +132,14 @@ table{
     color:white;
 }
 
-#purchase_button {
+button {
         width:200px;
         height:50px;
         background:#0B231C;
-        position: absolute;
-        bottom: 0;
-		transition: .5s ease;
-		left: 1150px;
-		top: 24px;
-
+        position:relative;    
+        bottom:-270px;          
         color:white;
-    }
-	
-#undo_button {
-        width:200px;
-        height:50px;
-        background:#0B231C;
-        position: absolute;
-        bottom: 0;
-		transition: .5s ease;
-		left: 1150px;
-		top: 100px;
-
-        color:white;
+    margin-top: 60px;
     }
 
 p{
@@ -156,9 +156,44 @@ p{
     
 }
 
-#td img{
-    display: block;
+textarea{
+    border: 3px solid white;
+    background-color: #0B231C;
+    color:white;
     margin-left: auto;
     margin-right: auto;
+    display: block;
+    width: 50%;
+    Height:50%;
+    text-align: left;
+    overflow: scroll;
+}   
+
+.drink{
+    font-size: 15px;
+    
+}
+
+#price{
+    height: 20px;
+    width: 60px;
+    background-color: white;
+    border-radius: 2em;
+    border:1px solid #0B231C;
+     margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+ 
+    
+}
+#amount{
+    height: 20px;
+    width: 60px;
+    background-color: white;
+      border:1px solid #0B231C;
+    border-radius: 2em;
+     margin-left: auto;
+    margin-right: auto;
+    display:inline-block;
 
 }
