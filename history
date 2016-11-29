@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <title>Jamaican inn</title>
+    </head>
+    
+    <body>
+        
+        <h1>Hello username</h1>
+        <h3>Your balance is:</h3>
+        
+        <header>
+	    <nav>
+	      <ul>
+		      <li><a href="allbeverages.html" >All Beverages</a></li>
+              <li><a href="alcobev.html">Alcoholic Beverages</a></li>
+              <li><a href="softdrink.html">Soft Drinks</a></li>
+		      <li><a href="history.html" class="current">Previously Bought</a></li>
+	      </ul>
+	    </nav>
+	  </header>
+        
+
+        <br>
+        <br>
+        
+        
+        <textarea rows="4" cols="50">Din historia
+        </textarea>
+     
+
+    </body>
+
+
+</html>
