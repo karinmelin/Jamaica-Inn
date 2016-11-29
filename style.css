@@ -24,6 +24,10 @@ h1{
     text-align:center;
 }
 
+.loginText {
+    color: white;
+}
+
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;

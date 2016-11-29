@@ -2,6 +2,11 @@
     <head>
         <link href="style.css" rel="stylesheet">
         <title>Jamaican inn</title>
+        <script src="js/api.js"></script>
+        <script src="js/script.js"></script>
+        <!--<script>
+            docLoaded(pageLoaded);
+        </script>-->
     </head>
     
     <body>
@@ -9,24 +14,23 @@
         <h1>Log in</h1>
             
             <section id="login">
-                <form action ="action_page.php">
+                <form> <!-- action="http://127.0.0.1:50415/script.js/pageLoaded(this.form)" -->
                 <div class="container">
                     <p>
-                    <label><b>Username</b></label>
-                    <input type="text" placeholder ="Enter Username" name = "uname" required>
+                    <label class="loginText"><b>Username</b></label>
+                    <input id="unameInput" type="text" placeholder ="Enter Username" name = "uname" required>
                     </p>
                     
-                    <p>
-                    <label><b>Password</b></label>
+                    <!--<p>
+                    <label class="loginText"><b>Password</b></label>
                     <input type = "password" placeholder = "Enter Password" name = "psw" required>
-                    </p>
+                    </p>-->
                     
                     
                     <button id = "personalButton" type = "submit"> Login as staff</button>
                     
                     
-                    <button id = "staffButton" type = "submit"> Login as admin</button>
-                    
+                    <button id="staffBtn" type="submit" onclick="loginAdmin()"> Login as admin</button>
                     </div>
                 </form>
             </section>        
