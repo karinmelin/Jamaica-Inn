@@ -20,10 +20,11 @@
         <header>
 	    <nav>
 	      <ul>
-              <li><a href="allbeverages.html" class="current">All Beverages</a></li>
+              <li><a href="allbeverages.html" >All Beverages</a></li>
               <li><a href="alcobev.html">Alcoholic Beverages</a></li>
               <li><a href="softdrink.html">Non-Alcoholic Beverages</a></li>
-	      <li><a href="history.html">Previously Bought</a></li>
+	          <li><a href="history.html">Previously Bought</a></li>
+              <li><a href="settings.html" class="current">Settings</a></li>
 	      </ul>
 	    </nav>
 	  </header>
@@ -36,6 +37,17 @@
             <table id = "All beverages">
                     <tr>
                        <td><div draggable="true" ondragstart="drag(event)" class="drink" id="drink1"></div>
+                           
+                           <div class="dropdown">
+                              <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                              <div id="myDropdown" class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                              </div>
+                            </div>
+                           
+                           
                             <div id = "amount"> amount </div> <div id = "price"> price </div> </td> 
                         <td><div draggable="true" ondragstart="drag(event)" id="drink2" class="drink">Heineken</div>
                             <div id = "amount"> amount </div> <div id = "price"> price </div> </td>
@@ -91,16 +103,7 @@
                 </table>
                 </div>
              
-                <div id = "shoppingarea">
-                    <div id ="Heading_cart"> Shopping cart </div>
-                <div class = "shopping_cart" id="shop" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-                      
-                </div>
-
-                        <div class = "buttons">
-                            <button type="submit" id="purchase_button"> Purchase </button>
-                        </div>
-                </div>
+              
         </div>
         
         </body>
