@@ -22,6 +22,10 @@ h1{
    
 }
 
+#info{
+    text-align: center;
+}
+
 .login{
     margin-left: auto;
     margin-right: auto;
