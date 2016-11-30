@@ -1,5 +1,5 @@
 ﻿function docLoaded(fn) {
-	if (document.readyState !== 'loading') {
+    if (document.readyState !== 'loading') {
         fn();
 	} else {
 		document.addEventListener('DOMContentLoaded', fn);
@@ -10,23 +10,55 @@ function connectToAPI() {
     var api = new APIConnect();
 	/*btn = document.getElementById("b1");*/
 
+    var btn = document.getElementById("staffBtn");
+    
     api.setUser('jorass', 'jorass');
     /*btn.addEventListener('click', function() { loadUsers(api) });*/
 
-    api.fetchIOU(function(usr) {  
-        
-        var json = JSON.parse(usr);
-        var payload = json.payload;
-        
-        var name = payload[0].first_name;
-        var credit = payload[0].assets;
-        
-        document.querySelector('.username').innerHTML = name;
-        document.querySelector('.credit').innerHTML = credit;
-        
-    });
+    btn.addEventListener('click', function() { checkLogin(api); });
+    
+
 }
 
 function pageLoaded() {
 	connectToAPI();
+}
+
+/* ------------------------- Login  ------------------- */
+
+function loginAdmin() {
+    checkLogin();
+
+}
+
+function openNewWindow() {
+window.location.assign('allbeverages.html');
+}
+
+
+
+function checkLogin() {
+    /*Here we get values from the login form and save APIConnect() in a variable*/
+    var loginForm = document.forms["login"];
+    var username = loginForm.elements["uname"].value;
+    var password = loginForm.elements["psw"].value;
+    var api = new APIConnect();
+
+    /*we set the user to the values the user entered through the form*/
+    api.setUser(username, password);
+
+	/*FetchIOU and store username and password in localStorage*/
+    api.fetchIOU(function(data){
+        var json = JSON.parse(data);
+
+        if (json.type === 'error') {
+		alert('Wrong username or password. Please try again.');          
+        } else if (username === 'ervtod' && password === 'ervtod' || username === 'hirchr' && password === 'hirchr' || username === 'jorass' && password === 'jorass' || username === 'saskru' && password === 'saskru' || username === 'svetor' && password === 'svetor'){   
+			localStorage.localPassword = password; 
+            localStorage.localUsername = username;
+            window.location.assign("allbeveragesadmin.html") //Send admins to admin page
+        } else {
+			window.location.assign("allbeverages.html") //Send all users that are not admins to non-admin version of the site 
+		}
+    });
 }
