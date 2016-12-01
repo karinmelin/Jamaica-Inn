@@ -56,10 +56,11 @@ nav a.current  {
 }
 
 nav a {
-	font-size: 1.5em;
+	font-size: 1.3em;
 	color: #0B231C;
 	text-decoration: none;
 	padding: 0 .5em 0 .5em;
+    
 }
 nav a:hover {
     color: #21c559;
