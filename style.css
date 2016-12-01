@@ -26,23 +26,40 @@ h1{
 #info{
     text-align: center;
     height: auto;
-    width: 500px;
-    display: inline;
+    width: 800px;
+     margin-left: auto;
+    margin-right: auto;
    
 }
 
-.login{
+#login{
     margin-left: auto;
     margin-right: auto;
     height: 200px;
-    width: 50%;
-    text-align:center;
+    width: 500px;
+    position:relative;
+    margin-bottom: 50%;
+    text-align: center;
+}
+
+#login_body{
+    margin-top: 25%;
+    position: relative; 
+    
 }
 
 .loginText {
     color: white;
 }
 
+#login p {
+    display: inline;
+}
+
+#login_button {
+    position: absolute;
+    display: inline;
+}
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;

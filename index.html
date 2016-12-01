@@ -6,20 +6,21 @@
         <script src="script.js"></script>
 		<title>Jamaican inn</title>
     </head>
-    
-    <body>
+    <div id = "wrapper">
+    <body id ="login_body">
         
          
         <div id="login">
 		<h2>Log in </h2>
             <form name="login">
-                <input type="text" name="uname" required="required" placeholder="Username">
-                <input type="password" name="psw" required="required" placeholder="Password">
+               <p> Username </p> <input type="text" name="uname" required="required" placeholder="Username">
+                <p> Password </p><input type="password" name="psw" required="required" placeholder="Password">
             </form>
-            <button type="submit" value="Send" onclick="checkLogin();">Log in</button> 
+            <button id = "login_button" type="submit" value="Send" onclick="checkLogin();">Log in</button> 
 
         </div>
         
     </body>
+        </div>
 
 </html>
