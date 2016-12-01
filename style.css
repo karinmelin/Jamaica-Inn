@@ -190,7 +190,7 @@ table{
 }
 
 
-
+/*DROP DOWN-MENY*/
 /* Dropdown Button */
 .dropbtn {
     background-color: white;
@@ -234,6 +234,8 @@ table{
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/*DROP DOWN-MENY SLUT*/
 
 #prevDrinks {
     width: 400px;
