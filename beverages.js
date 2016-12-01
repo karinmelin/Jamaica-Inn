@@ -18,7 +18,7 @@ function connectAPI() {
         var json = JSON.parse(usr);
         var payload = json.payload;
         
-        var assets = payload[0].assets
+        var assets = payload[0].assets;
         var name = payload[0].first_name;
         document.querySelector('#assets').innerHTML = assets;
         document.querySelector('#headerName').innerHTML = name;
