@@ -49,7 +49,7 @@ function connectAPI() {
                 
                 //var alcFreeList = [];
                 
-                if 
+                //if 
                 document.querySelector('#drink1type').innerHTML = beer_type;
                 
             }, beer_id);
