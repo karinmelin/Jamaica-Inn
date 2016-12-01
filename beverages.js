@@ -7,6 +7,10 @@ function docLoaded(fn) {
 	}
 }
 
+function bevPageLoaded() {
+	connectAPI();
+}
+
 // connects to the server
 function connectAPI() {
     var api = new APIConnect();
@@ -35,12 +39,17 @@ function connectAPI() {
             document.querySelector('#' + beer_td).innerHTML = beer_name;
             
             var beer_id = payload[i].beer_id;
+            
             api.fetchBevType(function(bev){
             
                 var json = JSON.parse(bev);
                 var payload_type = json.payload;
                 
-                var beer_type = payload_type[0].alkoholhalt;
+                var beer_type = payload_type[0].varugrupp;
+                
+                //var alcFreeList = [];
+                
+                if 
                 document.querySelector('#drink1type').innerHTML = beer_type;
                 
             }, beer_id);
@@ -84,8 +93,4 @@ function connectAPI() {
         
     });
     
-}
-
-function bevPageLoaded() {
-	connectAPI();
 }

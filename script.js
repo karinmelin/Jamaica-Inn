@@ -58,7 +58,9 @@ function checkLogin() {
             localStorage.localUsername = username;
             window.location.assign("adminallbeverages.html") //Send admins to admin page
         } else {
-			window.location.assign("allbeverages.html") //Send all users that are not admins to non-admin version of the site 
+			window.location.assign("allbeverages.html") //Send all users that are not admins to non-admin version of the site
+            localStorage.localPassword = password; 
+            localStorage.localUsername = username;
 		}
     });
 }
