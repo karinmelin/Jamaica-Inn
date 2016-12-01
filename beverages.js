@@ -35,8 +35,7 @@ function connectAPI() {
             document.querySelector('#' + beer_td).innerHTML = beer_name;
             
             var beer_id = payload[i].beer_id;
-            
-            api.fetchBevType(function(bev, beer_id){
+            api.fetchBevType(function(bev){
             
                 var json = JSON.parse(bev);
                 var payload_type = json.payload;
@@ -44,7 +43,7 @@ function connectAPI() {
                 var beer_type = payload_type[0].alkoholhalt;
                 document.querySelector('#drink1type').innerHTML = beer_type;
                 
-            });
+            }, beer_id);
             
         }
         
@@ -72,13 +71,15 @@ function connectAPI() {
         for (var i = 0; i < payload.length; i++) {
             
             var drink = payload[i+2].namn;
+            var timeStamp = payload[i+2].timestamp;
+            var price = payload[i+2].price;
             
             var para = document.createElement("p");
-            var node = document.createTextNode(drink);
+            var node = document.createTextNode(timeStamp + ' ' + drink + ' ' + price + ':-');
             para.appendChild(node);
 
-            var element = document.getElementById("prevDrinks");
-            element.appendChild(para);
+            var prevDrink = document.getElementById("prevDrinks");
+            prevDrink.appendChild(para);
         }
         
     });
