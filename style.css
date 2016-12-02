@@ -275,3 +275,38 @@ table{
     right:100px;
       
 }
+
+#container_user{
+    display: inline;
+}
+
+#users {
+    width: 600px;
+    height:350px;
+    overflow: auto;
+    background-color:darkgreen;
+    float:left;
+    border-radius:2px;
+    border: 10px solid green;
+    
+}
+
+#users p{
+    color: white;
+   text-align: left;
+    padding-left: 20px;
+    
+}
+
+#adduser {
+     width: 600px;
+    height:350px;
+    background-color:darkgreen;
+    border-radius:2px;
+    border: 10px solid green;
+    float:right;
+}
+
+#adduser adduserform{
+    display: inline;
+}
