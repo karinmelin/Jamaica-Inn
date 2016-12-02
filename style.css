@@ -267,3 +267,14 @@ table{
     padding-left: 20px;
     
 }
+
+#user_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+    position: absolute;
+    top:20px;
+    right:100px;
+      
+}
