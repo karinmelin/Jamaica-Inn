@@ -281,6 +281,17 @@ table{
       
 }
 
+.dropdown_bev{
+   
+      font-size: 15px;
+    width: 225px;
+    height:40px;
+}
+
+
+.dropdown_bev select{
+    margin-top: 10px;
+}
 #container_user{
     display: inline;
 }
@@ -302,6 +313,8 @@ table{
     padding-left: 20px;
     
 }
+
+
 
 #adduser {
      width: 600px;
