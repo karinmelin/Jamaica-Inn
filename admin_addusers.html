@@ -42,7 +42,16 @@
             </div>
         
             <div id= "adduser">
-            
+            <h2>Add user</h2>
+            <form name="adduserform">
+                <p> First name </p> <input type="text" name="fname" required="required" placeholder="First name">
+                <p> Last name </p> <input type="text" name="lname" required="required" placeholder="Last name">
+               <p> Username </p> <input type="text" name="uname" required="required" placeholder="Username">
+                <p> Password </p><input type="password" name="psw" required="required" placeholder="Password">
+                <p> Email </p> <input type="text" name="email" required="required" placeholder="Email">
+            </form>
+            <button id = "add_button" type="submit" value="Add" onclick="checkLogin();">Add user</button> 
+            </div>
             
             <div id="buttonarea">
             
@@ -50,10 +59,10 @@
                 </button>
             <button id = "edituser_button"> Edit user
                 </button>
-    
+                 <button id = "saveuser_button"> Save user
+                </button>
             </div>
      
-        </div>
         </div>
 
     </body>

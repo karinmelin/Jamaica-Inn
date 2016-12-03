@@ -276,6 +276,16 @@ table{
         background:#0B231C;;         
         color:white;
         position: absolute;
+        top:80px;
+        right:20px;
+      
+}
+#save_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+        position: absolute;
         top:20px;
         right:20px;
       
@@ -292,32 +302,33 @@ table{
 .dropdown_bev select{
     margin-top: 10px;
 }
+
+
 #container_user{
     display: inline;
+    border-spacing: 4px;
+    height:350px;
+    width: 1240px;
+    
+}
+
+#container_user h2 {
+    padding-left: 10px;
 }
 
 #users {
-    width: 600px;
+    width: 575px;
     height:350px;
     overflow: auto;
     background-color:darkgreen;
     float:left;
     border-radius:2px;
     border: 10px solid green;
-    
+  
 }
-
-#users p{
-    color: white;
-   text-align: left;
-    padding-left: 20px;
-    
-}
-
-
 
 #adduser {
-     width: 600px;
+     width: 575px;
     height:350px;
     background-color:darkgreen;
     border-radius:2px;
@@ -325,6 +336,4 @@ table{
     float:right;
 }
 
-#adduser adduserform{
-    display: inline;
-}
+
