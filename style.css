@@ -305,12 +305,43 @@ table{
 
 
 #container_user{
-    display: inline;
     border-spacing: 4px;
-    height:350px;
+    height:430px;
     width: 1240px;
+    position: relative;
     
 }
+
+#buttonarea_users{
+    height:50px;
+    width: 1240px;
+    bottom:0;
+    left:0;
+    position:absolute;
+}
+#createuser_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+      
+}
+#edituser_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+      
+}
+#saveuser_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+    margin-left: 235px;
+    
+}
+
 
 #container_user h2 {
     padding-left: 10px;
@@ -334,6 +365,7 @@ table{
     border-radius:2px;
     border: 10px solid green;
     float:right;
+    position: 
 }
 
 
