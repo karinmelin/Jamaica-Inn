@@ -92,7 +92,7 @@ function checkAlcohol(api, beer_id, i, n) {
     });*/
     
     
-    /*api.fetchPrevDrinks(function(list) {
+    api.fetchPrevDrinks(function(list) {
         
         var json = JSON.parse(list);
         var payload = json.payload;
@@ -111,6 +111,6 @@ function checkAlcohol(api, beer_id, i, n) {
             prevDrink.appendChild(para);
         }
         
-    });*/
+    });
     
 }
