@@ -35,7 +35,6 @@ function APIConnect() {
     
 	this.fetchUsers = function(callback) {
 		var url = constructURL({action: 'user_get_all'});
-        alert('fetchUsers');
 		request(url, callback);
 	};
 	
@@ -65,3 +64,5 @@ function APIConnect() {
         request(url, callback);
     };
 }
+   
+

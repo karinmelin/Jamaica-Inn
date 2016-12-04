@@ -35,6 +35,14 @@ function openNewWindow() {
 window.location.assign('allbeverages.html');
 }
 
+function openCreateUser() {
+window.location.assign('admin_addusers.html');
+}
+
+function openAdminUsers() {
+window.location.assign('adminusers.html');
+	
+}
 
 
 function checkLogin() {
