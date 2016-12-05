@@ -355,7 +355,13 @@ table{
     float:left;
     border-radius:2px;
     border: 10px solid green;
+    
   
+}
+
+#users p{ /*gör inget än*/
+    text-align: justify; 
+    
 }
 
 #adduser {
@@ -365,7 +371,7 @@ table{
     border-radius:2px;
     border: 10px solid green;
     float:right;
-    position: 
+    
 }
 
 
