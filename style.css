@@ -4,7 +4,8 @@ html {
      
 }
 body{
-    background-color: #0B231C;
+    min-height = 100%;  
+    background: radial-gradient(transparent, black), color: white; 
 	font-family: 'Arial ',sans-serif;
 
 }
