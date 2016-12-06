@@ -8,12 +8,10 @@ function docLoaded(fn) {
 
 function connectToAPI() {
     var api = new APIConnect();
-	/*btn = document.getElementById("b1");*/
 
     var btn = document.getElementById("staffBtn");
     
     api.setUser('jorass', 'jorass');
-    /*btn.addEventListener('click', function() { loadUsers(api) });*/
 
     btn.addEventListener('click', function() { checkLogin(api); });
     
@@ -31,7 +29,7 @@ function loginAdmin() {
 
 }
 
-function openNewWindow() {
+/*function openNewWindow() {
 window.location.assign('allbeverages.html');
 }
 
@@ -43,7 +41,7 @@ function openAdminUsers() {
 window.location.assign('adminusers.html');
 	
 }
-
+*/
 
 function checkLogin() {
     /*Here we get values from the login form and save APIConnect() in a variable*/
@@ -64,9 +62,9 @@ function checkLogin() {
         } else if (username === 'ervtod' && password === 'ervtod' || username === 'hirchr' && password === 'hirchr' || username === 'jorass' && password === 'jorass' || username === 'saskru' && password === 'saskru' || username === 'svetor' && password === 'svetor'){   
 			localStorage.localPassword = password; 
             localStorage.localUsername = username;
-            window.location.assign("adminallbeverages.html") //Send admins to admin page
+            window.location.assign("admin_allbeverages.html") //Send admins to admin page
         } else {
-			window.location.assign("allbeverages.html") //Send all users that are not admins to non-admin version of the site
+			window.location.assign("user_allbeverages.html") //Send all users that are not admins to non-admin version of the site
             localStorage.localPassword = password; 
             localStorage.localUsername = username;
 		}

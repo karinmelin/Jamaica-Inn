@@ -38,7 +38,7 @@ function connectAPI() {
         
         //looping through payload 
         for (var i = 1; i < 21; i++) {
-            var n = i + 8;
+            var n = i + 89;
             var beer_name = payload[n].namn;
             var beer_td = 'drink' + i + 'p';
             
@@ -54,7 +54,12 @@ function connectAPI() {
             var amount = payload[n].count;
             var price = payload[n].price;
             
-            document.querySelector('#amount' + i).innerHTML = amount + ' units';
+            if (amount > 0) {
+                document.querySelector('#amount' + i).innerHTML = amount + ' units';
+            } else {
+                document.querySelector('#amount' + i).innerHTML = 'Refill me';
+            }
+            
             document.querySelector('#price' + i).innerHTML = price + ':-';
             
         }

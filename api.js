@@ -67,7 +67,7 @@ function APIConnect() {
 	this.setNewUser = function(callback, new_username, new_password, first_name, last_name, email, phone) {
 		var url = constructURL({action: 'user_edit', new_username: new_username, new_password: new_password, first_name: first_name, last_name: last_name, email: email, phone: phone});
 		request(url, callback);
-		alert(url);
+		//alert(url);
 	};
 }
    
