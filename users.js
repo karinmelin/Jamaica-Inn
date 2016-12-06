@@ -7,6 +7,8 @@ function docLoaded(fn) {
 	}
 }
 
+
+
 function loadAllUsers() {
 	var api = new APIConnect();
 	api.setUser('jorass', 'jorass');
@@ -21,15 +23,27 @@ function loadAllUsers() {
             var last_name = payload[i+13].last_name;
             var username = payload[i+13].username;
 			
-			var para = document.createElement("p");
+
+			para = document.createElement("p");
+			para.onclick = function (e) { alert('test') };
+			
 			var node = document.createTextNode(first_name + ' ' +last_name + ' ' + email + ' ' + username);
 			para.appendChild(node);
-			
+
 			var userList = document.getElementById("users");
 			userList.appendChild(para);
 			
 
         }
-       
+		
     });
+}
+	
+
+
+function copyToEditUserForm() {
+
+//SKALL SKAPA DEN HÄR!!! 
+
+
 }
