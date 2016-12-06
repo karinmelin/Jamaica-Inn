@@ -6,8 +6,7 @@ html {
 body{
     background-color: #0B231C;
 	font-family: 'Arial ',sans-serif;
-    max-width: 1240px;
-    max-height: 768px;
+
 }
 
 #wrapper{
@@ -15,6 +14,8 @@ body{
     margin-right: auto;
     max-width: 1240px;
     max-height: 768px;
+    min-width: 1240px;
+    min-height: 768px;
    
 }
 
