@@ -41,12 +41,21 @@ function connectAPI() {
             var n = i + 8;
             var beer_name = payload[n].namn;
             var beer_td = 'drink' + i + 'p';
+            
             document.querySelector('#' + beer_td).innerHTML = beer_name;
             
             var beer_id = payload[n].beer_id;
             console.log(beer_id);
             
+            //check if non-alcoholic drink and adding a label if so
             checkAlcohol(api, beer_id, i, n);
+            
+            //adding amount and price for each beverage
+            var amount = payload[n].count;
+            var price = payload[n].price;
+            
+            document.querySelector('#amount' + i).innerHTML = amount + ' units';
+            document.querySelector('#price' + i).innerHTML = price + ':-';
             
         }
         
@@ -134,6 +143,8 @@ function checkAlcohol(api, beer_id, i, n) {
         }
        
     });
+    
+    
     
 }
 
