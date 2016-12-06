@@ -36,7 +36,9 @@ function connectAPI() {
         var json = JSON.parse(bevList);
         var payload = json.payload;
         
-        //looping through payload 
+        //looping through payload
+        
+        
         for (var i = 1; i < 21; i++) {
             var n = i + 89;
             var beer_name = payload[n].namn;
@@ -45,7 +47,7 @@ function connectAPI() {
             document.querySelector('#' + beer_td).innerHTML = beer_name;
             
             var beer_id = payload[n].beer_id;
-            console.log(beer_id);
+            //console.log(beer_id);
             
             //check if non-alcoholic drink and adding a label if so
             checkAlcohol(api, beer_id, i, n);
@@ -77,13 +79,13 @@ function checkAlcohol(api, beer_id, i, n) {
         var json = JSON.parse(bev);
         var payload_type = json.payload;
         //console.log(payload_type);
-        console.log('innan varugrupp ' + n);
+        //console.log('innan varugrupp ' + n);
         var beer_type = payload_type[0].varugrupp;
                 
         var alcFree = 'Alkoholfritt, Övrigt';
-        console.log(beer_type);
+        /*console.log(beer_type);
         console.log(alcFree);
-        console.log(n);
+        console.log(n);*/
         if (beer_type === alcFree) {
             console.log(i);
             var node = document.querySelector('#drinktype' + i).innerHTML = 'non-alcoholic';

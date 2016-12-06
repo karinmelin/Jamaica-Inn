@@ -11,10 +11,10 @@ function drag(dragevent) {
 function drop(dropevent) {
 	
   dropevent.preventDefault();
-  var data=dropevent.dataTransfer.getData("text");
+  /*var data=dropevent.dataTransfer.getData("text");
   var nodeCopy = document.getElementById(data).cloneNode(true);
   nodeCopy.id = "drink_in_cart";
-  dropevent.target.appendChild(nodeCopy);
+  dropevent.target.appendChild(nodeCopy);*/
 }
 
 function ClearCart() {
