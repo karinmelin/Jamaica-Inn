@@ -10,20 +10,18 @@
             docLoaded(bevPageLoaded);
         </script>
     </head>
-        
+    
     <body>
         <div id = "wrapper">
+            
         <div id = "logout">
             <a href="index.html">Log out</a>
         </div>
         
         <div id = "info">
-           
-        <h1>Hello <span id="headerName"></span>!</h1>
-        
-        <h3>Your balance is:   <span id="assets"></span>:-</h3>
-        <h5>To purchase a beverage, drag and drop the drink into the shopping cart</h5>
-        
+            <h1>Hello <span id="headerName"></span>!</h1>
+            <h3>Your balance is:   <span id="assets"></span>:-</h3>
+            <h5>To purchase a beverage, drag and drop the drink into the shopping cart</h5>
         </div>
         
         <header>
@@ -37,7 +35,7 @@
         
         <br>        
         
-        <div id="container"  >
+        <div id="container">
             
             <div id= "table_all" >
                 <table id = "All beverages">
@@ -218,17 +216,17 @@
                 <div id ="Heading_cart"> 
                     Shopping cart 
                 </div>
-            <div class = "shopping_cart" id="shop" ondrop="addToCart();" ondragover="allowDrop(event)"> 
-                
-            </div>
+                <!-- ondrop="addToCart();"-->
+                <div class = "shopping_cart" id="shop" ondragover="allowDrop(event)"></div>
 
                 <div class = "buttons">
                     <button type="submit" id="purchase_button"> Purchase </button>
                     <button type="submit" id="clear_button"> Clear </button>
                 </div>
             </div>
+            
         </div>
-        
-        </body>
-    </div>
+            
+        </div>
+    </body>
 </html>

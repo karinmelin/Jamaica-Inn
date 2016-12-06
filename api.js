@@ -22,7 +22,7 @@ function APIConnect() {
         xhr.onreadystatechange = function() {
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
                 callback(this.responseText)
-                console.log(this.responseText);
+                //console.log(this.responseText);
             }
         };
         xhr.send();
