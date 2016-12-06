@@ -45,7 +45,7 @@ function connectAPI() {
             document.querySelector('#' + beer_td).innerHTML = beer_name;
             
             var beer_id = payload[n].beer_id;
-            console.log(beer_id);
+            //console.log(beer_id);
             
             //check if non-alcoholic drink and adding a label if so
             checkAlcohol(api, beer_id, i, n);
@@ -68,19 +68,19 @@ function checkAlcohol(api, beer_id, i, n) {
         
         // for testing with non-alcoholic: beer_id = 197702
         
-        console.log(bev);
+        //console.log(bev);
         var json = JSON.parse(bev);
         var payload_type = json.payload;
         //console.log(payload_type);
-        console.log('innan varugrupp ' + n);
+        //console.log('innan varugrupp ' + n);
         var beer_type = payload_type[0].varugrupp;
                 
         var alcFree = 'Alkoholfritt, Övrigt';
-        console.log(beer_type);
+        /*console.log(beer_type);
         console.log(alcFree);
-        console.log(n);
+        console.log(n);*/
         if (beer_type === alcFree) {
-            console.log(i);
+            //console.log(i);
             var node = document.querySelector('#drinktype' + i).innerHTML = 'non-alcoholic';
         }
                 
@@ -150,6 +150,12 @@ function checkAlcohol(api, beer_id, i, n) {
 
 function addToCart() {
     var cart = document.getElementById('shop');
-    var node = document.createTextNode('Dricka');
+    var drink = event.target.id;
+    // Vill hämta id från den div som läggs i cart - googla det här!
+    console.log(beer);
+    var beer_name = beer.getElementsByTagName('p')[0].innerHTML;
+    console.log(beer_name);
+    
+    var node = document.createTextNode(beer_name);
     cart.appendChild(node);
 };
