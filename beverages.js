@@ -54,7 +54,12 @@ function connectAPI() {
             var amount = payload[n].count;
             var price = payload[n].price;
             
-            document.querySelector('#amount' + i).innerHTML = amount + ' units';
+            if (amount > 0) {
+                document.querySelector('#amount' + i).innerHTML = amount + ' units';
+            } else {
+                document.querySelector('#amount' + i).innerHTML = 'Refill me';
+            }
+            
             document.querySelector('#price' + i).innerHTML = price + ':-';
             
         }
@@ -122,7 +127,8 @@ function checkAlcohol(api, beer_id, i, n) {
         
     });
 	
-	api.fetchUsers(function(list) {
+    //Filips hämta användare - avmarkera senare
+	/*api.fetchUsers(function(list) {
 		var json = JSON.parse(list);
         var payload = json.payload;
         
@@ -142,20 +148,38 @@ function checkAlcohol(api, beer_id, i, n) {
 
         }
        
-    });
+    });*/
     
     
     
 }
 
-function addToCart() {
+document.addEventListener("drop", function(event) {
+    
     var cart = document.getElementById('shop');
-    var drink = event.target.id;
+    var drink_id = event.dataTransfer.getData('text');
+    
+    console.log(drink_id);
+    var drink_ptag = document.getElementById(drink_id);
+    var drink_name = drink_ptag.getElementsByTagName('p')[0].innerHTML;
+    
+    var node = document.createTextNode(drink_name);
+    var para = document.createElement("p");
+    para.appendChild(node);
+    cart.appendChild(para);
+    
+    console.log(drink_name);
+});
+
+/*function addToCart() {
+    var cart = document.getElementById('shop');
+    var drink = event.srcElement;
+    //var drink = event.target.id;
     // Vill hämta id från den div som läggs i cart - googla det här!
-    console.log(beer);
+    console.log(drink);
     var beer_name = beer.getElementsByTagName('p')[0].innerHTML;
     console.log(beer_name);
     
     var node = document.createTextNode(beer_name);
     cart.appendChild(node);
-};
+};*/
