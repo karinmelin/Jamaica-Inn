@@ -40,7 +40,7 @@ function connectAPI() {
         for (var i = 1; i < 21; i++) {
             var n = i + 8;
             var beer_name = payload[n].namn;
-            var beer_td = 'drink' + i;
+            var beer_td = 'drink' + i + 'p';
             document.querySelector('#' + beer_td).innerHTML = beer_name;
             
             var beer_id = payload[n].beer_id;
@@ -106,7 +106,7 @@ function checkAlcohol(api, beer_id, i, n) {
             var para = document.createElement("p");
             var node = document.createTextNode(timeStamp + ' ' + drink + ' ' + price + ':-');
             para.appendChild(node);
-
+            
             var prevDrink = document.getElementById("prevDrinks");
             prevDrink.appendChild(para);
         }
@@ -132,9 +132,13 @@ function checkAlcohol(api, beer_id, i, n) {
 			document.getElementById("users").appendChild(newline);
 
         }
-
-		
        
     });
     
 }
+
+function addToCart() {
+    var cart = document.getElementById('shop');
+    var node = document.createTextNode('Dricka');
+    cart.appendChild(node);
+};
