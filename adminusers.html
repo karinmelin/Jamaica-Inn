@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link href="style2.css" rel="stylesheet">
+        <title>Jamaican inn</title>
+        <script src="api.js"></script>
+        <script src="dragdrop.js"></script>
+        <script src="beverages.js"></script>
+		<script src="script.js"></script>
+        <script>
+            docLoaded(bevPageLoaded);
+        </script>
+    </head>
+    <div id = "wrapper">
+    <body>
+        <div id = "logout">
+            <a href="index.html">Log out</a>
+                </div>
+        
+        <h1>Hello <span id="headerName"></span>!</h1>
+        <div id = "info">
+        <h3>Your balance is:  <span id="assets"></span>:-</h3>
+        <h5>Edit users</h5>
+            </div>
+        
+       <header>
+	    <nav>
+	      <ul>
+              <li><a href="adminallbeverages.html" >All Beverages</a></li>
+	          <li><a href="adminhistory.html">Previously Bought</a></li>
+                <li><a href="adminusers.html" class="current">Manage Users</a></li>
+              <li><a href="adminbeverages.html">Manage Beverages</a></li>
+	      </ul>
+	    </nav>
+	  </header>
+        
+
+        <br>
+      
+        <div id = "container_user">
+            <div id="users">
+                <h2> All users</h2>
+            </div>
+        
+            <div id= "adduser">
+            
+            
+            <div id="buttonarea_users">
+            
+            <button id = "createuser_button" type="button" onclick="openCreateUser();"> Create user
+                </button>
+            <button id = "edituser_button"> Edit user
+                </button>
+    
+            </div>
+     
+        </div>
+        </div>
+
+    </body>
+    </div>
+
+</html>

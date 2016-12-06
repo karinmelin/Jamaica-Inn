@@ -1,36 +1,27 @@
 <html>
     <head>
+		<title>Jamaican inn</title>
         <link href="style.css" rel="stylesheet">
-        <title>Jamaican inn</title>
+        <link href="style2.css" rel="stylesheet">
+        <script src="api.js"></script>
+        <script src="script.js"></script>
+		<title>Jamaican inn</title>
     </head>
-    
-    <body>
+    <div id = "wrapper">
+    <body id ="login_body">
         
-        <h1>Log in</h1>
-            
-            <section id="login">
-                <form action ="action_page.php">
-                <div class="container">
-                    <p>
-                    <label><b>Username</b></label>
-                    <input type="text" placeholder ="Enter Username" name = "uname" required>
-                    </p>
-                    
-                    <p>
-                    <label><b>Password</b></label>
-                    <input type = "password" placeholder = "Enter Password" name = "psw" required>
-                    </p>
-                    
-                    
-                    <button id = "personalButton" type = "submit"> Login as staff</button>
-                    
-                    
-                    <button id = "staffButton" type = "submit"> Login as admin</button>
-                    
-                    </div>
-                </form>
-            </section>        
-    </body>
+         
+        <div id="login">
+		<h2>Log in </h2>
+            <form name="login">
+               <p> Username </p> <input type="text" name="uname" required="required" placeholder="Username">
+                <p> Password </p><input type="password" name="psw" required="required" placeholder="Password">
+            </form>
+            <button id = "login_button" type="submit" value="Send" onclick="checkLogin();">Log in</button> 
 
+        </div>
+        
+    </body>
+        </div>
 
 </html>

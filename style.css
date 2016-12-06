@@ -5,8 +5,18 @@ html {
 }
 body{
     background-color: #0B231C;
-  
-    
+	font-family: 'Arial ',sans-serif;
+
+}
+
+#wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1240px;
+    max-height: 768px;
+    min-width: 1240px;
+    min-height: 768px;
+   
 }
 
 h1{
@@ -16,14 +26,43 @@ h1{
    
 }
 
-.login{
+#info{
+    text-align: center;
+    height: auto;
+    width: 800px;
+     margin-left: auto;
+    margin-right: auto;
+   
+}
+
+#login{
     margin-left: auto;
     margin-right: auto;
     height: 200px;
-    width: 50%;
-    text-align:center;
+    width: 500px;
+    position:relative;
+    margin-bottom: 50%;
+    text-align: center;
 }
 
+#login_body{
+    margin-top: 25%;
+    position: relative; 
+    
+}
+
+.loginText {
+    color: white;
+}
+
+#login p {
+    display: inline;
+}
+
+#login_button {
+    position: absolute;
+    display: inline;
+}
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -37,10 +76,11 @@ nav a.current  {
 }
 
 nav a {
-	font-size: 1.5em;
+	font-size: 1.3em;
 	color: #0B231C;
 	text-decoration: none;
 	padding: 0 .5em 0 .5em;
+    
 }
 nav a:hover {
     color: #21c559;
@@ -48,6 +88,19 @@ nav a:hover {
 nav ul{
 	padding-top: .5em;
 	text-align: center;
+}
+
+#logout a{
+    color:white;
+    margin-left:1100px;
+    text-decoration: none;
+    
+}
+
+#logout{
+    position: absolute;
+    top:30px;
+    
 }
 
 nav li{
@@ -58,6 +111,9 @@ nav li{
 header{
 	background-color:whitesmoke;
     height: 3em;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 	
 }
 
@@ -67,15 +123,55 @@ td {
     border-radius: 2em;
     background-color: white;
     color:#0B231C;
-    text-align: center;
+    text-align: center;  
+}
+
+.drink {
+    font-size: 15px;
+    width: 225px;
+    height:70px;
+
+}
+
+.drink p {
+    padding-top: 5px;
+    margin:0;
+}
+
+.price{
+    height: 15px;
+    width: 80px;
+    font-weight: bold;
+    background-color: white;
+    /*border-radius: 2em;
+    border:2px solid #009933;*/
+    padding-top: 5px;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    display: inline-block;
+    /*margin-bottom: 4px;*/
+ 
+    
+}
+.amount{
+    height: 15px;
+    width: 80px;
+    font-weight: bold;
+    background-color: white;
+    /*border:2px solid #009933;
+    border-radius: 2em;*/
+    /*margin-left: auto;
+    margin-right: auto;*/
+    display:inline-block;
+
 }
 
 #table_all{
     background-color: #0B231C;
-    width:750px;
+    width:900px;
     height: 400px;
     float: left;
-    margin-left: 2em;
+    
 }
 
 #table_alco{
@@ -95,19 +191,24 @@ td {
 }
 
 table{
-    width: 100%;
-    height: 100%;
-    float:left;
-    
+    border-spacing: 10px;
 }
 
+#shoppingarea{
+     width:200px;
+    height: 350px;
+     float:LEFT;  
+    margin-left:6.5em;
+    display: table; 
+    position: relative;
+}
 .shopping_cart{
     background-color: white;
     width:200px;
-    height: 400px;
-    float:left;  
-    margin-left:6.5em;
-    display: table; 
+    height: 300px; 
+    vertical-align: text-top;
+    overflow:auto;
+    
 }
 
 #Heading_cart{
@@ -117,35 +218,28 @@ table{
 }
 
 #purchase_button {
-        width:200px;
+        width:100px;
         height:50px;
-        background:#0B231C;
-        position: absolute;
-        bottom: 0;
-		transition: .5s ease;
-		left: 1150px;
-		top: 24px;
-
+        float:left;
+        background:#0B231C;         
         color:white;
+        bottom:0;    
+    display: inline;
     }
-	
-#undo_button {
-        width:200px;
+#clear_button {
+        width:100px;
         height:50px;
-        background:#0B231C;
-        position: absolute;
-        bottom: 0;
-		transition: .5s ease;
-		left: 1150px;
-		top: 100px;
-
+        background:darkred;         
         color:white;
+        bottom:0;  
+        display: inline;
+    float:right
+    
     }
 
-p{
-    color:black;
-    text-align: left;
-}
+
+
+
 
 
 
@@ -153,12 +247,137 @@ p{
     margin: 0 auto;
     text-align: center;
     position: relative;
+    width: 1240px;
+    float:left;
     
 }
 
-#td img{
-    display: block;
+
+
+
+
+
+#prevDrinks {
+    width: 600px;
+    height:350px;
+    overflow: auto;
+    background-color:darkgreen;
     margin-left: auto;
     margin-right: auto;
-
+    border-radius:2px;
+    border: 10px solid green;
+    
 }
+
+#prevDrinks p{
+    color: white;
+   text-align: left;
+    padding-left: 20px;
+    
+}
+
+#beverage_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+        position: absolute;
+        top:80px;
+        right:20px;
+      
+}
+#save_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+        position: absolute;
+        top:20px;
+        right:20px;
+      
+}
+
+.dropdown_bev{
+   
+      font-size: 15px;
+    width: 225px;
+    height:40px;
+}
+
+
+.dropdown_bev select{
+    margin-top: 10px;
+}
+
+
+#container_user{
+    border-spacing: 4px;
+    height:430px;
+    width: 1240px;
+    position: relative;
+    
+}
+
+#buttonarea_users{
+    height:50px;
+    width: 1240px;
+    bottom:0;
+    left:0;
+    position:absolute;
+}
+#createuser_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+      
+}
+#edituser_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+      
+}
+#saveuser_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+    margin-left: 235px;
+    
+}
+
+
+#container_user h2 {
+    padding-left: 10px;
+}
+
+#users {
+    width: 575px;
+    height:350px;
+    overflow: auto;
+    background-color:darkgreen;
+    float:left;
+    border-radius:2px;
+    border: 10px solid green;
+    
+  
+}
+
+#users p{ /*gör inget än*/
+    text-align: justify; 
+    
+}
+
+#adduser {
+     width: 575px;
+    height:350px;
+    background-color:darkgreen;
+    border-radius:2px;
+    border: 10px solid green;
+    float:right;
+    
+}
+
+

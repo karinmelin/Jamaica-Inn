@@ -35,7 +35,6 @@ function APIConnect() {
     
 	this.fetchUsers = function(callback) {
 		var url = constructURL({action: 'user_get_all'});
-        alert('fetchUsers');
 		request(url, callback);
 	};
 	
@@ -55,8 +54,15 @@ function APIConnect() {
         request(url, callback);
     };
     
+    this.fetchBevType = function(callback, beer_nr) {
+        var url = constructURL({action: 'beer_data_get', beer_id: beer_nr});
+        request(url, callback);
+    }
+    
     this.fetchPrevDrinks = function(callback) {
         var url = constructURL({action: 'purchases_get'});
         request(url, callback);
     };
 }
+   
+

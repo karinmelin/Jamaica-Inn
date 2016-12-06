@@ -1,0 +1,157 @@
+<html>
+    <head>
+      <link href="style.css" rel="stylesheet">
+        <link href="style2.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <script src="api.js"></script>
+        <script src="beverages.js"></script>
+        <script src="dragdrop.js"></script>
+        <script>
+            docLoaded(bevPageLoaded);
+        </script>
+    </head>
+    
+    <div id = "wrapper">
+        
+    <body>
+        <div id = "logout">
+            <a href="index.html">Log out</a>
+        </div>
+        
+        <div id = "info">
+           
+        <h1>Hello <span id="headerName"></span>!</h1>
+        
+        <h3>Your balance is:   <span id="assets"></span>:-</h3>
+        <h5>To purchase a beverage, drag and drop the drink into the shopping cart</h5>
+        
+        </div>
+        
+          <header>
+	    <nav>
+	      <ul>
+              <li><a href="adminallbeverages.html" class = "current">All Beverages</a></li>
+	          <li><a href="adminhistory.html">Previously Bought</a></li>
+                <li><a href="adminusers.html" >Manage Users</a></li>
+              <li><a href="adminbeverages.html">Manage Beverages</a></li>
+	      </ul>
+	    </nav>
+	  </header>
+        
+        <br>        
+        
+        <div id="container"  >
+            
+            <div id= "table_all" >
+                <table id = "All beverages">
+                    <tr>
+                       <td>
+                           <div class="drink"><p id ="drink1" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype1"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                       <td>
+                           <div class="drink"><p id ="drink2" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype2"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div>
+                        </td> 
+                       <td>
+                           <div class="drink"><p id ="drink3" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype3"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div>
+                        </td> 
+                       <td>
+                           <div class="drink"><p id ="drink4" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype4"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>
+                           <div class="drink"><p id ="drink5"></p> <p id="drinktype5" draggable="true" ondragstart="drag(event)"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div>
+                        </td> 
+                        <td>
+                           <div class="drink"><p id ="drink6" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype6"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div>
+                        </td> 
+                        <td>
+                           <div class="drink"><p id ="drink7"></p> <p id="drinktype7" draggable="true" ondragstart="drag(event)"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                        <td>
+                           <div class="drink"><p id ="drink8" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype8"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                    </tr>
+                    <tr>
+                       <td>
+                           <div class="drink"><p id ="drink9"></p> <p id="drinktype9" draggable="true" ondragstart="drag(event)"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                       <td>
+                           <div class="drink"><p id ="drink10"></p> <p id="drinktype10" draggable="true" ondragstart="drag(event)"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                       <td>
+                           <div class="drink"><p id ="drink11" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype11"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                       <td>
+                           <div class="drink"><p id ="drink12"></p> <p id="drinktype12" draggable="true" ondragstart="drag(event)"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                    </tr>
+                    <tr>
+                       <td>
+                           <div class="drink"><p id ="drink13"></p> <p id="drinktype13" draggable="true" ondragstart="drag(event)"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                        <td>
+                           <div class="drink"><p id ="drink14" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype14"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                        <td>
+                           <div class="drink"><p id ="drink15" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype15"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                        <td>
+                           <div class="drink"><p id ="drink16" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype16"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                    </tr>
+                  <tr>
+                       <td>
+                           <div class="drink"><p id ="drink17"></p> <p id="drinktype17" draggable="true" ondragstart="drag(event)"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                       <td>
+                           <div class="drink"><p id ="drink18" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype18"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                       <td>
+                           <div class="drink"><p id ="drink19" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype19"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+                       <td>
+                           <div class="drink"><p id ="drink20" draggable="true" ondragstart="drag(event)"></p> <p id="drinktype20"></p></div>
+                            <div class = "amount"> amount </div> <div class = "price"> price </div> 
+                        </td> 
+
+                </table>
+            </div>
+             
+            <div id = "shoppingarea">
+                <div id ="Heading_cart"> 
+                    Shopping cart 
+                </div>
+            <div class = "shopping_cart" id="shop" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+                
+            </div>
+
+                <div class = "buttons">
+                    <button type="submit" id="purchase_button"> Purchase </button>
+                    <button type="submit" id="clear_button"> Clear </button>
+                </div>
+            </div>
+        </div>
+        
+        </body>
+    </div>
+</html>
