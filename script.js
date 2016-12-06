@@ -1,4 +1,4 @@
-﻿function docLoaded(fn) {
+function docLoaded(fn) {
 	if (document.readyState !== 'loading') {
         fn();
 	} else {
@@ -27,6 +27,68 @@ function connectToAPI() {
     });
 }
 
+//---translation---
+
+function dictionary() {
+    var dict = {
+        sv: {
+            
+        },
+        en: {
+            
+        }    
+    }
+    return dict[sessionStorage.getItem('sprak')];
+}
+
+
+function translate() {
+    var textElem = document.getElementsByClassName('transl');
+    var dict = dictionary();
+    
+    for(var j=0; j<textElem.length; j++) {
+        var x = dict[textElem[j].id];
+        
+        if(x === undefined) {
+            alert(textElem[j].id + " is not in dictionary()");
+        }
+        else {
+            if(textElem[j].nodeName === 'INPUT') {
+                if(textElem[j].getAttribute('placeholder')) {
+                    textElem[j].setAttribute('placeholder', x);
+                }
+                else if(textElem[j].getAttribute('value')) {
+                    textElem[j].setAttribute('value', x);
+                }
+            }
+            else {
+                document.getElementById(textElem[j].id).innerHTML = x;
+            }
+        }
+    }
+}
+
+
+function langSelect() {
+    var x = document.getElementById('langChoice').value;
+    sessionStorage.setItem('sprak', x);
+    translate();
+}
+
+
+function checkLang() {
+    if (!sessionStorage.getItem('sprak')) {
+        sessionStorage.setItem('sprak', 'en') // Default language
+    }
+    var x = document.getElementById("langChoice");
+    x.addEventListener("change", langSelect);
+    document.getElementById(sessionStorage.getItem('sprak')).selected = 'true';
+    translate();     
+}
+
+//-----------------
+
 function pageLoaded() {
 	connectToAPI();
+    checkLang();
 }
