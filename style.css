@@ -1,4 +1,4 @@
-html {
+﻿html {
     font-size: 20px;
     color: white;
      
@@ -344,10 +344,9 @@ table{
         height:50px;
         background:#0B231C;;         
         color:white;
-    margin-left: 235px;
+		margin-left: 500px;
     
 }
-
 
 #container_user h2 {
     padding-left: 10px;

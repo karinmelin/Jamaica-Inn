@@ -6,8 +6,10 @@
         <script src="api.js"></script>
         <script src="dragdrop.js"></script>
         <script src="beverages.js"></script>
+		<script src="saveNewUser.js"></script>
+		<script src="users.js"></script>
         <script>
-            docLoaded(bevPageLoaded);
+            docLoaded(loadAllUsers);
         </script>
     </head>
     <div id = "wrapper">
@@ -40,17 +42,17 @@
             <div id="users">
                 <h2> All users</h2>
             </div>
-        
+			
             <div id= "adduser">
-            <h2>Add user</h2>
+			<h3> Edit user<h3>
             <form name="adduserform">
-                <p> First name </p> <input type="text" name="fname" required="required" placeholder="First name">
-                <p> Last name </p> <input type="text" name="lname" required="required" placeholder="Last name">
-               <p> Username </p> <input type="text" name="uname" required="required" placeholder="Username">
-                <p> Password </p><input type="password" name="psw" required="required" placeholder="Password">
-                <p> Email </p> <input type="text" name="email" required="required" placeholder="Email">
+                <p> First name </p> <input type="text" id="fname" required="required" placeholder="First name">
+                <p> Last name </p> <input type="text" id="lname" required="required" placeholder="Last name">
+                <p> Username </p> <input type="text" id="uname" required="required" placeholder="Username">
+                <p> Password </p> <input type="password" id="psw" required="required" placeholder="Password">
+                <p> Email </p> <input type="text" id="email" required="required" placeholder="Email">
+				<p> Phone </p> <input type="text" id="phone" required="required" placeholder="Phone">
             </form>
-            <button id = "add_button" type="submit" value="Add" onclick="checkLogin();">Add user</button> 
             </div>
             
             <div id="buttonarea_users">
@@ -59,7 +61,7 @@
                 </button>
             <button id = "edituser_button"> Edit user
                 </button>
-                 <button id = "saveuser_button"> Save user
+                 <button id = "saveuser_button" type="button" value="Add" onclick="saveNewUser();"> Save user
                 </button>
             </div>
      

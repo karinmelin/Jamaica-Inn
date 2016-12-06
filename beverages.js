@@ -122,30 +122,8 @@ function checkAlcohol(api, beer_id, i, n) {
         
     });
 	
-	api.fetchUsers(function(list) {
-		var json = JSON.parse(list);
-        var payload = json.payload;
-        
 
-        for (var i = 0; i < payload.length; i++) {
-			var email = payload[i+13].email;
-            var first_name = payload[i+13].first_name;
-            var last_name = payload[i+13].last_name;
-            var username = payload[i+13].username;
-			
-			var newline = document.createElement("br");
-		
-			var node = document.createTextNode(first_name + ' ' +last_name + ' ' + email + ' ' + username);
-			
-			document.getElementById("users").appendChild(node);
-			document.getElementById("users").appendChild(newline);
-
-        }
-       
-    });
-    
-    
-    
+	
 }
 
 function addToCart() {
@@ -153,3 +131,6 @@ function addToCart() {
     var node = document.createTextNode('Dricka');
     cart.appendChild(node);
 };
+
+
+
