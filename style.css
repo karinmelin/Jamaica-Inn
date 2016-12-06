@@ -7,7 +7,7 @@ body{
     min-height = 100%;  
     background: radial-gradient(transparent, black), color: white; 
 	font-family: 'Arial ',sans-serif;
-
+    /*margin: 0px*/
 }
 
 #wrapper{
@@ -236,7 +236,7 @@ table{
         display: inline;
     float:right
     
-    }
+}
 
 
 
@@ -321,7 +321,7 @@ table{
 
 #buttonarea_users{
     height:50px;
-    width: 1240px;
+    width: 240px;
     bottom:0;
     left:0;
     position:absolute;
@@ -345,10 +345,9 @@ table{
         height:50px;
         background:#0B231C;;         
         color:white;
-    margin-left: 235px;
+		margin-left: 1040px;
     
 }
-
 
 #container_user h2 {
     padding-left: 10px;

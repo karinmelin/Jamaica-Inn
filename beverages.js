@@ -36,9 +36,11 @@ function connectAPI() {
         var json = JSON.parse(bevList);
         var payload = json.payload;
         
-        //looping through payload 
+        //looping through payload
+        
+        
         for (var i = 1; i < 21; i++) {
-            var n = i + 8;
+            var n = i + 89;
             var beer_name = payload[n].namn;
             var beer_td = 'drink' + i + 'p';
             
@@ -73,7 +75,7 @@ function checkAlcohol(api, beer_id, i, n) {
         
         // for testing with non-alcoholic: beer_id = 197702
         
-        //console.log(bev);
+        console.log(bev);
         var json = JSON.parse(bev);
         var payload_type = json.payload;
         //console.log(payload_type);
@@ -85,7 +87,7 @@ function checkAlcohol(api, beer_id, i, n) {
         console.log(alcFree);
         console.log(n);*/
         if (beer_type === alcFree) {
-            //console.log(i);
+            console.log(i);
             var node = document.querySelector('#drinktype' + i).innerHTML = 'non-alcoholic';
         }
                 
@@ -127,31 +129,8 @@ function checkAlcohol(api, beer_id, i, n) {
         
     });
 	
-    //Filips hämta användare - avmarkera senare
-	/*api.fetchUsers(function(list) {
-		var json = JSON.parse(list);
-        var payload = json.payload;
-        
 
-        for (var i = 0; i < payload.length; i++) {
-			var email = payload[i+13].email;
-            var first_name = payload[i+13].first_name;
-            var last_name = payload[i+13].last_name;
-            var username = payload[i+13].username;
-			
-			var newline = document.createElement("br");
-		
-			var node = document.createTextNode(first_name + ' ' +last_name + ' ' + email + ' ' + username);
-			
-			document.getElementById("users").appendChild(node);
-			document.getElementById("users").appendChild(newline);
-
-        }
-       
-    });*/
-    
-    
-    
+	
 }
 
 document.addEventListener("drop", function(event) {
