@@ -9,6 +9,7 @@ function docLoaded(fn) {
 
 //go to connectAPI to fetch info from API
 function bevPageLoaded() {
+    document.getElementById("clear_button").addEventListener("click", clearCart);
 	connectAPI();
 }
 
@@ -130,24 +131,6 @@ function checkAlcohol(api, beer_id, i, n) {
     });*/
     
 }
-
-document.addEventListener("drop", function(event) {
-    
-    var cart = document.getElementById('shop');
-    var drink_id = event.dataTransfer.getData('text');
-    
-    console.log(drink_id);
-    var drink_ptag = document.getElementById(drink_id);
-    //drink_ptag.className = "inCart";
-    var drink_name = drink_ptag.getElementsByTagName('p')[0].innerHTML;
-    
-    var node = document.createTextNode(drink_name);
-    var para = document.createElement("p");
-    para.appendChild(node);
-    cart.appendChild(para);
-    
-    console.log(drink_name);
-});
 
 /*function addToCart() {
     var cart = document.getElementById('shop');

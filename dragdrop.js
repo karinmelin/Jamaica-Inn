@@ -1,3 +1,30 @@
+document.addEventListener("drop", function(event) {
+    
+    var cart = document.getElementById('shop');
+    var drink_id = event.dataTransfer.getData('text');
+    
+    console.log(drink_id);
+    var drink_ptag = document.getElementById(drink_id);
+    //drink_ptag.className = "inCart";
+    var drink_name = drink_ptag.getElementsByTagName('p')[0].innerHTML;
+    var price = drink_ptag.getElementsByClassName('price')[0].innerHTML;
+    
+    var namenode = document.createTextNode(drink_name);
+    var pricenode = document.createTextNode(price);
+    var para1 = document.createElement("p");
+    var para2 = document.createElement("p");
+    para1.setAttribute('class', 'drink_cart');
+    
+    
+    para2.setAttribute('class', 'price_cart');
+    
+    para1.appendChild(namenode);
+    para2.appendChild(pricenode)
+    cart.appendChild(para1); //Bör p-taggar läggas i div?
+    cart.appendChild(para2);
+    console.log(drink_name);
+});
+
 function allowDrop(allowdropevent) {
     allowdropevent.target.style.color = 'black';
     allowdropevent.preventDefault();
@@ -25,16 +52,18 @@ function drop(dropevent) {
 function clearCart() {
     //ClearDrink('drink_in_cart');
     
-    var drinkCopy = document.getElementsByClassName("inCart");
+    /*var drinkCopy = document.getElementsByClassName("inCart");
     /* ----- här ska du få tag i alla med klassen inCart och ta bort dem ---*/
     
     //drinkCopy.remove;
-    console.log(drinkCopy);
+    /*console.log(drinkCopy);
     console.log(drinkCopy[0]);
     while(drinkCopy[0]) {
         drinkCopy[0].parentNode.removeChild(drinkCopy[0]);
         console.log('går in här');
-    }
+    }*/
+    
+    document.getElementById("shop").innerHTML = "";
 }
 
 /*function clearDrink(elementID) {
