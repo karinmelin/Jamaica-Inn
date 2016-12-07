@@ -43,8 +43,9 @@ window.location.assign('adminusers.html');
 */
 
 function checkLogin() {
+    console.log('hej');
     /*Here we get values from the login form and save APIConnect() in a variable*/
-    var loginForm = document.forms["login"];
+    var loginForm = document.forms["loginform"];
     var username = loginForm.elements["uname"].value;
     var password = loginForm.elements["psw"].value;
     
