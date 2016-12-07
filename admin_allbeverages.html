@@ -14,16 +14,6 @@
     <body>
         <div id = "wrapper">
             
-       
-        
-        <div id = "info">
-           
-            <h1>Hello <span id="headerName"></span>!</h1>
-            <h3>Your balance is:   <span id="assets"></span>:-</h3>
-            <h5>To purchase a beverage, drag and drop the drink into the shopping cart</h5>
-        
-        </div>
-        
         <header>
 	       <nav>
                <div id = "logo_img"> <img src="logo.png"> </div>
@@ -35,19 +25,30 @@
                </ul>
             </nav>
             <div id = "personal_info">
+                <div id = "welcome"><p>Welcome <span id="headerName"></span></p></div>
                 <div id = "user_img"> <img src="user.png"> </div>
+                <div id ="balance"><p>Balance:  <span id="assets"></span>:-</p></div>
                 <div id = "logout">
                     <a href="index.html">Log out</a>
                 </div>
             </div>
         </header>
         
-        <br>        
-        
+     
          <div id="container">
+             
             
             <div id= "table_all" >
                 <table id = "All beverages">
+                    <div id = "category">
+                        <p>To purchase a beverage, drag and drop the drink into the shopping cart</p>
+                        <ul>
+                        <li id = "beer_cat">Beer</li>
+                        <li id = "cider_cat">Cider</li>
+                        <li id = "wine_cat">Wine</li>
+                        <li id = "non_cat">Non-Alcoholic</li>
+                            </ul>
+                    </div>
                     <tr>
                         <td>
                            <div class="drink" id="drink1" draggable="true" ondragstart="drag(event)">

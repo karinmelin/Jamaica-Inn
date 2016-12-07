@@ -25,7 +25,7 @@ h1{
     font-size: 60px;
    
 }
-
+/*ta bort? --> gjorde om utseendet*/
 #info{
     text-align: center;
     height: auto;
@@ -159,6 +159,24 @@ header{
   margin:auto;
   display:block;
 }
+#welcome {
+    color: #0B231C;
+    position: absolute;
+       top:10px;
+    right:90px;
+    
+    
+}
+#balance {
+    color: #0B231C;
+    position: absolute;
+    right:50px;
+    bottom:30px;
+    font-size: 16px;
+}
+
+
+
 #logout a{
     color:#0B231C;
     text-decoration: none;
@@ -179,6 +197,37 @@ td {
     background-color: white;
     color:#0B231C;
     text-align: center;  
+}
+
+
+#category li{
+	display: inline;
+}
+
+#category ul{
+    width:900px;
+    float: left;
+    position: relative;
+}
+
+#beer_cat{
+    position: absolute;
+    left: 100px;
+}
+
+#cider_cat{
+    position: absolute;
+    left: 350px;
+}
+
+#wine_cat{
+    position: absolute;
+    left: 580px;
+}
+
+#non_cat{
+    position: absolute;
+    left: 780px;
 }
 
 .drink {
@@ -229,21 +278,6 @@ td {
     
 }
 
-#table_alco{
-    background-color: #0B231C;
-    width:750px;
-    height: 400px;
-    float: left;
-    margin-left: 2em;
-}
-
-#table_soft{
-    background-color: #0B231C;
-    width:100px;
-    height: 100px;
-    float: left;
-    margin-left: 2em;
-}
 
 table{
     border-spacing: 10px;
