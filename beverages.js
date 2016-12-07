@@ -29,6 +29,7 @@ function connectAPI() {
         var name = payload[0].first_name;
         document.querySelector('#assets').innerHTML = assets;
         document.querySelector('#headerName').innerHTML = name;
+        
     });
     
     api.fetchPrevDrinks(function(list) {
