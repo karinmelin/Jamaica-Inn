@@ -439,4 +439,6 @@ table{
     
 }
 
-
+.dropdown_bev select {
+    width: 140px;
+}
