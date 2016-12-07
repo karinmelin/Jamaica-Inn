@@ -137,6 +137,7 @@ document.addEventListener("drop", function(event) {
     
     console.log(drink_id);
     var drink_ptag = document.getElementById(drink_id);
+    //drink_ptag.className = "inCart";
     var drink_name = drink_ptag.getElementsByTagName('p')[0].innerHTML;
     
     var node = document.createTextNode(drink_name);

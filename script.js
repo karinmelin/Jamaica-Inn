@@ -169,13 +169,13 @@ function checkLogin() {
 		"count": "183",
 		"price": "39.00"
 	}, {
-		"namn": "Staropramen",
-		"namn2": "Non-Alcoholic",
-		"sbl_price": "12.40",
-		"pub_price": "15",
-		"beer_id": "193002",
-		"count": "192",
-		"price": "12.40"
+		"namn": "S:t Eriks",
+		"namn2": "Oktoberfest",
+		"sbl_price": "16.90",
+		"pub_price": "20",
+		"beer_id": "1125303",
+		"count": "197",
+		"price": "16.90"
 	}, {
 		"namn": "Wyld Wood",
 		"namn2": "Organic",
