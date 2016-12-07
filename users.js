@@ -22,12 +22,12 @@ function loadAllUsers() {
             var first_name = payload[i+13].first_name;
             var last_name = payload[i+13].last_name;
             var username = payload[i+13].username;
-			
+			var phone = payload[i+13].phone;
 
 			para = document.createElement("p");
-			para.onclick = function (e) { alert('test') };
+			//para.onclick = function (e) { alert('test') };
 			
-			var node = document.createTextNode(first_name + ' ' +last_name + ' ' + email + ' ' + username);
+			var node = document.createTextNode(first_name + ' ' +last_name + ' ' + email + ' ' + username + ' ' + phone);
 			para.appendChild(node);
 
 			var userList = document.getElementById("users");
@@ -41,9 +41,7 @@ function loadAllUsers() {
 	
 
 
-function copyToEditUserForm() {
-
-//SKALL SKAPA DEN HÄR!!! 
+/*function copyToEditUserForm() {
 
 
-}
+}*/
