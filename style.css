@@ -284,6 +284,7 @@ table{
 }
 
 #shoppingarea{
+    margin-top: 100px;
      width:200px;
     height: 350px;
      float:LEFT;  
@@ -454,33 +455,12 @@ table{
   
 }
 
-#users p{ 
+#users p{ /*gör inget än*/
     text-align: justify; 
     font-size:18px;
     padding-left: 10px;
     
 }
-
-#all_beverages {
-    width: 575px;
-    height:350px;
-    overflow: auto;
-    background-color:darkgreen;
-    float:left;
-    border-radius:2px;
-    border: 10px solid green;
-    
-  
-}
-
-#all_beverages p{ 
-    text-align: justify; 
-    font-size:18px;
-    padding-left: 10px;
-    
-}
-
-
 
 #adduser {
      width: 575px;
@@ -494,6 +474,4 @@ table{
     
 }
 
-.dropdown_bev select {
-    width: 140px;
-}
+
