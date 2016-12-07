@@ -198,6 +198,8 @@ function chooseInitDrinks(api) {
             
             if (amount < 0) {
                 document.querySelector('#amount' + n).innerHTML = 'Refill me';
+            } else if (amount > 10){
+                document.querySelector('#amount' + n).innerHTML = 10 + ' units';
             } else {
                 document.querySelector('#amount' + n).innerHTML = amount + ' units';
             }

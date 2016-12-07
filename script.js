@@ -225,13 +225,13 @@ function checkLogin() {
 		"count": "195",
 		"price": "104.00"
 	}, {
-		"namn": "Weihenstephaner",
-		"namn2": "Hefeweissbier Alkoholfrei",
-		"sbl_price": "12.90",
+		"namn": "Staropramen",
+		"namn2": "Non-Alcoholic",
+		"sbl_price": "12.40",
 		"pub_price": "15",
-		"beer_id": "192201",
-		"count": "184",
-		"price": "12.90"
+		"beer_id": "193002",
+		"count": "192",
+		"price": "12.40"
 	}]};
     
     localStorage.setItem("drinkList", JSON.stringify(drinkList));
