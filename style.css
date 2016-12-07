@@ -420,12 +420,33 @@ table{
   
 }
 
-#users p{ /*gör inget än*/
+#users p{ 
     text-align: justify; 
     font-size:18px;
     padding-left: 10px;
     
 }
+
+#all_beverages {
+    width: 575px;
+    height:350px;
+    overflow: auto;
+    background-color:darkgreen;
+    float:left;
+    border-radius:2px;
+    border: 10px solid green;
+    
+  
+}
+
+#all_beverages p{ 
+    text-align: justify; 
+    font-size:18px;
+    padding-left: 10px;
+    
+}
+
+
 
 #adduser {
      width: 575px;

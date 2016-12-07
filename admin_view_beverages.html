@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link href="style2.css" rel="stylesheet">
+        <title>Jamaican inn</title>
+        <script src="api.js"></script>
+        <script src="dragdrop.js"></script>
+        <script src="beverages.js"></script>
+		<script src="saveNewUser.js"></script>
+		<script src="users.js"></script>
+		<script src="view_all_beverages.js"></script>
+        <script>
+            docLoaded(loadAllBeverages);
+        </script>
+    </head>
+    
+    
+    <body>
+        <div id = "wrapper">
+            
+        <div id = "logout">
+            <a href="index.html">Log out</a>
+        </div>
+        
+        <h1>Hello <span id="headerName"></span>!</h1>
+        
+        <div id = "info">
+            <h3>Your balance is:  <span id="assets"></span>:-</h3>
+            <h5>Edit users</h5>
+        </div>
+        
+        <header>
+	       <nav>
+	           <ul>
+                   <li><a href="admin_allbeverages.html" >All Beverages</a></li>
+                   <li><a href="admin_history.html">Previously Bought</a></li>
+                   <li><a href="admin_manage_users.html" >Manage Users</a></li>
+                   <li><a href="admin_manage_beverages.html" class="current">Manage Beverages</a></li>
+	           </ul>
+	       </nav>
+        </header>
+
+        <br>
+      
+        <div id = "container_view_all_beverages">
+            <div id="all_beverages">
+                <h3>&nbsp&nbspAll Beverages</h3> 
+				<b>&nbsp Beer &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Price &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Quantity</b>
+            </div>
+			
+            <div id= "adduser">
+                <h3> Edit Beverage</h3>
+                <form name="adduserform">
+                    <p> Quantity </p> <input type="text" id="fname" required="required" placeholder="Enter a new quantity">
+                    <p> Price </p> <input type="text" id="lname" required="required" placeholder="Enter a new price">
+                </form>
+            </div>
+            
+            <div id="buttonarea_users">
+                <button id = "saveuser_button" type="button" value="Add" onclick="saveNewUser();">Save user</button>
+            
+            </div>
+        </div>
+               
+                
+        </div>
+    </body>
+
+</html>
