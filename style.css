@@ -35,33 +35,68 @@ h1{
    
 }
 
-#login{
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
-    width: 500px;
-    position:relative;
-    margin-bottom: 50%;
-    text-align: center;
+#jamaican{
+    font-size:56px;
+    color:forestgreen;
+    font-family: 'Courier New';
+      text-align: center;
 }
-
-#login_body{
-    margin-top: 25%;
-    position: relative; 
+#inn{
+    font-size:56px;
+    color:white;
+    font-family: 'Courier New';
+    margin-left: 250px;
+      text-align: center;
     
 }
 
-.loginText {
-    color: white;
+
+#login{
+    margin-left: auto;
+    margin-right: auto;
+   
+    height: 200px;
+    width: 500px;
+    border: 3px solid forestgreen;
+    border-radius: 1em;
+    padding-left: 100px;
+    position: relative;
+
 }
+#wrapper_index{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1240px;
+    max-height: 468px;
+    min-width: 1240px;
+    min-height: 468px;
+ padding-top: 300px;
+   
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}
+
 
 #login p {
     display: inline;
 }
 
+#loginform{
+    width:150px;
+}
+
 #login_button {
-    position: absolute;
-    display: inline;
+ position: absolute;
+    top: 135px;
+    right:100px;
+    
+    height:30px;
+    width:100px;
+    
 }
 a.button {
     -webkit-appearance: button;
@@ -337,6 +372,7 @@ table{
         height:50px;
         background:#0B231C;;         
         color:white;
+    
       
 }
 #saveuser_button{
@@ -376,6 +412,7 @@ table{
     border-radius:2px;
     border: 10px solid green;
     float:right;
+    overflow: auto;
     
 }
 

@@ -8,14 +8,23 @@
 		<title>Jamaican inn</title>
     </head>
     
-    <body id ="login_body">
-        <div id = "wrapper">
+    <body>
+        <div id = "wrapper_index">
          
         <div id="login">
-		<h2>Log in </h2>
-            <form name="login">
-               <p> Username </p> <input type="text" name="uname" required="required" placeholder="Username">
-                <p> Password </p><input type="password" name="psw" required="required" placeholder="Password">
+		<p id = "jamaican">Jamaican </p> <br> <p id = "inn">inn </p>
+            <form name="loginform">
+                
+                <div class = "login_div">
+               <label> Username</label>   
+                <input type="text" name="uname" required="required" placeholder="Username">
+                </div>
+              
+                
+                <div class = "login_div">
+               <label> Password</label> 
+                <input type="password" name="psw" required="required" placeholder="Password"> 
+                </div>
             </form>
             <button id = "login_button" type="submit" value="Send" onclick="checkLogin();">Log in</button> 
 
