@@ -193,9 +193,14 @@ header{
 #language_choice{
     position: absolute;
     right: 110px;
-    bottom:20px;
-
-    
+    bottom:20px;   
+}
+#language_choice_index{
+    position: absolute;
+    right: 105px;
+    top:20px;   
+    width:100px;
+    height: 20px;
 }
 
 
