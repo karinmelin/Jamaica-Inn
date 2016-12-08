@@ -48,9 +48,6 @@ document.addEventListener("drop", function(event) {
             cart.appendChild(para3);
         }
     }
-    
-    //list = JSON.parse(localStorage.getItem("drinklist").data;
-
     console.log(drink_name);
 });
 

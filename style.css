@@ -25,7 +25,7 @@ h1{
     font-size: 60px;
    
 }
-
+/*ta bort? --> gjorde om utseendet*/
 #info{
     text-align: center;
     height: auto;
@@ -35,33 +35,68 @@ h1{
    
 }
 
-#login{
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
-    width: 500px;
-    position:relative;
-    margin-bottom: 50%;
-    text-align: center;
+#jamaican{
+    font-size:56px;
+    color:forestgreen;
+    font-family: 'Courier New';
+      text-align: center;
 }
-
-#login_body{
-    margin-top: 25%;
-    position: relative; 
+#inn{
+    font-size:56px;
+    color:white;
+    font-family: 'Courier New';
+    margin-left: 250px;
+      text-align: center;
     
 }
 
-.loginText {
-    color: white;
+
+#login{
+    margin-left: auto;
+    margin-right: auto;
+   
+    height: 200px;
+    width: 500px;
+    border: 3px solid forestgreen;
+    border-radius: 1em;
+    padding-left: 100px;
+    position: relative;
+
 }
+#wrapper_index{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1240px;
+    max-height: 468px;
+    min-width: 1240px;
+    min-height: 468px;
+ padding-top: 300px;
+   
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}
+
 
 #login p {
     display: inline;
 }
 
+#loginform{
+    width:150px;
+}
+
 #login_button {
-    position: absolute;
-    display: inline;
+ position: absolute;
+    top: 135px;
+    right:100px;
+    
+    height:30px;
+    width:100px;
+    
 }
 a.button {
     -webkit-appearance: button;
@@ -80,41 +115,92 @@ nav a {
 	color: #0B231C;
 	text-decoration: none;
 	padding: 0 .5em 0 .5em;
+   
     
 }
 nav a:hover {
     color: #21c559;
 }
 nav ul{
-	padding-top: .5em;
-	text-align: center;
+    position: absolute;
+    bottom: 0;
+    margin-left: 50px; /*ändra hur du vill*/
+
 }
 
+nav li{
+	display: inline;
+    
+    
+}
+
+header{
+	background-color:white;
+    height: 200px;
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+	
+}
+
+#user_img{
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+#user_img img
+{
+  max-width:100%; 
+  max-height:100%;
+  margin:auto;
+  display:block;
+}
+#welcome {
+    color: #0B231C;
+    position: absolute;
+       top:10px;
+    right:90px;
+    
+    
+}
+#balance {
+    color: #0B231C;
+    position: absolute;
+    right:50px;
+    bottom:30px;
+    font-size: 16px;
+}
+
+
+
 #logout a{
-    color:white;
-    margin-left:1100px;
+    color:#0B231C;
     text-decoration: none;
     
 }
 
 #logout{
     position: absolute;
-    top:30px;
+    top:5px;
+    right:5px;
     
 }
 
-nav li{
-	display: inline;
-    
+#language_choice{
+    position: absolute;
+    right: 110px;
+    bottom:20px;   
 }
-
-header{
-	background-color:whitesmoke;
-    height: 3em;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-	
+#language_choice_index{
+    position: absolute;
+    right: 105px;
+    top:20px;   
+    width:100px;
+    height: 20px;
 }
 
 
@@ -124,6 +210,37 @@ td {
     background-color: white;
     color:#0B231C;
     text-align: center;  
+}
+
+
+#category li{
+	display: inline;
+}
+
+#category ul{
+    width:900px;
+    float: left;
+    position: relative;
+}
+
+#beer_cat{
+    position: absolute;
+    left: 100px;
+}
+
+#cider_cat{
+    position: absolute;
+    left: 350px;
+}
+
+#wine_cat{
+    position: absolute;
+    left: 580px;
+}
+
+#non_cat{
+    position: absolute;
+    left: 780px;
 }
 
 .drink {
@@ -174,27 +291,13 @@ td {
     
 }
 
-#table_alco{
-    background-color: #0B231C;
-    width:750px;
-    height: 400px;
-    float: left;
-    margin-left: 2em;
-}
-
-#table_soft{
-    background-color: #0B231C;
-    width:100px;
-    height: 100px;
-    float: left;
-    margin-left: 2em;
-}
 
 table{
     border-spacing: 10px;
 }
 
 #shoppingarea{
+    margin-top: 100px;
      width:200px;
     height: 350px;
      float:LEFT;  
@@ -337,6 +440,7 @@ table{
         height:50px;
         background:#0B231C;;         
         color:white;
+    
       
 }
 #saveuser_button{
@@ -353,29 +457,45 @@ table{
 }
 
 #users {
-    width: 575px;
+    width: 800px;
     height:350px;
     overflow: auto;
     background-color:darkgreen;
     float:left;
     border-radius:2px;
     border: 10px solid green;
-    
-  
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#users p{ /*gör inget än*/
-    text-align: justify; 
-    
+#users div:after {
+      content: "";
+      display: inline-block;
+      width: 100%; 
 }
+
+#users_category {
+    font-size:24px;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+#users_category:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
 
 #adduser {
-     width: 575px;
+     width: 350px;
     height:350px;
     background-color:darkgreen;
     border-radius:2px;
     border: 10px solid green;
     float:right;
+    overflow: auto;
+    padding-left: 10px;
     
 }
 

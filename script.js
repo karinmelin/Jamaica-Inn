@@ -43,8 +43,9 @@ window.location.assign('adminusers.html');
 */
 
 function checkLogin() {
+    console.log('hej');
     /*Here we get values from the login form and save APIConnect() in a variable*/
-    var loginForm = document.forms["login"];
+    var loginForm = document.forms["loginform"];
     var username = loginForm.elements["uname"].value;
     var password = loginForm.elements["psw"].value;
     
@@ -71,82 +72,169 @@ function checkLogin() {
     });
     
     //add a dictionary locally stored, for containing drinks
-    var drinkList = {};
+    //beer, cider, wine, non-alcoholic
+    var drinkList = {"data":[{
+		"namn": "Brooklyn Lager",
+		"namn2": "",
+		"sbl_price": "17.90",
+		"pub_price": "20",
+		"beer_id": "154803",
+		"count": "4",
+		"price": "16.90"
+	}, {
+		"namn": "Kiviks Williams",
+		"namn2": "Päroncider Halvtorr",
+		"sbl_price": "19.90",
+		"pub_price": "25",
+		"beer_id": "183203",
+		"count": "199",
+		"price": "18.90"
+	}, {
+		"namn": "Ecologica",
+		"namn2": "Shiraz Malbec",
+		"sbl_price": "69.00",
+		"pub_price": "75",
+		"beer_id": "651201",
+		"count": "194",
+		"price": "69.00"
+	}, {
+		"namn": "BEO",
+		"namn2": "Blood Orange Hibiscus",
+		"sbl_price": "12.90",
+		"pub_price": "15",
+		"beer_id": "197302",
+		"count": "-2",
+		"price": "12.90"
+	}, {
+		"namn": "Lapin Kulta",
+		"namn2": "",
+		"sbl_price": "13.40",
+		"pub_price": "15",
+		"beer_id": "159412",
+		"count": "1",
+		"price": "13.10"
+	}, {
+		"namn": "Somersby",
+		"namn2": "Apple Cider Organic",
+		"sbl_price": "17.20",
+		"pub_price": "20",
+		"beer_id": "183502",
+		"count": "198",
+		"price": "16.90"
+	}, {
+		"namn": "Casillero del Diablo",
+		"namn2": "Chardonnay",
+		"sbl_price": "29.00",
+		"pub_price": "35",
+		"beer_id": "207504",
+		"count": "203",
+		"price": "30.00"
+	}, {
+		"namn": "Mariestads",
+		"namn2": "Alkoholfri",
+		"sbl_price": "10.90",
+		"pub_price": "15",
+		"beer_id": "195202",
+		"count": "199",
+		"price": "10.90"
+	}, {
+		"namn": "Zeunerts",
+		"namn2": "Höga Kusten",
+		"sbl_price": "15.40",
+		"pub_price": "20",
+		"beer_id": "148001",
+		"count": "-1",
+		"price": "15.40"
+	}, {
+		"namn": "Strongbow",
+		"namn2": "",
+		"sbl_price": "15.50",
+		"pub_price": "20",
+		"beer_id": "181902",
+		"count": "188",
+		"price": "15.50"
+	}, {
+		"namn": "Viña Maipo",
+		"namn2": "Chardonnay",
+		"sbl_price": "33.00",
+		"pub_price": "35",
+		"beer_id": "667102",
+		"count": "188",
+		"price": "33.00"
+	}, {
+		"namn": "Rabarbernektar",
+		"namn2": "",
+		"sbl_price": "39.00",
+		"pub_price": "45",
+		"beer_id": "194203",
+		"count": "183",
+		"price": "39.00"
+	}, {
+		"namn": "S:t Eriks",
+		"namn2": "Oktoberfest",
+		"sbl_price": "16.90",
+		"pub_price": "20",
+		"beer_id": "1125303",
+		"count": "197",
+		"price": "16.90"
+	}, {
+		"namn": "Wyld Wood",
+		"namn2": "Organic",
+		"sbl_price": "27.90",
+		"pub_price": "30",
+		"beer_id": "186602",
+		"count": "194",
+		"price": "27.90"
+	}, {
+		"namn": "Chilcas",
+		"namn2": "Sauvignon Blanc",
+		"sbl_price": "46.00",
+		"pub_price": "50",
+		"beer_id": "669702",
+		"count": "200",
+		"price": "45.00"
+	}, {
+		"namn": "Xide Non Alco",
+		"namn2": "Lemon Dragonfruit",
+		"sbl_price": "13.90",
+		"pub_price": "15",
+		"beer_id": "192003",
+		"count": "196",
+		"price": "13.90"
+	}, {
+		"namn": "Samuel Adams",
+		"namn2": "Boston Lager",
+		"sbl_price": "17.90",
+		"pub_price": "20",
+		"beer_id": "154603",
+		"count": "195",
+		"price": "15.90"
+	}, {
+		"namn": "Somersby",
+		"namn2": "Pear Cider",
+		"sbl_price": "17.20",
+		"pub_price": "20",
+		"beer_id": "182402",
+		"count": "200",
+		"price": "16.90"
+	}, {
+		"namn": "Stoneleigh",
+		"namn2": "Riesling",
+		"sbl_price": "99.00",
+		"pub_price": "105",
+		"beer_id": "649801",
+		"count": "195",
+		"price": "104.00"
+	}, {
+		"namn": "Staropramen",
+		"namn2": "Non-Alcoholic",
+		"sbl_price": "12.40",
+		"pub_price": "15",
+		"beer_id": "193002",
+		"count": "192",
+		"price": "12.40"
+	}]};
+    
     localStorage.setItem("drinkList", JSON.stringify(drinkList));
-    chooseInitDrinks(api);
-}
-
-function chooseInitDrinks(api) {
-    /*we set the user to the values the user entered through the form*/
-    api.setUser(username, password);
-    
-    var drinkList = JSON.parse(localStorage.getItem("drinkList"));
-    
-    api.fetchBev(function(bevList) {
-        
-        var json = JSON.parse(bevList);
-        var payload = json.payload;
-        
-        //looping through drinkList
-        for (var i = 1; i < 21; i++) {
-            var n = i + 89; //Här ska index för vilken dryck väljas
-            var drink_name = payload[n].namn;
-            var drink_td = 'drink' + i + 'p';
-            
-            document.querySelector('#' + drink_td).innerHTML = drink_name;
-            
-            var drink_id = payload[n].beer_id;
-            console.log(drink_id);
-            
-            //check if non-alcoholic drink and adding a label if so
-            checkAlcohol(api, beer_id, i, n);
-            
-            //adding amount and price for each beverage
-            var amount = payload[n].count;
-            var price = payload[n].price;
-            
-            if (amount < 0) {
-                document.querySelector('#amount' + i).innerHTML = 'Refill me';
-            } else {
-                document.querySelector('#amount' + i).innerHTML = amount + ' units';
-            }
-            
-            document.querySelector('#price' + i).innerHTML = price + ':-';
-            
-        }
-        
-    });
-    
-    
-    function checkAlcohol(api, beer_id, i, n) {
-    
-        api.fetchBevType(function(bev){   
-        
-        // for testing with non-alcoholic: beer_id = 197702
-        
-        //console.log(bev);
-        var json = JSON.parse(bev);
-        var payload_type = json.payload;
-        //console.log(payload_type);
-        //console.log('innan varugrupp ' + n);
-        var beer_type = payload_type[0].varugrupp;
-                
-        var alcFree = 'Alkoholfritt, Övrigt';
-        /*console.log(beer_type);
-        console.log(alcFree);
-        console.log(n);*/
-        if (beer_type === alcFree) {
-            //console.log(i);
-            var node = document.querySelector('#drinktype' + i).innerHTML = 'non-alcoholic';
-            }
-                
-        }, beer_id);
-    }
-    
-    //alert(drinkList);
-    for (var i = 0; i < 21; i++) {
-        
-        drinkList[i] = ;
-    }
-    
+    /*chooseInitDrinks(api);*/
 }
