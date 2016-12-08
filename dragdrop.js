@@ -5,7 +5,13 @@ document.addEventListener("drop", function(event) {
     
     console.log(drink_id);
     var drink_ptag = document.getElementById(drink_id);
-    //drink_ptag.className = "inCart";
+    
+    if(!document.getElementById('sum_cart')) {
+        var div1 = document.createElement('div');
+        div1.setAttribute('id', 'sum_cart');
+        cart.appendChild(div1);
+    }
+    
     var units = drink_ptag.getElementsByClassName('amount')[0].innerHTML;
     units = parseInt(units);
     if(!isNaN(units)) {
@@ -47,6 +53,14 @@ document.addEventListener("drop", function(event) {
             cart.appendChild(para2);
             cart.appendChild(para3);
         }
+        var prices = cart.getElementsByClassName('price_cart');
+        var sum = 0;
+        for(i=0; i<prices.length; i++) {
+            sum += parseFloat(prices[i].innerHTML);
+        }
+        var x = document.getElementById('sum_cart');
+        x.innerHTML = sum;
+        cart.appendChild(x);
     }
     console.log(drink_name);
 });
