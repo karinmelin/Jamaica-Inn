@@ -33,6 +33,8 @@ function connectAPI() {
         
     });
     
+    loadDrinks(api);
+    
     api.fetchPrevDrinks(function(list) {
 
         var json = JSON.parse(list);
@@ -53,8 +55,6 @@ function connectAPI() {
         }
         
     });
-    
-    chooseInitDrinks(api);
     
     /*api.fetchBev(function(bevList) {
         
@@ -145,55 +145,46 @@ function checkAlcohol(api, beer_id, i, n) {
     cart.appendChild(node);
 };*/
 
-function chooseInitDrinks(api) {
+function loadDrinks(api) {
     /*we set the user to the values the user entered through the form*/
     api.setUser('jorass', 'jorass');
     console.log('inne i chooseinitDrinks');
     var drinkList = JSON.parse(localStorage.getItem("drinkList"));
     var data = drinkList.data;
     
-    api.fetchBev(function(bevList) {
+    for (var i = 0; i < 20; i++) {
+        console.log(data[i]);
+        var drink_name = data[i].namn + ' ' + data[i].namn2;
+        //console.log(drink_name);
         
-        /*var json = JSON.parse(bevList);
-        var payload = json.payload;*/
-        
-        //looping through drinkList
-        for (var i = 0; i < 20; i++) {
-            console.log(data[i]);
-            var drink_name = data[i].namn + ' ' + data[i].namn2;
-            console.log(drink_name);
+        var n = i+1;
+        var drink_td = 'drink' + n + 'p';
+        //console.log(drink_td);
+        //console.log(i);
             
-            var n = i+1;
-            var drink_td = 'drink' + n + 'p';
-            console.log(drink_td);
-            console.log(i);
+        document.querySelector('#' + drink_td).innerHTML = drink_name;
             
-            document.querySelector('#' + drink_td).innerHTML = drink_name;
+        var drink_id = data[i].beer_id;
+        //console.log(drink_id);
             
-            var drink_id = data[i].beer_id;
-            //console.log(drink_id);
+        //check if non-alcoholic drink and adding a label if so
+        checkAlcohol(api, drink_id, n);
             
-            //check if non-alcoholic drink and adding a label if so
-            checkAlcohol(api, drink_id, n);
+        //adding amount and price for each beverage
+        var amount = data[i].count;
+        var price = data[i].price;
             
-            //adding amount and price for each beverage
-            var amount = data[i].count;
-            var price = data[i].price;
-            
-            if (amount < 0) {
-                document.querySelector('#amount' + n).innerHTML = 'Refill me';
-            } else if (amount > 10){
-                document.querySelector('#amount' + n).innerHTML = 10 + ' units';
-            } else {
-                document.querySelector('#amount' + n).innerHTML = amount + ' units';
-            }
-            
-            document.querySelector('#price' + n).innerHTML = price + ':-';
-            
+        if (amount < 0) {
+            document.querySelector('#amount' + n).innerHTML = 'Refill me';
+        } else if (amount > 10){
+            document.querySelector('#amount' + n).innerHTML = 10 + ' units';
+        } else {
+            document.querySelector('#amount' + n).innerHTML = amount + ' units';
         }
         
-    });
-    
+        document.querySelector('#price' + n).innerHTML = price + ':-';
+            
+    }
     
     function checkAlcohol(api, beer_id, n) {
     

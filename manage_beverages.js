@@ -139,6 +139,7 @@ document.addEventListener("change", function(event) {
         }
         
         console.log(data);
+        localStorage.setItem("drinkList", JSON.stringify(drinkList));
         
     });
 });
