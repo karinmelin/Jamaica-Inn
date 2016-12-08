@@ -562,3 +562,7 @@ table{
         color:white;
   
 }
+
+.dropdown_bev select {
+    width: 150px;
+}
