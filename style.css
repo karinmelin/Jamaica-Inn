@@ -498,5 +498,67 @@ table{
     padding-left: 10px;
     
 }
+#container_view_all_beverages{
+    border-spacing: 4px;
+    height:430px;
+    width: 1240px;
+    position: relative;
+    
+}
 
+#all_beverages {
+    width: 800px;
+    height:350px;
+    overflow: auto;
+    background-color:darkgreen;
+    float:left;
+    border-radius:2px;
+    border: 10px solid green;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
+#all_beverages div:after {
+      content: "";
+      display: inline-block;
+      width: 100%; 
+}
+
+#bev_category {
+    font-size:24px;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+#bev_category:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+#addbeverage {
+     width: 350px;
+    height:350px;
+    background-color:darkgreen;
+    border-radius:2px;
+    border: 10px solid green;
+    float:right;
+    overflow: auto;
+    padding-left: 10px;
+    
+}
+
+#buttonarea_beverage{
+    height:50px;
+    width: 200px;
+    bottom:0;
+    right:0;
+    position:absolute;
+}
+#savebeverage_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+  
+}
