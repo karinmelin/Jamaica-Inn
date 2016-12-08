@@ -13,6 +13,7 @@ function manageBevPageLoaded() {
 function chooseDrinks() {
     var api = new APIConnect();
     
+    //setting the user
     var username = localStorage.localUsername;
     var password = localStorage.localUsername;
     api.setUser(username, password);
