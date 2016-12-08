@@ -12,7 +12,10 @@ function docLoaded(fn) {
 function loadAllUsers() {
 	var api = new APIConnect();
     
-	api.setUser('jorass', 'jorass');
+	var username = localStorage.localUsername;
+    var password = localStorage.localUsername;
+    
+    api.setUser(username, password);
     
     //fetch info about the user of choice
     api.fetchIOU(function(usr) {

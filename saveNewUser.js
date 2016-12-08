@@ -19,7 +19,12 @@ function saveNewUser() {
 
 function setNewUser(new_username, new_password, first_name,last_name, email, phone) {
 	var api = new APIConnect();
-	api.setUser('jorass', 'jorass');
+    
+    //setting the user
+    var username = localStorage.localUsername;
+    var password = localStorage.localUsername;
+    api.setUser(username, password);
+    
 	api.setNewUser(function(list) {
 		
 		},new_username, new_password, first_name, last_name, email, phone); 

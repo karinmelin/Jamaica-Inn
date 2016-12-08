@@ -11,8 +11,13 @@ function docLoaded(fn) {
 
 function loadAllBeverages() {
 	var api = new APIConnect();
-	api.setUser('jorass', 'jorass');
-	api.fetchBev(function(list) {
+    
+    //setting the user
+    var username = localStorage.localUsername;
+    var password = localStorage.localUsername;
+    api.setUser(username, password);
+	
+    api.fetchBev(function(list) {
 
 		var json = JSON.parse(list);
         var payload = json.payload;

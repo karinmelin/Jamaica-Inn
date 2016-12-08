@@ -19,8 +19,35 @@ function connectAPI() {
     
     var api = new APIConnect();
     
-    //setting the user to jorass for building url
-    api.setUser('jorass', 'jorass');
+    /*//setting the user to jorass for building url
+    var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    console.log(currentUser);
+    var currentUserFirstName = info[0].first_name;
+    console.log(currentUserFirstName);
+    var currentUserUsername = "";
+    
+    api.fetchAllIOU(function(list) {
+        
+        var json = JSON.parse(usr);
+        var payload = json.payload;
+        
+        for (var i = 0; i < payload.length; i++) {
+            
+            var payload_firstName = payload[i].first_name;
+            console.log(payload_firstName);
+            
+            if (currentUserFirstName == payload_firstName) {
+                currentUserUsername = payload[i].username;
+                console.log(currentUserUsername);
+                break;
+            }
+        }
+    });*/
+    
+    var username = localStorage.localUsername;
+    var password = localStorage.localUsername;
+    
+    api.setUser(username, password);
     
     //fetch info about the user of choice
     api.fetchIOU(function(usr) {
@@ -42,8 +69,12 @@ function connectAPI() {
     
 function loadDrinks(api) {
     /*we set the user to the values the user entered through the form*/
-    api.setUser('jorass', 'jorass');
-    console.log('inne i chooseinitDrinks');
+    var username = localStorage.localUsername;
+    var password = localStorage.localUsername;
+    
+    api.setUser(username, password);
+    //console.log('inne i chooseinitDrinks');
+    
     var drinkList = JSON.parse(localStorage.getItem("drinkList"));
     var data = drinkList.data;
     

@@ -11,7 +11,9 @@ function connectToAPI() {
 
     /*var btn = document.getElementById("staffBtn");*/
     
-    api.setUser('jorass', 'jorass');
+    var username = localStorage.localUsername;
+    var password = localStorage.localUsername;
+    api.setUser(username, password);
 
     btn.addEventListener('click', function() { checkLogin(api); });
     
@@ -43,7 +45,6 @@ window.location.assign('adminusers.html');
 */
 
 function checkLogin() {
-    console.log('hej');
     /*Here we get values from the login form and save APIConnect() in a variable*/
     var loginForm = document.forms["loginform"];
     var username = loginForm.elements["uname"].value;
@@ -51,12 +52,13 @@ function checkLogin() {
     
     var api = new APIConnect();
 
-    /*we set the user to the values the user entered through the form*/
+    /*set the user to the values the user entered through the form*/
     api.setUser(username, password);
 
 	/*FetchIOU and store username and password in localStorage*/
     api.fetchIOU(function(data){
         var json = JSON.parse(data);
+        var payload = json.payload;
 
         if (json.type === 'error') {
 		alert('Wrong username or password. Please try again.');          
@@ -69,10 +71,17 @@ function checkLogin() {
             localStorage.localPassword = password; 
             localStorage.localUsername = username;
 		}
+    
+        /*//setting the logged in user as the current user and store it locally
+        alert(payload[0].first_name);
+        
+        var currentUser = {"info":[{"user_id": payload[0].user_id, "first_name": payload[0].first_name, "last_name": payload[0].last_name, "assets": payload[0].assets}]};
+        
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));*/
     });
     
-    //add a dictionary locally stored, for containing drinks
-    //beer, cider, wine, non-alcoholic
+    /*add a dictionary locally stored, for containing drinks
+    beer, cider, wine, non-alcoholic*/
     var drinkList = {"data":[{
 		"namn": "Brooklyn Lager",
 		"namn2": "",
@@ -236,5 +245,4 @@ function checkLogin() {
 	}]};
     
     localStorage.setItem("drinkList", JSON.stringify(drinkList));
-    /*chooseInitDrinks(api);*/
 }
