@@ -24,7 +24,7 @@ function loadAllUsers() {
             var username = payload[i+13].username;
 			var phone = payload[i+13].phone;
 
-			para = document.createElement("p");
+			para = document.createElement("div");
 			//para.onclick = function (e) { alert('test') };
 			
 			var node = document.createTextNode(first_name + ' ' +last_name + ' ' + email + ' ' + username + ' ' + phone);

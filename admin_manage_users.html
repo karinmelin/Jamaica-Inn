@@ -29,12 +29,18 @@
                </ul>
             </nav>
             <div id = "personal_info">
-                <div id = "welcome"><p>Welcome <span id="headerName"></span></p></div>
-                <div id = "user_img"> <img src="user.png"> </div>
-                <div id ="balance"><p>Balance:  <span id="assets"></span>:-</p></div>
                 <div id = "logout">
                     <a href="index.html">Log out</a>
                 </div>
+                
+                <div id = "welcome"><p>Welcome <span id="headerName"></span></p></div>
+                <div id = "user_img"> <img src="user.png"> </div>
+                <div id ="balance"><p>Balance:  <span id="assets"></span>:-</p></div>
+                <select id="language_choice">
+                            <option>English</option>
+                            <option>Svenska</option>
+                </select> 
+                
             </div>
         </header>
 
@@ -42,8 +48,10 @@
       
         <div id = "container_user">
             <div id="users">
-                <h3>&nbsp&nbspAll users</h3> 
-				<b>&nbsp Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp E-mail &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Username &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Phone</b>
+                <h3>All users</h3> 
+            
+				<div id = "users_category">Name E-mail Username Phone</div>
+                <br>
             </div>
 			
             <div id= "adduser">

@@ -26,12 +26,18 @@
                </ul>
             </nav>
             <div id = "personal_info">
-                <div id = "welcome"><p>Welcome <span id="headerName"></span></p></div>
-                <div id = "user_img"> <img src="user.png"> </div>
-                <div id ="balance"><p>Balance:  <span id="assets"></span>:-</p></div>
                 <div id = "logout">
                     <a href="index.html">Log out</a>
                 </div>
+                
+                <div id = "welcome"><p>Welcome <span id="headerName"></span></p></div>
+                <div id = "user_img"> <img src="user.png"> </div>
+                <div id ="balance"><p>Balance:  <span id="assets"></span>:-</p></div>
+                <select id="language_choice">
+                            <option>English</option>
+                            <option>Svenska</option>
+                </select> 
+                
             </div>
         </header>
         
@@ -41,6 +47,13 @@
             
             <div id= "table_all" >
                 <table id = "All beverages">
+                    <div id = "category">
+                     <ul>
+                        <li id = "beer_cat">Beer</li>
+                        <li id = "cider_cat">Cider</li>
+                        <li id = "wine_cat">Wine</li>
+                        <li id = "non_cat">Non-Alcoholic</li>
+                            </ul></div>
                     <tr>
                         <td>
                            <div class = "dropdown_bev"> 

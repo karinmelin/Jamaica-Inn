@@ -190,6 +190,14 @@ header{
     
 }
 
+#language_choice{
+    position: absolute;
+    right: 110px;
+    bottom:20px;
+
+    
+}
+
 
 td {
     border: 1px solid #0B231C;
@@ -451,16 +459,28 @@ table{
     float:left;
     border-radius:2px;
     border: 10px solid green;
-    
-  
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#users p{ /*gör inget än*/
-    text-align: justify; 
-    font-size:18px;
-    padding-left: 10px;
-    
+#users:after {
+      content: "";
+      display: inline-block;
+      width: 100%; 
 }
+
+#users_category {
+    font-size:24px;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+#users_category:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
 
 #adduser {
      width: 575px;
