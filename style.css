@@ -452,7 +452,7 @@ table{
 }
 
 #users {
-    width: 575px;
+    width: 800px;
     height:350px;
     overflow: auto;
     background-color:darkgreen;
@@ -464,7 +464,7 @@ table{
     padding-right: 10px;
 }
 
-#users:after {
+#users div:after {
       content: "";
       display: inline-block;
       width: 100%; 
@@ -483,7 +483,7 @@ table{
     }
 
 #adduser {
-     width: 575px;
+     width: 350px;
     height:350px;
     background-color:darkgreen;
     border-radius:2px;
