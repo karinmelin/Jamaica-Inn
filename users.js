@@ -11,7 +11,23 @@ function docLoaded(fn) {
 
 function loadAllUsers() {
 	var api = new APIConnect();
+    
 	api.setUser('jorass', 'jorass');
+    
+    //fetch info about the user of choice
+    api.fetchIOU(function(usr) {
+        
+        var json = JSON.parse(usr);
+        var payload = json.payload;
+        console.log(payload);
+        
+        var assets = payload[0].assets;
+        var name = payload[0].first_name;
+        document.querySelector('#assets').innerHTML = assets;
+        document.querySelector('#headerName').innerHTML = name;
+        
+    });
+    
 	api.fetchUsers(function(list) {
 
 		var json = JSON.parse(list);
