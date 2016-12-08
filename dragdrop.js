@@ -6,22 +6,48 @@ document.addEventListener("drop", function(event) {
     console.log(drink_id);
     var drink_ptag = document.getElementById(drink_id);
     //drink_ptag.className = "inCart";
-    var drink_name = drink_ptag.getElementsByTagName('p')[0].innerHTML;
-    var price = drink_ptag.getElementsByClassName('price')[0].innerHTML;
-    
-    var namenode = document.createTextNode(drink_name);
-    var pricenode = document.createTextNode(price);
-    var para1 = document.createElement("p");
-    var para2 = document.createElement("p");
-    para1.setAttribute('class', 'drink_cart');
-    
-    
-    para2.setAttribute('class', 'price_cart');
-    
-    para1.appendChild(namenode);
-    para2.appendChild(pricenode)
-    cart.appendChild(para1); //Bör p-taggar läggas i div?
-    cart.appendChild(para2);
+    var units = drink_ptag.getElementsByClassName('amount')[0].innerHTML;
+    units = parseInt(units);
+    if(!isNaN(units)) {
+        var price = drink_ptag.getElementsByClassName('price')[0].innerHTML;
+        price = parseFloat(price);
+        
+        var drink_name = drink_ptag.getElementsByTagName('p')[0].innerHTML;
+        var inCart = cart.getElementsByClassName('drink_cart');
+        var amount = 1;
+        
+        var itsHere;
+        for(var i=0; i<inCart.length; i++) {
+            if(inCart[i].innerHTML == drink_name) {
+                itsHere = true;
+                var cartAmount = cart.getElementsByClassName('amount_cart');
+                var cartPrice = cart.getElementsByClassName('price_cart');
+                amount += parseInt(cartAmount[i].innerHTML);
+                if(amount <= units) {
+                    cartAmount[i].innerHTML = amount;
+                    cartPrice[i].innerHTML = amount*price;
+                }
+                break;
+            }
+        }
+        if(!itsHere) {
+            var namenode = document.createTextNode(drink_name);
+            var amountnode = document.createTextNode(amount);
+            var pricenode = document.createTextNode(price);
+            var para1 = document.createElement("p"); //Bör p-taggar läggas i div?
+            var para2 = document.createElement("p");
+            var para3 = document.createElement("p");
+            para1.setAttribute('class', 'drink_cart');
+            para2.setAttribute('class', 'amount_cart');
+            para3.setAttribute('class', 'price_cart');
+            para1.appendChild(namenode);
+            para2.appendChild(amountnode);
+            para3.appendChild(pricenode);
+            cart.appendChild(para1);
+            cart.appendChild(para2);
+            cart.appendChild(para3);
+        }
+    }
     console.log(drink_name);
 });
 
@@ -67,6 +93,5 @@ function clearCart() {
 }
 
 /*function clearDrink(elementID) {
-
     document.getElementById(elementID).innerHTML = "";
 }*/
