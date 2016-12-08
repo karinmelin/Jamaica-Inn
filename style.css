@@ -170,9 +170,11 @@ header{
 #userBalance {
     color: #0B231C;
     position: absolute;
-    right:50px;
-    bottom:30px;
+    right:0px;
+    bottom:40px;
     font-size: 16px;
+    height:40px;
+    width: 200px;
 }
 
 
@@ -309,8 +311,13 @@ table{
     background-color: white;
     width:200px;
     height: 300px; 
-    vertical-align: text-top;
     overflow:auto;
+    
+}
+.shopping_cart p{
+   display: inline;
+    font-size: 14px;
+    text-align: left;
     
 }
 
