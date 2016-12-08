@@ -7,8 +7,9 @@
         <script src="dragdrop.js"></script>
         <script src="beverages.js"></script>
         <script src="script.js"></script>
+        <script src="history.js"></script>
         <script>
-            docLoaded(bevPageLoaded);
+            docLoaded(loadHistory)
         </script>
     </head>
     <div id = "wrapper">
@@ -28,9 +29,9 @@
                     <a href="index.html">Log out</a>
                 </div>
                 
-                <div id = "welcome"><p>Welcome <span id="headerName"></span></p></div>
-                <div id = "user_img"> <img src="user.png"> </div>
-                <div id ="balance"><p>Balance:  <span id="assets"></span>:-</p></div>
+                <div id="welcome"><p>Welcome <span id="headerName"></span></p></div>
+                <div id="user_img"> <img src="user.png"> </div>
+                <div id="userBalance"><p>Balance:  <span id="assets"></span>:-</p></div>
                 <select id="language_choice">
                             <option>English</option>
                             <option>Svenska</option>

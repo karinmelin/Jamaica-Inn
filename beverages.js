@@ -9,12 +9,14 @@ function docLoaded(fn) {
 
 //go to connectAPI to fetch info from API
 function bevPageLoaded() {
-    document.getElementById("clear_button").addEventListener("click", clearCart);
+    //document.getElementById("clear_button").addEventListener("click", clearCart);
 	connectAPI();
 }
 
 // connects to the server and fetching the info needed for the beverages
 function connectAPI() {
+    document.getElementById("clear_button").addEventListener("click", clearCart);
+    
     var api = new APIConnect();
     
     //setting the user to jorass for building url
@@ -25,6 +27,7 @@ function connectAPI() {
         
         var json = JSON.parse(usr);
         var payload = json.payload;
+        console.log(payload);
         
         var assets = payload[0].assets;
         var name = payload[0].first_name;
@@ -34,27 +37,71 @@ function connectAPI() {
     });
     
     loadDrinks(api);
-    
-    api.fetchPrevDrinks(function(list) {
+}
 
-        var json = JSON.parse(list);
-        var payload = json.payload;
+    
+function loadDrinks(api) {
+    /*we set the user to the values the user entered through the form*/
+    api.setUser('jorass', 'jorass');
+    console.log('inne i chooseinitDrinks');
+    var drinkList = JSON.parse(localStorage.getItem("drinkList"));
+    var data = drinkList.data;
+    
+    for (var i = 0; i < 20; i++) {
+        //console.log(data[i]);
+        var drink_name = data[i].namn + ' ' + data[i].namn2;
+        //console.log(drink_name);
         
-        for (var i = 0; i < payload.length; i++) {
+        var n = i+1;
+        var drink_td = 'drink' + n + 'p';
+        //console.log(drink_td);
+        //console.log(i);
             
-            var drink = payload[i+2].namn;
-            var timeStamp = payload[i+2].timestamp;
-            var price = payload[i+2].price;
+        document.querySelector('#' + drink_td).innerHTML = drink_name;
             
-            var para = document.createElement("p");
-            var node = document.createTextNode(timeStamp + ' ' + drink + ' ' + price + ':-');
-            para.appendChild(node);
+        var drink_id = data[i].beer_id;
+        //console.log(drink_id);
             
-            var prevDrink = document.getElementById("prevDrinks");
-            prevDrink.appendChild(para);
+        //check if non-alcoholic drink and adding a label if so
+        checkAlcohol(api, drink_id, n);
+            
+        //adding amount and price for each beverage
+        var amount = data[i].count;
+        var price = data[i].price;
+            
+        if (amount < 0) {
+            document.querySelector('#amount' + n).innerHTML = 'Refill me';
+        } else if (amount > 10){
+            document.querySelector('#amount' + n).innerHTML = 10 + ' units';
+        } else {
+            document.querySelector('#amount' + n).innerHTML = amount + ' units';
         }
         
-    });
+        document.querySelector('#price' + n).innerHTML = price + ':-';
+            
+    }
+}
+    
+function checkAlcohol(api, beer_id, n) {
+    
+    api.fetchBevType(function(bev){   
+    
+    // for testing with non-alcoholic: beer_id = 197702
+        
+    //console.log(bev);
+    var json = JSON.parse(bev);
+    var payload_type = json.payload;
+    //console.log(payload_type);
+    //console.log('innan varugrupp ' + n);
+    var beer_type = payload_type[0].varugrupp;
+            
+    if (beer_type === 'Alkoholfritt, Övrigt'|| beer_type === 'Alkoholfritt, Öl' || beer_type === 'Alkoholfritt, Must') {
+        //console.log(i);
+        var node = document.querySelector('#drinktype' + n).innerHTML = 'non-alcoholic';
+        }
+                
+    }, beer_id);
+}
     
     /*api.fetchBev(function(bevList) {
         
@@ -130,7 +177,6 @@ function checkAlcohol(api, beer_id, i, n) {
         
     });*/
     
-}
 
 /*function addToCart() {
     var cart = document.getElementById('shop');
@@ -145,72 +191,9 @@ function checkAlcohol(api, beer_id, i, n) {
     cart.appendChild(node);
 };*/
 
-function loadDrinks(api) {
-    /*we set the user to the values the user entered through the form*/
-    api.setUser('jorass', 'jorass');
-    console.log('inne i chooseinitDrinks');
-    var drinkList = JSON.parse(localStorage.getItem("drinkList"));
-    var data = drinkList.data;
-    
-    for (var i = 0; i < 20; i++) {
-        console.log(data[i]);
-        var drink_name = data[i].namn + ' ' + data[i].namn2;
-        //console.log(drink_name);
-        
-        var n = i+1;
-        var drink_td = 'drink' + n + 'p';
-        //console.log(drink_td);
-        //console.log(i);
-            
-        document.querySelector('#' + drink_td).innerHTML = drink_name;
-            
-        var drink_id = data[i].beer_id;
-        //console.log(drink_id);
-            
-        //check if non-alcoholic drink and adding a label if so
-        checkAlcohol(api, drink_id, n);
-            
-        //adding amount and price for each beverage
-        var amount = data[i].count;
-        var price = data[i].price;
-            
-        if (amount < 0) {
-            document.querySelector('#amount' + n).innerHTML = 'Refill me';
-        } else if (amount > 10){
-            document.querySelector('#amount' + n).innerHTML = 10 + ' units';
-        } else {
-            document.querySelector('#amount' + n).innerHTML = amount + ' units';
-        }
-        
-        document.querySelector('#price' + n).innerHTML = price + ':-';
-            
-    }
-    
-    function checkAlcohol(api, beer_id, n) {
-    
-        api.fetchBevType(function(bev){   
-        
-        // for testing with non-alcoholic: beer_id = 197702
-        
-        //console.log(bev);
-        var json = JSON.parse(bev);
-        var payload_type = json.payload;
-        //console.log(payload_type);
-        //console.log('innan varugrupp ' + n);
-        var beer_type = payload_type[0].varugrupp;
-                
-        if (beer_type === 'Alkoholfritt, Övrigt'|| beer_type === 'Alkoholfritt, Öl' || beer_type === 'Alkoholfritt, Must') {
-            //console.log(i);
-            var node = document.querySelector('#drinktype' + n).innerHTML = 'non-alcoholic';
-            }
-                
-        }, beer_id);
-    }
     
     //alert(drinkList);
     /*for (var i = 0; i < 21; i++) {
         
         drinkList[i] = ;
     }*/
-    
-}
