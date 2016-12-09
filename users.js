@@ -1,6 +1,6 @@
 /* 
 Script for loading all users from the API into
-the 'Manage users' page for the admin to view.
+the Manage users and Admin manage balance for the admin to view.
 
 Author: Filip Törnqvist 2016
 */
@@ -66,4 +66,31 @@ function loadAllUsers() {
 			userList.appendChild(para);
         }
     });
+}
+/*Loads all users and their balance into admin_manage_balance.html */
+function loadAllUsersAndBalance() {
+        checkLang();
+	var api = new APIConnect();
+	var username = localStorage.localUsername;
+    var password = localStorage.localUsername;
+    api.setUser(username, password);
+	api.fetchAllIOU(function(list) {
+
+		var json = JSON.parse(list);
+        var payload = json.payload;
+        
+        var t = payload.length-13;
+        for (var i = 0; i < t; i++) {
+            var username = payload[i+13].username;
+			var assets = payload[i+13].assets;
+			para = document.createElement("div");
+			
+			var node = document.createTextNode(username + ' ' + assets);
+			para.appendChild(node);
+
+			var userList = document.getElementById("users_balance");
+			userList.appendChild(para);
+        }
+    });
+		
 }
