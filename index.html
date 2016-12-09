@@ -5,32 +5,34 @@
         <link href="style2.css" rel="stylesheet">
         <script src="api.js"></script>
         <script src="script.js"></script>
-		<title>Jamaican inn</title>
+        <script src="translation.js"></script>
+		<title>Jamaica Inn</title>
+        <!--<script>checkLang();</script>-->
     </head>
     
     <body>
         <div id = "wrapper_index">
          
         <div id="login">
-            <select id="language_choice_index">
-                            <option>English</option>
-                            <option>Svenska</option>
-                </select> 
-		<p id = "jamaican">Jamaican </p> <br> <p id = "inn">inn </p>
+                <select id="language_choice_index">
+				    <option id="en" value="en">English</option>
+                    <option id="sv" value="sv">Svenska</option>
+                </select>  
+		<p id = "jamaican">Jamaica </p> <br> <p id = "inn">inn </p>
             <form name="loginform">
                 
                 <div class = "login_div">
-                    <label> Username</label>   
-                    <input type="text" name="uname" required="required" placeholder="Username">
+                    <label class="transl" id="username_label_index"> Username</label>   
+                    <input type="text"  class="transl" id="username_placeholder_index" name="uname" required="required" placeholder="Username">
                 </div>
               
                 
                 <div class = "login_div">
-                    <label> Password</label> 
-                    <input type="password" name="psw" required="required" placeholder="Password"> 
+                    <label class="transl" id="password_label_index"> Password</label> 
+                    <input type="password" class="transl" id="password_placeholder_index" name="psw" required="required" placeholder="Password"> 
                 </div>
             </form>
-            <button id = "login_button" type="submit" value="Send" onclick="checkLogin();">Log in</button> 
+            <button class="transl" id = "login_button" type="submit" value="Send" onclick="checkLogin();">Log in</button> 
 
         </div>
        
