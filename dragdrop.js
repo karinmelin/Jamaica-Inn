@@ -6,11 +6,11 @@ document.addEventListener("drop", function(event) {
     console.log(drink_id);
     var drink_ptag = document.getElementById(drink_id);
     
-    if(!document.getElementById('sum_cart')) {
+    /*if(!document.getElementById('sum_cart')) {
         var div1 = document.createElement('div');
         div1.setAttribute('id', 'sum_cart');
         cart.appendChild(div1);
-    }
+    }*/
     
     var units = drink_ptag.getElementsByClassName('amount')[0].innerHTML;
     units = parseInt(units);
@@ -58,9 +58,10 @@ document.addEventListener("drop", function(event) {
         for(i=0; i<prices.length; i++) {
             sum += parseFloat(prices[i].innerHTML);
         }
-        var x = document.getElementById('sum_cart');
-        x.innerHTML = sum;
-        cart.appendChild(x);
+        //var x = document.getElementById('totalamount').innerHTML; //added .innerHTML, changed id
+        document.getElementById('totalamount').innerHTML = "Total: " + sum + ":-";
+        //x.innerHTML = sum;
+        //cart.appendChild(x);
     }
     console.log(drink_name);
 });
@@ -90,20 +91,26 @@ function drop(dropevent) {
 }
 
 function clearCart() {
-    //ClearDrink('drink_in_cart');
-    
-    /*var drinkCopy = document.getElementsByClassName("inCart");
-    /* ----- här ska du få tag i alla med klassen inCart och ta bort dem ---*/
-    
-    //drinkCopy.remove;
-    /*console.log(drinkCopy);
-    console.log(drinkCopy[0]);
-    while(drinkCopy[0]) {
-        drinkCopy[0].parentNode.removeChild(drinkCopy[0]);
-        console.log('går in här');
-    }*/
-    
     document.getElementById("shop").innerHTML = "";
+    document.getElementById('totalamount').innerHTML = "Total:";
+}
+
+function purchase() {
+    var cart = document.getElementById('shop');
+    var inCart = cart.getElementsByClassName('drink_cart');
+    var cartAmount = cart.getElementsByClassName('amount_cart');
+    var sum = document.getElementById('sum_cart');
+    
+    var drinkList = JSON.parse(localStorage.getItem('drinkList'));
+    var drinkData = drinkList.data;
+    
+    if(sum.innerHTML) {
+        for(i=0; i<inCart.length; i++) {
+            for(j=0; j<20; j++) {
+                
+            }
+        }
+    }
 }
 
 /*function clearDrink(elementID) {
