@@ -183,14 +183,14 @@ header{
     color: #0B231C;
     position: absolute;
     top:10px;
-    right:90px;
+    right:180px;
     
     
 }
 #userBalance {
     color: #0B231C;
     position: absolute;
-    right:0px;
+    right:-25px;
     bottom:40px;
     font-size: 16px;
     height:40px;
@@ -207,15 +207,15 @@ header{
 
 #logout{
     position: absolute;
-    top:5px;
-    right:5px;
+    top:10px;
+    right:10px;
     
 }
 
 #language_choice{
     position: absolute;
-    right: 110px;
-    bottom:20px;   
+    right:  10px;
+    bottom:10px;   
 }
 #language_choice_index{
     position: absolute;
