@@ -21,7 +21,7 @@
             
         <header>
             
-	       <nav>
+	        <nav>
                <div id = "logo_img"> <img src="logo.png"> </div>
 	           <ul>
                         <li><a href="admin_allbeverages.html" id="all_beverages" class = "transl" >All Beverages</a></li>
@@ -67,30 +67,32 @@
             <div id="users">
                 <h3 class="transl" id="all_users">All users</h3> 
             
-				<div class="transl" id = "users_category">Username Firstname Lastname Email Phone</div>
+				<div id = "users_category">Username Fname Lname E-mail Phone</div>
                 <br>
             </div>
 			
             <div id= "adduser">
-                <h3 class="transl" id="edit_user"> Edit user</h3>
+                <h3 class="transl" id="edit_user"> Add user</h3>
                 <form name="adduserform">
-                    <p class="transl" id="username">Username</p>
-                    <input type="text" class="transl" id="uname" required="required" placeholder="Username">
                     <p class="transl" id="first_name">First name</p>
                     <input type="text" class="transl" id="fname" required="required" placeholder="First name">
                     <p class="transl" id="last_name">Last name</p>
                     <input type="text" class="transl" id="lname" required="required" placeholder="Last name">
+                    <p class="transl" id="username">Username</p>
+                    <input type="text" class="transl" id="uname" required="required" placeholder="Username">
                     <p class="transl" id="password">Password</p>
                     <input type="password" class="transl" id="psw" required="required" placeholder="Password">
                     <p class="transl" id="email">Email</p>
-                    <input type="text" class="transl" id="emailplaceholder" required="required" placeholder="Email">
+                    <input type="text" class="transl" id="email" required="required" placeholder="Email">
 				    <p class="transl" id="phone">Phone number</p>
-                    <input type="text" class="transl" id="phoneplaceholder" required="required" placeholder="Phone">
+                    <input type="text" class="transl" id="phone" required="required" placeholder="Phone">
+                    <p class="transl" id="balance">Balance</p>
+                    <input type="text" class="transl" id="balance" required="required" placeholder="Balance">
                 </form>
             </div>
             
             <div id="buttonarea_users">
-                <button class="transl" id = "saveuser_button" type="button" value="Add" onclick="saveNewUser();">Save user</button>
+                <button class="transl" id = "saveuser_button" type="button" value="Add" onclick="saveNewUser();">Add user</button>
             
             </div>
         </div>

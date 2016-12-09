@@ -20,13 +20,27 @@
         <div id = "wrapper">
             
         <header>
-	       <nav>
+	        <nav>
                <div id = "logo_img"> <img src="logo.png"> </div>
 	           <ul>
-                   <li><a href="admin_allbeverages.html" class="transl" id="all_beverages">All Beverages</a></li>
-                   <li><a href="admin_history.html" class="transl" id="previously_bought">Previously Bought</a></li>
-                   <li><a href="admin_manage_users.html" class = "current transl" id="manage_users">Manage Users</a></li>
-                   <li><a href="admin_manage_beverages.html" class="transl" id="manage_beverages">Manage Beverages</a></li>
+                        <li><a href="admin_allbeverages.html" id="all_beverages" class = "transl" >All Beverages</a></li>
+                        <li><a href="admin_history.html" id="admin_history" class = "transl">Previously Bought</a></li>
+                   
+                        <div class="dropdown_menu">
+                            <button class="dropbtn current2 transl" id="manage_users">Manage Users</button>
+                                <div class="dropdown-content">
+                                    <a href="admin_add_users.html" id="add_users" class = "transl" >Add Users</a>
+                                    <a href="admin_manage_users.html" id="edit_users" class = "transl" >Edit Users</a>
+                                    <a href="admin_manage_balance.html" id="edit_balance" class = "transl" >Edit Balance</a>
+                                  </div>
+                                </div>
+                        <div class="dropdown_menu">
+                            <button class="dropbtn transl" id="manage_beverages">Manage Beverages</button>
+                                <div class="dropdown-content">
+                                    <a href="admin_manage_beverages.html" id="edit_slots" class = "transl">Edit Slots</a>
+                                    <a href="admin_view_beverages.html" id="edit_stock_price" class = "transl">Edit Stock/Price</a>
+                            </div>
+                            </div>
                </ul>
             </nav>
             <div id = "personal_info">
@@ -43,19 +57,22 @@
                 </select> 
                 
             </div>
+            
+            
+            
         </header>
 
         <br>
       
         <div id = "container_user">
-            <div id="users_balance">
+            <div id="users">
                 <h3 class="transl" id="all_users">All users</h3> 
             
 				<div id = "users_balance_category">Username Balance</div>
-                <br>
-            </div>
+                    <br>
+                </div>
 			
-            <div id= "adduser">
+            <div id= "edituser">
                 <h3 class="transl" id="edit_user_balance"> Edit User Balance</h3>
                 <form name="adduserform">
 					<p class="transl" id="username_p">Username</p>

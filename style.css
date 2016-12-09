@@ -129,6 +129,9 @@ a.button {
 nav a.current  {
 	color:#009933;
 }
+.current2  {
+	color:#009933;
+}
 
 nav a {
 	font-size: 1.3em;
@@ -478,6 +481,14 @@ table{
     
 }
 
+#savebalance_button{
+         width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+		margin-left: 1040px;
+}
+
 #container_user h2 {
     padding-left: 10px;
 }
@@ -517,6 +528,17 @@ table{
 }
 
 #adduser {
+    width: 350px;
+    height:350px;
+    background-color:darkgreen;
+    border-radius:2px;
+    border: 10px solid green;
+    float:right;
+    overflow: auto;
+    padding-left: 10px;
+}
+
+#edituser {
     width: 350px;
     height:350px;
     background-color:darkgreen;
