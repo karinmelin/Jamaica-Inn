@@ -1,3 +1,4 @@
+/* check if page loaded */
 function docLoaded(fn) {
     if (document.readyState !== 'loading') {
         fn();
@@ -5,18 +6,17 @@ function docLoaded(fn) {
 		document.addEventListener('DOMContentLoaded', fn);
 	}
 }
-
+/* Displays all beverages. Uses api functions fetchIOU and fetchPrevDrinks from api.js.
+This function is called from admin_history.js when loaded. */
 function loadHistory() {
     var api = new APIConnect();
-    
-    //setting the user to jorass for building url
     var username = localStorage.localUsername;
     var password = localStorage.localUsername;
     api.setUser(username, password);
     
-    //fetch info about the user of choice
+	 /* from the API, fetching the name and assets
+    for the user for display in header */
     api.fetchIOU(function(usr) {
-        
         var json = JSON.parse(usr);
         var payload = json.payload;
         console.log(payload);
@@ -28,8 +28,8 @@ function loadHistory() {
         
     });
     
+	/* This is the API function that displays previously bought drinks */
     api.fetchPrevDrinks(function(list) {
-
         var json = JSON.parse(list);
         var payload = json.payload;
         
