@@ -9,6 +9,7 @@ function docLoaded(fn) {
 /* Displays all beverages. Uses api functions fetchIOU and fetchPrevDrinks from api.js.
 This function is called from admin_history.js when loaded. */
 function loadHistory() {
+    checkLang();
     var api = new APIConnect();
     var username = localStorage.localUsername;
     var password = localStorage.localUsername;
@@ -34,7 +35,7 @@ function loadHistory() {
         var json = JSON.parse(list);
         var payload = json.payload;
         
-        for (var i = 0; i < payload.length; i++) {
+        for (var i = 0; i < payload.length-2; i++) {
             
             var drink = payload[i+2].namn;
             var timeStamp = payload[i+2].timestamp;
