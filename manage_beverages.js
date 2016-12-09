@@ -16,6 +16,7 @@ function docLoaded(fn) {
 
 /* when page loaded go through to the next function */
 function manageBevPageLoaded() {
+	checkLang();
     chooseDrinks();
 }
 

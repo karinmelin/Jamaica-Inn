@@ -7,6 +7,7 @@
         <script src="beverages.js"></script>
         <script src="dragdrop.js"></script>
         <script src="manage_beverages.js"></script>
+		<script src="translation.js"></script>
         <script>
             docLoaded(manageBevPageLoaded);
         </script>
@@ -19,37 +20,37 @@
 	       <nav>
                <div id = "logo_img"> <img src="logo.png"> </div>
 	           <ul>
-                        <li><a href="admin_allbeverages.html" >All Beverages</a></li>
-                        <li><a href="admin_history.html">Previously Bought</a></li>
+                        <li><a href="admin_allbeverages.html" id="all_beverages" class = "transl" >All Beverages</a></li>
+                        <li><a href="admin_history.html" id="admin_history" class = "transl">Previously Bought</a></li>
                    
                         <div class="dropdown_menu">
-                            <button class="dropbtn">Manage Users</button>
+                            <button class="dropbtn current transl" id="manage_users">Manage Users</button>
                                 <div class="dropdown-content">
-                                    <a href="admin_add_users.html" >Add Users</a>
-                                    <a href="admin_manage_users.html" >Edit Users</a>
-                                    <a href="admin_manage_balance.html" >Edit Balance</a>
+                                    <a href="admin_add_users.html" id="add_users" class = "transl" >Add Users</a>
+                                    <a href="admin_manage_users.html" id="edit_users" class = "transl" >Edit Users</a>
+                                    <a href="admin_manage_balance.html" id="edit_balance" class = "transl" >Edit Balance</a>
                                   </div>
                                 </div>
                         <div class="dropdown_menu">
-                            <button class="dropbtn">Manage Beverages</button>
+                            <button class="dropbtn current transl" id="manage_beverages">Manage Beverages</button>
                                 <div class="dropdown-content">
-                                    <a href="admin_manage_beverages.html" class = "current">Edit Slots</a>
-                                    <a href="admin_view_beverages.html" class = "current">Edit Stock/Price</a>
+                                    <a href="admin_manage_beverages.html" id="edit_slots" class = "current transl">Edit Slots</a>
+                                    <a href="admin_view_beverages.html" id="edit_stock_price" class = "current transl">Edit Stock/Price</a>
                             </div>
                             </div>
                </ul>
             </nav>
             <div id = "personal_info">
                 <div id = "logout">
-                    <a href="index.html">Log out</a>
+                    <a href="index.html" class = "transl" id="log_out">Log out</a>
                 </div>
                 
-                <div id = "welcome"><p>Welcome <span id="headerName"></span></p></div>
+                <div id = "welcome"><p class = "transl" id="welcome">Welcome <span id="headerName"></span></p></div>
                 <div id = "user_img"> <img src="user.png"> </div>
-                <div id ="userBalance"><p>Balance:  <span id="assets"></span>:-</p></div>
+                <div id ="userBalance"><p class = "transl" id="Balance">Balance:  <span id="assets"></span>:-</p></div>
                 <select id="language_choice">
-                            <option>English</option>
-                            <option>Svenska</option>
+				    <option id="en" value="en">English</option>
+                    <option id="sv" value="sv">Svenska</option>
                 </select> 
                 
             </div>
@@ -62,12 +63,12 @@
             <div id= "table_all" >
                 <table id = "All beverages">
                     <div id = "category">
-                        <p>Choose which beverages you want in the vending machine</p>
+                        <p class = "transl" id="beverage_choose">Choose which beverages you want in the vending machine</p>
                      <ul>
-                        <li id = "beer_cat">Beer</li>
-                        <li id = "cider_cat">Cider</li>
-                        <li id = "wine_cat">Wine</li>
-                        <li id = "non_cat">Non-Alcoholic</li>
+                        <li id = "beer_cat" class = "transl">Beer</li>
+                        <li id = "cider_cat" class = "transl">Cider</li>
+                        <li id = "wine_cat" class = "transl">Wine</li>
+                        <li id = "non_cat" class = "transl">Non-Alcoholic</li>
                             </ul></div>
                     <tr>
                          <td>
@@ -76,8 +77,8 @@
                                     
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice1"> price </div>
-                            <div class = "amount" id="manAmount1"> amount </div> 
+                            <div class = "price transl" id="manPrice1"> price </div>
+                            <div class = "amount transl" id="manAmount1"> amount </div> 
                         </td>
                          <td>
                            <div class = "dropdown_bev"> 
@@ -85,8 +86,8 @@
                                     
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice2"> price </div>
-                            <div class = "amount" id="manAmount2"> amount </div> 
+                            <div class = "price transl" id="manPrice2"> price </div>
+                            <div class = "amount transl" id="manAmount2"> amount </div> 
                         </td>
                         <td>
                            <div class = "dropdown_bev"> 
@@ -94,8 +95,8 @@
                                     
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice3"> price </div>
-                            <div class = "amount" id="manAmount3"> amount </div> 
+                            <div class = "price transl" id="manPrice3"> price </div>
+                            <div class = "amount transl" id="manAmount3"> amount </div> 
                         </td>
                          <td>
                            <div class = "dropdown_bev"> 
@@ -103,8 +104,8 @@
                                     
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice4"> price </div>
-                            <div class = "amount" id="manAmount4"> amount </div> 
+                            <div class = "price transl" id="manPrice4"> price </div>
+                            <div class = "amount transl" id="manAmount4"> amount </div> 
                         </td>
                 
                     </tr>
@@ -115,8 +116,8 @@
                                     
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice5"> price </div>
-                            <div class = "amount" id="manAmount5"> amount </div> 
+                            <div class = "price transl" id="manPrice5"> price </div>
+                            <div class = "amount transl" id="manAmount5"> amount </div> 
                         </td>
                         <td>
                            <div class = "dropdown_bev"> 
@@ -124,8 +125,8 @@
                             
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice6"> price </div>
-                            <div class = "amount" id="manAmount6"> amount </div>
+                            <div class = "price transl" id="manPrice6"> price </div>
+                            <div class = "amount transl" id="manAmount6"> amount </div>
                         </td> 
                         <td>
                            <div class = "dropdown_bev"> 
@@ -133,8 +134,8 @@
                                     
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice7"> price </div>
-                            <div class = "amount" id="manAmount7"> amount </div> 
+                            <div class = "price transl" id="manPrice7"> price </div>
+                            <div class = "amount transl" id="manAmount7"> amount </div> 
                         </td> 
                         <td>
                            <div class = "dropdown_bev"> 
@@ -142,8 +143,8 @@
                                     
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice8"> price </div>
-                            <div class = "amount" id="manAmount8"> amount </div> 
+                            <div class = "price transl" id="manPrice8"> price </div>
+                            <div class = "amount transl" id="manAmount8"> amount </div> 
                         </td>
                     </tr>
                     <tr>
@@ -153,8 +154,8 @@
                                    
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice9"> price </div>
-                            <div class = "amount" id="manAmount9"> amount </div> 
+                            <div class = "price transl" id="manPrice9"> price </div>
+                            <div class = "amount transl" id="manAmount9"> amount </div> 
                         </td> 
                         <td>
                            <div class = "dropdown_bev"> 
@@ -162,8 +163,8 @@
                                   
                                </select> 
                            </div>
-                            <div class = "price" id="manPrice10"> price </div>
-                            <div class = "amount" id="manAmount10"> amount </div> 
+                            <div class = "price transl" id="manPrice10"> price </div>
+                            <div class = "amount transl" id="manAmount10"> amount </div> 
                         </td>
                         <td>
                            <div class = "dropdown_bev"> 
@@ -171,8 +172,8 @@
                                     
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice11"> price </div>
-                                <div class = "amount" id="manAmount11"> amount </div> 
+                                <div class = "price transl" id="manPrice11"> price </div>
+                                <div class = "amount transl" id="manAmount11"> amount </div> 
                         </td> 
                         <td>
                            <div class = "dropdown_bev"> 
@@ -180,8 +181,8 @@
                                  
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice12"> price </div>
-                                <div class = "amount" id="manAmount12"> amount </div> 
+                                <div class = "price transl" id="manPrice12"> price </div>
+                                <div class = "amount transl" id="manAmount12"> amount </div> 
                         </td> 
                     </tr>
                     <tr>
@@ -191,8 +192,8 @@
                                    
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice13"> price </div>
-                                <div class = "amount" id="manAmount13"> amount </div> 
+                                <div class = "price transl" id="manPrice13"> price </div>
+                                <div class = "amount transl" id="manAmount13"> amount </div> 
                         </td> 
                         <td>
                            <div class = "dropdown_bev"> 
@@ -200,8 +201,8 @@
                                  
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice14"> price </div>
-                                <div class = "amount" id="manAmount14"> amount </div> 
+                                <div class = "price transl" id="manPrice14"> price </div>
+                                <div class = "amount transl" id="manAmount14"> amount </div> 
                         </td>
                         <td>
                            <div class = "dropdown_bev"> 
@@ -209,8 +210,8 @@
                                    
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice15"> price </div>
-                                <div class = "amount" id="manAmount15"> amount </div> 
+                                <div class = "price transl" id="manPrice15"> price </div>
+                                <div class = "amount transl" id="manAmount15"> amount </div> 
                         </td>
                         <td>
                            <div class = "dropdown_bev"> 
@@ -218,8 +219,8 @@
                                   
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice16"> price </div>
-                                <div class = "amount" id="manAmount16"> amount </div> 
+                                <div class = "price transl" id="manPrice16"> price </div>
+                                <div class = "amount transl" id="manAmount16"> amount </div> 
                         </td>
                     </tr>
                     <tr>
@@ -229,8 +230,8 @@
                                    
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice17"> price </div>
-                                <div class = "amount" id="manAmount17"> amount </div>
+                                <div class = "price transl" id="manPrice17"> price </div>
+                                <div class = "amount transl" id="manAmount17"> amount </div>
                         </td> 
                         <td>
                            <div class = "dropdown_bev"> 
@@ -238,17 +239,17 @@
                                   
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice18"> price </div>
-                                <div class = "amount" id="manAmount18"> amount </div> 
+                                <div class = "price transl" id="manPrice18"> price </div>
+                                <div class = "amount transl" id="manAmount18"> amount </div> 
                         </td>
                         <td>
-                           <div class = "dropdown_bev"> 
+                           <div class = "dropdown_bev "> 
                                <select id="drinkChoice19">
                                     
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice19"> price </div>
-                                <div class = "amount" id="manAmount19"> amount </div> 
+                                <div class = "price transl" id="manPrice19"> price </div>
+                                <div class = "amount transl" id="manAmount19"> amount </div> 
                         </td>
                         <td>
                            <div class = "dropdown_bev"> 
@@ -256,8 +257,8 @@
                                    
                                </select> 
                            </div>
-                                <div class = "price" id="manPrice20"> price </div>
-                                <div class = "amount" id="manAmount20"> amount </div> 
+                                <div class = "price transl" id="manPrice20"> price </div>
+                                <div class = "amount transl" id="manAmount20"> amount </div> 
                         </td>
                     </tr>
 
@@ -265,7 +266,7 @@
             </div>
              
            <div id = "buttonarea_manbev">
-                        <button type="submit" id="save_button"> Save changes </button>
+                        <button type="submit" id="save_button" class = "transl"> Save changes </button>
                 </div>
         </div>
         
