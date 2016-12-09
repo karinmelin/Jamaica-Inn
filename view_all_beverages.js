@@ -1,4 +1,7 @@
-// check if page loaded
+/* The purpose of this file is that the admin should be able to create a new user or edit an existing user
+File was created by by Filip Törnvist 2016 */
+
+/* Check if page loaded.*/
 function docLoaded(fn) {
     if (document.readyState !== 'loading') {
         fn();
@@ -7,12 +10,12 @@ function docLoaded(fn) {
 	}
 }
 
-
-
+/* This function displays all beverages when admin_view_beverages.html is loaded.
+It also stores the username and password in localStorage. The API function used here is fetchBev, which is located
+in api.js */
 function loadAllBeverages() {
 	var api = new APIConnect();
     
-    //setting the user
     var username = localStorage.localUsername;
     var password = localStorage.localUsername;
     api.setUser(username, password);

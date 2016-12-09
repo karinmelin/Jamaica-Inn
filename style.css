@@ -478,12 +478,14 @@ table{
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
+	
 }
 
 #users div:after {
       content: "";
       display: inline-block;
       width: 100%; 
+	  
 }
 
 #users_category {
