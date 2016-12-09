@@ -1,4 +1,5 @@
 	function loadAllUsersAndBalance() {
+        checkLang();
 	var api = new APIConnect();
 	var username = localStorage.localUsername;
     var password = localStorage.localUsername;
@@ -7,8 +8,9 @@
 
 		var json = JSON.parse(list);
         var payload = json.payload;
-
-        for (var i = 0; i < payload.length; i++) {
+        
+        var t = payload.length-13;
+        for (var i = 0; i < t; i++) {
             var username = payload[i+13].username;
 			var assets = payload[i+13].assets;
 			para = document.createElement("div");

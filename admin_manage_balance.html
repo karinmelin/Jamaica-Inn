@@ -3,6 +3,7 @@
         <link href="style.css" rel="stylesheet">
         <link href="style2.css" rel="stylesheet">
         <title>Jamaican inn</title>
+        <script src="translation.js"></script>
         <script src="api.js"></script>
         <script src="dragdrop.js"></script>
         <script src="beverages.js"></script>
@@ -23,23 +24,23 @@
 	       <nav>
                <div id = "logo_img"> <img src="logo.png"> </div>
 	           <ul>
-                   <li><a href="admin_allbeverages.html" >All Beverages</a></li>
-                   <li><a href="admin_history.html">Previously Bought</a></li>
-                   <li><a href="admin_manage_users.html" class = "current" >Manage Users</a></li>
-                   <li><a href="admin_manage_beverages.html">Manage Beverages</a></li>
+                   <li><a href="admin_allbeverages.html" class="transl" id="all_beverages">All Beverages</a></li>
+                   <li><a href="admin_history.html" class="transl" id="previously_bought">Previously Bought</a></li>
+                   <li><a href="admin_manage_users.html" class = "current transl" id="manage_users">Manage Users</a></li>
+                   <li><a href="admin_manage_beverages.html" class="transl" id="manage_beverages">Manage Beverages</a></li>
                </ul>
             </nav>
             <div id = "personal_info">
                 <div id = "logout">
-                    <a href="index.html">Log out</a>
+                    <a href="index.html" class="transl" id="log_out">Log out</a>
                 </div>
                 
-                <div id = "welcome"><p>Welcome <span id="headerName"></span></p></div>
+                <div id = "welcome"><p class="transl" id="welcome_p">Welcome <span id="headerName"></span></p></div>
                 <div id = "user_img"> <img src="user.png"> </div>
-                <div id ="userBalance"><p>Balance:  <span id="assets"></span>:-</p></div>
+                <div id ="userBalance"><p class="transl" id="userBalance_p">Balance:  <span id="assets"></span>:-</p></div>
                 <select id="language_choice">
-                            <option>English</option>
-                            <option>Svenska</option>
+				    <option id="en" value="en">English</option>
+                    <option id="sv" value="sv">Svenska</option>
                 </select> 
                 
             </div>
@@ -49,24 +50,24 @@
       
         <div id = "container_user">
             <div id="users_balance">
-                <h3>All users</h3> 
+                <h3 class="transl" id="all_users">All users</h3> 
             
 				<div id = "users_balance_category">Username Balance</div>
                 <br>
             </div>
 			
             <div id= "adduser">
-                <h3> Edit User Balance</h3>
+                <h3 class="transl" id="edit_user_balance"> Edit User Balance</h3>
                 <form name="adduserform">
-					<p>Username</p>
-                    <input type="text" id="usernameBalance" required="required" placeholder="Username">
-                    <p>Balance</p>
-                    <input type="text" id="balance" required="required" placeholder="Balance">
+					<p class="transl" id="username_p">Username</p>
+                    <input type="text" class="transl" id="usernameBalance" required="required" placeholder="Username">
+                    <p class="transl" id="usernameBalance_p">Balance</p>
+                    <input type="text" class="" id="balance" required="required" placeholder="Balance">
                 </form>
             </div>
             
             <div id="buttonarea_users">
-                <button id = "savebalance_button" type="button" value="Add" onclick="setPaymentAppend();">Update User Balance</button>
+                <button id = "savebalance_button" class="uppdate_user_balance" type="button" value="Add" onclick="setPaymentAppend();">Update User Balance</button>
             
             </div>
         </div>

@@ -98,7 +98,7 @@ function translate() {
 
 
 function langSelect() {
-    var x = document.getElementById('langChoice').value;
+    var x = document.getElementById('language_choice').value;
     sessionStorage.setItem('sprak', x);
     translate();
 }
@@ -108,7 +108,7 @@ function checkLang() {
     if (!sessionStorage.getItem('sprak')) {
         sessionStorage.setItem('sprak', 'en') // Default language
     }
-    var x = document.getElementById("langChoice");
+    var x = document.getElementById("language_choice");
     x.addEventListener("change", langSelect);
     document.getElementById(sessionStorage.getItem('sprak')).selected = 'true';
     translate();     
