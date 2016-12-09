@@ -6,7 +6,7 @@ html {
 body{
     background-color: #0B231C;
 	font-family: 'Arial ',sans-serif;
-    /*margin: 0px*/
+
 }
 
 #wrapper{
@@ -17,23 +17,7 @@ body{
     min-width: 1240px;
     min-height: 768px;
    
-}
-
-h1{
-    text-align: center;
-    font-family: 'Chalkduster', cursive;
-    font-size: 60px;
-   
-}
-/*ta bort? --> gjorde om utseendet*/
-#info{
-    text-align: center;
-    height: auto;
-    width: 800px;
-     margin-left: auto;
-    margin-right: auto;
-   
-}
+}                                   /*LOG IN SIDAN START*/
 
 #jamaican{
     font-size:56px;
@@ -97,7 +81,43 @@ label {
     height:30px;
     width:100px;
     
+}                                   /*LOG IN SIDAN SLUT*/
+
+
+
+.dropbtn {
+    background-color: white;
+    color: #0B231C;
+    font-size: 1.3em;
+    border: none;
+    cursor: pointer;
 }
+
+.dropdown_menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index:2;
+}
+
+.dropdown-content a {
+    color: #0B231C;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+}
+
+.dropdown_menu:hover .dropdown-content {
+    display: block;
+}
+
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -282,7 +302,7 @@ td {
 #table_all{
     background-color: #0B231C;
     width:900px;
-    height: 400px;
+    height: 500px;
     float: left;
     
 }
@@ -352,11 +372,6 @@ table{
 }
 
 
-
-
-
-
-
 #container{
     margin: 0 auto;
     text-align: center;
@@ -365,11 +380,6 @@ table{
     float:left;
     
 }
-
-
-
-
-
 
 #prevDrinks {
     width: 600px;
@@ -389,15 +399,21 @@ table{
     padding-left: 20px;
     
 }
+#buttonarea_manbev{
+    height: 100px;
+    width:200px;
+    position: absolute;
+    right:50px;
+    top:100px;
+    
+}
+
 
 #beverage_button{
         width:200px;
         height:50px;
         background:#0B231C;;         
         color:white;
-        position: absolute;
-        top:80px;
-        right:20px;
       
 }
 #save_button{
@@ -405,9 +421,8 @@ table{
         height:50px;
         background:#0B231C;;         
         color:white;
-        position: absolute;
-        top:20px;
-        right:20px;
+  
+
       
 }
 
