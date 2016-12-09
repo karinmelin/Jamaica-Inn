@@ -2,7 +2,7 @@
 Script for loading all users from the API into
 the 'Manage users' page for the admin to view.
 
-Author: Filip Törnqvist 2016-12-06
+Author: Filip Törnqvist 2016
 */
 
 

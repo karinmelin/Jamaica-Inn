@@ -3,7 +3,7 @@ Script for login of the user from the startpage.
 Saves the username, password and the original drinks
 found in the vending machine locally.
 
-Authors: Filip Törnqvist & Karin Melin, 2016-12-06
+Authors: Filip Törnqvist & Karin Melin 2016
 */
 
 /* check if page loaded, then continuing to the function called from page */
@@ -15,6 +15,7 @@ function docLoaded(fn) {
 	}
 }
 
+/* when page loaded go through to the next function */
 function pageLoaded() {
 	connectToAPI();
 }
