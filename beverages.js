@@ -75,12 +75,14 @@ function loadDrinks(api) {
         in each slot */
         var amount = data[i].count;
         var price = data[i].price;
-            
+        
+        //console.log(data[i].count);
+        
         if (amount < 0) {
             document.querySelector('#amount' + n).innerHTML = 'Refill me';
-        } else if (amount > 10){
+        } /*else if (amount > 10){
             document.querySelector('#amount' + n).innerHTML = 10 + ' units';
-        } else {
+        } */else {
             document.querySelector('#amount' + n).innerHTML = amount + ' units';
         }
         

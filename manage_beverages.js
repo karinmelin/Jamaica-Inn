@@ -148,6 +148,7 @@ document.addEventListener("change", function(event) {
             }
         }
         /* save the drink list locally */
+        setStock(data);
         localStorage.setItem("drinkList", JSON.stringify(drinkList));
         location.reload();
     });

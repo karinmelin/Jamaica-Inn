@@ -237,5 +237,17 @@ function checkLogin() {
 		"price": "12.40"
 	}]};
     
+    var data = drinkList.data;
+    setStock(data);
     localStorage.setItem("drinkList", JSON.stringify(drinkList));
+}
+
+/* function that makes the slots contain a maximum of 10 bottles */
+function setStock(data) {
+    for (var i = 0; i < 20; i++) {
+        var count = data[i].count;
+            if (count > 10) {
+                data[i].count = "10";
+            }
+    }
 }
