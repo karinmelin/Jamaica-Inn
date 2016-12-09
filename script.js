@@ -15,6 +15,10 @@ function docLoaded(fn) {
 	}
 }
 
+function pageLoaded() {
+	connectToAPI();
+}
+
 function connectToAPI() {
     //create the connection object to the APi
 	var api = new APIConnect();
@@ -27,10 +31,6 @@ function connectToAPI() {
     api.setUser(username, password);
 
     btn.addEventListener('click', function() { checkLogin(api); });
-}
-
-function pageLoaded() {
-	connectToAPI();
 }
 
 /* ----- Login  ----- */

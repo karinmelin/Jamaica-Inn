@@ -7,9 +7,8 @@ function docLoaded(fn) {
 	}
 }
 
-//go to connectAPI to fetch info from API
+
 function bevPageLoaded() {
-    //document.getElementById("clear_button").addEventListener("click", clearCart);
 	connectAPI();
 }
 
