@@ -17,6 +17,7 @@ function docLoaded(fn) {
 
 function loadAllUsers() {
     //create the connection object to the APi
+    checkLang();
 	var api = new APIConnect();
     
     /* fetching the logged in user and setting 
@@ -49,7 +50,7 @@ function loadAllUsers() {
 		var json = JSON.parse(list);
         var payload = json.payload;
 
-        for (var i = 0; i < payload.length; i++) {
+        for (var i = 0; i < payload.length-13; i++) {
 			var email = payload[i+13].email;
             var first_name = payload[i+13].first_name;
             var last_name = payload[i+13].last_name;
