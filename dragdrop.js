@@ -138,6 +138,7 @@ function purchase() {
                     drinkCount = amnt.toString;
                     var k = j+1;
                     document.querySelector('#amount' + k).innerHTML = amnt + ' units';
+                    drinkData[j].count -= cartAmount[i].innerHTML;
                     break;
                 }
             }
