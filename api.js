@@ -44,7 +44,6 @@ function APIConnect() {
     };
     
     this.fetchAllIOU = function(callback) {
-        alert('fetchAllIOU');
         var url = constructURL({action: 'iou_get_all'});
         request(url, callback);
     };
@@ -69,6 +68,11 @@ function APIConnect() {
 		request(url, callback);
 		alert('User saved')
 	};
+	
+	this.setNewPayment = function(callback, amount, user_id) {
+        var url = constructURL({action: 'payments_append', amount:amount, user_id: user_id  });
+        request(url, callback);
+    };
 }
    
 
