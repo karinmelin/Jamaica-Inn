@@ -1,3 +1,10 @@
+/*  
+Script for administrating the drag and drop
+
+
+Author: Nils Hansander
+*/
+
 document.addEventListener("drop", function(event) {
     
     var cart = document.getElementById('shop');
@@ -139,6 +146,7 @@ function purchase() {
         
         // Dra bort sum från balance här
         
+        alert("Your purchase have been made!");
         clearCart();
     }
 }
