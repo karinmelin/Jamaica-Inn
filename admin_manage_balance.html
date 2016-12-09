@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link href="style2.css" rel="stylesheet">
+        <title>Jamaican inn</title>
+        <script src="api.js"></script>
+        <script src="dragdrop.js"></script>
+        <script src="beverages.js"></script>
+		<script src="saveNewUser.js"></script>
+		<script src="users.js"></script>
+        <script src="script.js"></script>
+		<script src="updateUserBalance.js"></script>
+        <script>
+            docLoaded(loadAllUsersAndBalance);
+        </script>
+    </head>
+    
+    
+    <body>
+        <div id = "wrapper">
+            
+        <header>
+	       <nav>
+               <div id = "logo_img"> <img src="logo.png"> </div>
+	           <ul>
+                   <li><a href="admin_allbeverages.html" >All Beverages</a></li>
+                   <li><a href="admin_history.html">Previously Bought</a></li>
+                   <li><a href="admin_manage_users.html" class = "current" >Manage Users</a></li>
+                   <li><a href="admin_manage_beverages.html">Manage Beverages</a></li>
+               </ul>
+            </nav>
+            <div id = "personal_info">
+                <div id = "logout">
+                    <a href="index.html">Log out</a>
+                </div>
+                
+                <div id = "welcome"><p>Welcome <span id="headerName"></span></p></div>
+                <div id = "user_img"> <img src="user.png"> </div>
+                <div id ="userBalance"><p>Balance:  <span id="assets"></span>:-</p></div>
+                <select id="language_choice">
+                            <option>English</option>
+                            <option>Svenska</option>
+                </select> 
+                
+            </div>
+        </header>
+
+        <br>
+      
+        <div id = "container_user">
+            <div id="users_balance">
+                <h3>All users</h3> 
+            
+				<div id = "users_balance_category">Username Balance</div>
+                <br>
+            </div>
+			
+            <div id= "adduser">
+                <h3> Edit User Balance</h3>
+                <form name="adduserform">
+					<p>Username</p>
+                    <input type="text" id="usernameBalance" required="required" placeholder="Username">
+                    <p>Balance</p>
+                    <input type="text" id="balance" required="required" placeholder="Balance">
+                </form>
+            </div>
+            
+            <div id="buttonarea_users">
+                <button id = "savebalance_button" type="button" value="Add" onclick="setPaymentAppend();">Update User Balance</button>
+            
+            </div>
+        </div>
+               
+                
+        </div>
+    </body>
+
+</html>
