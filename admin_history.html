@@ -8,6 +8,7 @@
         <script src="beverages.js"></script>
         <script src="script.js"></script>
         <script src="history.js"></script>
+        <script src="translation.js"></script>
         <script>
             docLoaded(loadHistory)
         </script>
@@ -15,34 +16,42 @@
     <div id = "wrapper">
     <body>
         <header>
+            
 	       <nav>
                <div id = "logo_img"> <img src="logo.png"> </div>
 	           <ul>
-                   <li><a href="admin_allbeverages.html" >All Beverages</a></li>
-                   <li><a href="admin_history.html" class = "current">Previously Bought</a></li>
-                   <li><a href="admin_manage_users.html" >Manage Users</a></li>
-                   <li><a href="admin_manage_beverages.html">Manage Beverages</a></li>
+                   <li>
+                       <a href="admin_allbeverages.html" class="transl" id="all_beverages">All Beverages</a>
+                   </li>
+                   <li>
+                       <a href="admin_history.html" class="current transl" id="previously_bought">Previously Bought</a>
+                   </li>
+                   <li>
+                       <a href="admin_manage_users.html" class="transl" id="manage_users">Manage Users</a>
+                   </li>
+                   <li>
+                       <a href="admin_manage_beverages.html" class="transl" id="manage_beverages">Manage Beverages</a>
+                   </li>
                </ul>
             </nav>
+            
             <div id = "personal_info">
                 <div id = "logout">
-                    <a href="index.html">Log out</a>
+                    <a href="index.html" class="transl" id="log_out">Log out</a>
                 </div>
                 
-                <div id="welcome"><p>Welcome <span id="headerName"></span></p></div>
+                <div id="welcome"><p class="transl" id="welcome_p">Welcome <span id="headerName"></span></p></div>
                 <div id="user_img"> <img src="user.png"> </div>
-                <div id="userBalance"><p>Balance:  <span id="assets"></span>:-</p></div>
+                <div id="userBalance"><p class="transl" id="balance_p">Balance:  <span id="assets"></span>:-</p></div>
                 <select id="language_choice">
-                            <option>English</option>
-                            <option>Svenska</option>
+                    <option>English</option>
+                    <option>Svenska</option>
                 </select> 
                 
             </div>
         </header>
         
-
         <br>
-      
         
         <div id="prevDrinks">
         </div>
