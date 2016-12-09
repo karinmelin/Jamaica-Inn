@@ -1,5 +1,5 @@
 /* The purpose of this file is that the admin should be able to create a new user or edit an existing user
-File was created by by Filip Törnqvist  */
+File was created by Filip Törnqvist  */
 
 /*This function is called by clicking the button saveuser_button that exits in the file admin_manage_users.html
 The function catches what the admin enters into the fields on the page admin_manage_users.html and passes it to the function setNewUser()*/

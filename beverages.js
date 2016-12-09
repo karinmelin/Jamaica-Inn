@@ -2,7 +2,7 @@
 Script to load drinks into slots of the 'All beverages' page.
 Update the drinks form the locally stored list every time the page is loaded.
 
-Authors: Karin Melin 2016
+Author: Karin Melin 2016
 */
 
 /* check if page loaded, then continuing to the function called from page */
@@ -39,7 +39,6 @@ function connectAPI() {
         
         var json = JSON.parse(usr);
         var payload = json.payload;
-        console.log(payload);
         
         var assets = payload[0].assets;
         var name = payload[0].first_name;
