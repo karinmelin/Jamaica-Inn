@@ -99,17 +99,37 @@ function purchase() {
     var cart = document.getElementById('shop');
     var inCart = cart.getElementsByClassName('drink_cart');
     var cartAmount = cart.getElementsByClassName('amount_cart');
-    var sum = document.getElementById('sum_cart');
+    var prices = cart.getElementsByClassName('price_cart');
+    var sum = 0;
+    for(i=0; i<prices.length; i++) {
+        sum += parseFloat(prices[i].innerHTML);
+    }
     
     var drinkList = JSON.parse(localStorage.getItem('drinkList'));
     var drinkData = drinkList.data;
     
-    if(sum.innerHTML) {
+    if(sum) {
         for(i=0; i<inCart.length; i++) {
             for(j=0; j<20; j++) {
-                
+                var nmn = drinkData[j][0] + " " + drinkData[j][1];
+                if(inCart[i].innerHTML == nmn) {
+                    var amnt = parseInt(drinkData[j][5]);
+                    amnt -= parseInt(cartAmount[i].innerHTML);
+                    drinkData[j][5] = amnt.toString;
+                    
+                    alert(amnt);
+                    
+                    var k = j+1;
+                    document.querySelector('#amount' + k).innerHTML = amnt + ' units';
+                    break;
+                }
             }
         }
+        localStorage.setItem("drinkList", JSON.stringify(drinkList));
+        
+        // Dra bort sum från balance här
+        
+        clearCart();
     }
 }
 

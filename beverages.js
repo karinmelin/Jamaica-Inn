@@ -21,7 +21,7 @@ function bevPageLoaded() {
 
 /* connects to the server and fetching the info needed for the beverages */
 function connectAPI() {
-    document.getElementById("clear_button").addEventListener("click", clearCart);
+    //document.getElementById("clear_button").addEventListener("click", clearCart);
     
     /* create the connection object to the API */
 	var api = new APIConnect();
@@ -76,10 +76,10 @@ function loadDrinks(api) {
         var amount = data[i].count;
         var price = data[i].price;
             
-        if (amount < 0) {
+        if (amount <= 0) {
             document.querySelector('#amount' + n).innerHTML = 'Refill me';
-        } else if (amount > 10){
-            document.querySelector('#amount' + n).innerHTML = 10 + ' units';
+        //} else if (amount > 10){
+        //    document.querySelector('#amount' + n).innerHTML = 10 + ' units';
         } else {
             document.querySelector('#amount' + n).innerHTML = amount + ' units';
         }

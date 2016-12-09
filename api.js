@@ -69,6 +69,10 @@ function APIConnect() {
 		request(url, callback);
 		alert('User saved')
 	};
+    
+    /*this.paymentsAppend = function(callback, 'payments_append', amount, username) {
+        var url = 
+    }*/
 }
    
 
