@@ -101,11 +101,11 @@ function checkLogin() {
 		"price": "69.00"
 	}, {
 		"namn": "BEO",
-		"namn2": "Blood Orange Hibiscus",
+		"namn2": "Apple Green Tea",
 		"sbl_price": "12.90",
 		"pub_price": "15",
-		"beer_id": "197302",
-		"count": "-2",
+		"beer_id": "197702",
+		"count": "-3",
 		"price": "12.90"
 	}, {
 		"namn": "Lapin Kulta",

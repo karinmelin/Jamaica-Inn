@@ -182,7 +182,7 @@ header{
 #welcome {
     color: #0B231C;
     position: absolute;
-       top:10px;
+    top:10px;
     right:90px;
     
     
@@ -314,9 +314,9 @@ table{
 
 #shoppingarea{
     margin-top: 100px;
-     width:200px;
+    width:200px;
     height: 350px;
-     float:LEFT;  
+    float:LEFT;  
     margin-left:6.5em;
     display: table; 
     position: relative;

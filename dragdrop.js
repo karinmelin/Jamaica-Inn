@@ -40,24 +40,36 @@ document.addEventListener("drop", function(event) {
             var namenode = document.createTextNode(drink_name);
             var amountnode = document.createTextNode(amount);
             var pricenode = document.createTextNode(price);
-            var para1 = document.createElement("p"); //Bör p-taggar läggas i div?
+            var spacenode = document.createTextNode(" ")
+            var priceendnode = document.createTextNode(":-")
+            var para1 = document.createElement("p");
             var para2 = document.createElement("p");
             var para3 = document.createElement("p");
+            var para4 = document.createElement("p");
+            var para5 = document.createElement("br");
+            var para6 = document.createElement("p");
             para1.setAttribute('class', 'drink_cart');
             para2.setAttribute('class', 'amount_cart');
             para3.setAttribute('class', 'price_cart');
             para1.appendChild(namenode);
             para2.appendChild(amountnode);
             para3.appendChild(pricenode);
+            para4.appendChild(spacenode); //space
+            para6.appendChild(priceendnode);
             cart.appendChild(para1);
+            cart.appendChild(para4); //space
             cart.appendChild(para2);
+            cart.appendChild(para4); //space
             cart.appendChild(para3);
+            cart.appendChild(para6);
+            cart.appendChild(para5);
         }
         var prices = cart.getElementsByClassName('price_cart');
         var sum = 0;
-        for(i=0; i<prices.length; i++) {
+        for (i=0; i<prices.length; i++) {
             sum += parseFloat(prices[i].innerHTML);
         }
+        sum = Number((sum).toFixed(1));
         //var x = document.getElementById('totalamount').innerHTML; //added .innerHTML, changed id
         document.getElementById('totalamount').innerHTML = "Total: " + sum + ":-";
         //x.innerHTML = sum;
