@@ -111,14 +111,12 @@ function purchase() {
     if(sum) {
         for(i=0; i<inCart.length; i++) {
             for(j=0; j<20; j++) {
-                var nmn = drinkData[j][0] + " " + drinkData[j][1];
+                var nmn = drinkData[j].namn + " " + drinkData[j].namn2;
                 if(inCart[i].innerHTML == nmn) {
-                    var amnt = parseInt(drinkData[j][5]);
+                    var drinkCount = drinkData[j].count;
+                    var amnt = parseInt(drinkCount);
                     amnt -= parseInt(cartAmount[i].innerHTML);
-                    drinkData[j][5] = amnt.toString;
-                    
-                    alert(amnt);
-                    
+                    drinkCount = amnt.toString;
                     var k = j+1;
                     document.querySelector('#amount' + k).innerHTML = amnt + ' units';
                     break;
