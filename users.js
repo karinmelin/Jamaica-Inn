@@ -58,7 +58,7 @@ function loadAllUsers() {
 
 			para = document.createElement("div");
 			
-			var node = document.createTextNode(first_name + ' ' +last_name + ' ' + email + ' ' + username + ' ' + phone);
+			var node = document.createTextNode(username + ' ' + first_name + ' ' + last_name + ' ' + email  + ' ' + phone);
 			para.appendChild(node);
 
 			var userList = document.getElementById("users");
