@@ -67,7 +67,18 @@ function translate() {
         var x = dict[textElem[j].id];
         
         if(x === undefined) {
-            alert(textElem[j].id + " is not in dictionary()");
+            if(textElem[j].nodeName === 'INPUT') {
+                if(textElem[j].getAttribute('placeholder')) {
+                    x = textElem[j].getAttribute('placeholder');
+                }
+                else if(textElem[j].getAttribute('value')) {
+                    x = textElem[j].getAttribute('value');
+                }
+            }
+            else {
+                x = document.getElementById(textElem[j].id).innerHTML;
+            }
+            console.log(textElem[j].id + ": '" + x + "'" + ",");
         }
         else {
             if(textElem[j].nodeName === 'INPUT') {
