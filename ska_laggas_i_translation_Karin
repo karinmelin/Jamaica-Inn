@@ -1,0 +1,7 @@
+all_beverages: 'All Beverages',
+previously_bought: 'Previously Bought',
+manage_users: 'Manage Users',
+manage_beverages: 'Manage Beverages',
+log_out: 'Log out',
+welcome_p: 'Welcome <span id="headerName"></span>',
+balance_p: 'Balance:  <span id="assets"></span>:-',
