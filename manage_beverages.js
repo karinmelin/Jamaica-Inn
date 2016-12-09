@@ -1,3 +1,11 @@
+/* 
+Script to load drinks into slots of the 'All beverages' page.
+Update the drinks form the locally stored list every time the page is loaded.
+
+Author: Karin Melin 2016
+*/
+
+/* check if page loaded, then continuing to the function called from page */
 function docLoaded(fn) {
     if (document.readyState !== 'loading') {
         fn();
@@ -6,19 +14,24 @@ function docLoaded(fn) {
 	}
 }
 
+/* when page loaded go through to the next function */
 function manageBevPageLoaded() {
     chooseDrinks();
 }
 
 function chooseDrinks() {
-    var api = new APIConnect();
+    /* create the connection object to the API */
+	var api = new APIConnect();
     
-    //setting the user
-    var username = localStorage.localUsername;
+    /* fetching the logged in user and setting 
+    the username and password for building the
+    url used to connect to the API */
+	var username = localStorage.localUsername;
     var password = localStorage.localUsername;
     api.setUser(username, password);
     
-    //fetch info about the user of choice
+    /* from the API, fetching the name and assets
+    for the user for display in header */
     api.fetchIOU(function(usr) {
         
         var json = JSON.parse(usr);
@@ -31,16 +44,18 @@ function chooseDrinks() {
         
     });
     
+    /* fetching the drink list from the local storage */
     var drinkList = JSON.parse(localStorage.getItem("drinkList"));
     var data = drinkList.data;
     
+    /* Loading all drinks available into a dropdown for each slot
+    for the admin to choose which drink is in each slot */
     api.fetchBev(function(list) {
         
         var json = JSON.parse(list);
         var payload = json.payload;
         
         for (var i = 1; i < 21; i++) {
-            
             var dropDown = document.getElementById("drinkChoice" + i);
         
             for (var i2 = 8; i2 < payload.length; i2++) {
@@ -55,27 +70,19 @@ function chooseDrinks() {
             }
         }
         
+        /* For each slot checking which drink should be selected in the dropdown
+        also diplaying which drink is currently located in each slot */
         for (var n = 0; n < 20; n++) {
             n1 = n+1;
             var dropDown = document.getElementById("drinkChoice" + n1);
             var currentDrinkName = data[n].namn;
             var currentDrinkName2 = data[n].namn2;
             var currentDrink = currentDrinkName + "-" + currentDrinkName2;
-            /*console.log(currentDrink);
-            var currentDrinkP = document.getElementById("drink" + i + "p");
-            var currentDrink = currentDrinkP.getElementsByTagName('p')[0].innerHTML;*/
             
             var k = 0;
             while (k < payload.length && k > -1) {
-                //var drinkInList = dropDown.options[dropDown.selectedIndex].text;
                 var drinkInList = dropDown.options[k].text;
                 var drinkInListOption = dropDown[k];
-                
-                /*
-                console.log(drinkInList);
-                console.log(currentDrink);
-                console.log(drinkInListOption);
-                console.log(dropDown);*/
                 
                 if (drinkInList == currentDrink) {
                     dropDown.options.selectedIndex = k; 
@@ -86,49 +93,46 @@ function chooseDrinks() {
                 }
             }
             
+            /* adding the price and the units for the drink in slot */
             var price = data[n].price;
             var amount = data[n].count;
             
             document.querySelector('#manPrice' + n1).innerHTML = price + ":-";
             document.querySelector('#manAmount' + n1).innerHTML = amount + " units";
         }
-        
     });
 }
 
+/* When changing drink in dropdown the drink is updated in the slot
+also updating the page to set the current price and amount of the drink in stock */
 document.addEventListener("change", function(event) {
     
-    console.log('inside change event');
     var api = new APIConnect();
     
-    //getting thename of the new drink chosen
+    /* getting then name of the new drink chosen in dropdown */
     var elem = (typeof this.selectedIndex === "undefined" ? window.event.srcElement : this);
     var newDrink = elem.value || elem.options[elem.selectedIndex].value;
-    console.log(newDrink);
     
+    /* Gettin the number of the drink from the id
+    which gives the index of the drink list where the current drink can be found*/
     var newDrink_id = elem.id;
     var id_nrPlus = newDrink_id.substr(newDrink_id.length - 1);
     var id_nr = id_nrPlus - 1;
     
+    /* fetching the locally stored drink list */
     var drinkList = JSON.parse(localStorage.getItem("drinkList"));
     var data = drinkList.data;
-    //console.log(data);
     
+    /* find the new drink chosen in the API and update the drink list
+    with the new drink */
     api.fetchBev(function(list) {
         
         var json = JSON.parse(list);
         var payload = json.payload;
-    
-        //console.log(payload);
         
-        //find in payload the drink chosen
         for (var i = 0; i < payload.length; i++) {
             var payload_drink = payload[i].namn + '-' + payload[i].namn2;
-            //var data_drink = data[i].namn + '-' + data[i].namn2;
-        
-            console.log(i);
-            console.log(newDrink_id);
-            console.log(id_nr);
+
             if (payload_drink == newDrink) {
                 data[id_nr].namn = payload[i].namn;
                 data[id_nr].namn2 = payload[i].namn2;
@@ -138,15 +142,13 @@ document.addEventListener("change", function(event) {
                 data[id_nr].count = payload[i].count;
                 data[id_nr].price = payload[i].price;
                 break;
+                
+                document.querySelector('#manPrice' + n1).innerHTML = price + ":-";
+                document.querySelector('#manAmount' + n1).innerHTML = amount + " units";
             }
         }
-        
-        console.log(data);
+        /* save the drink list locally */
         localStorage.setItem("drinkList", JSON.stringify(drinkList));
-        
+        location.reload();
     });
 });
-
-function changeDrink() {
-    
-}

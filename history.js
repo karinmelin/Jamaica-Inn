@@ -28,7 +28,8 @@ function loadHistory() {
         
     });
     
-	/* This is the API function that displays previously bought drinks */
+	/* This is the API function that displays previously bought
+    drinks on the 'Previosly Bought' page */
     api.fetchPrevDrinks(function(list) {
         var json = JSON.parse(list);
         var payload = json.payload;

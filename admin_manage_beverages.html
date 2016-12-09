@@ -19,10 +19,24 @@
 	       <nav>
                <div id = "logo_img"> <img src="logo.png"> </div>
 	           <ul>
-                   <li><a href="admin_allbeverages.html" >All Beverages</a></li>
-                   <li><a href="admin_history.html">Previously Bought</a></li>
-                   <li><a href="admin_manage_users.html" >Manage Users</a></li>
-                   <li><a href="admin_manage_beverages.html" class = "current">Manage Beverages</a></li>
+                        <li><a href="admin_allbeverages.html" >All Beverages</a></li>
+                        <li><a href="admin_history.html">Previously Bought</a></li>
+                   
+                        <div class="dropdown_menu">
+                            <button class="dropbtn">Manage Users</button>
+                                <div class="dropdown-content">
+                                    <a href="admin_add_users.html" >Add Users</a>
+                                    <a href="admin_manage_users.html" >Edit Users</a>
+                                    <a href="admin_manage_balance.html" >Edit Balance</a>
+                                  </div>
+                                </div>
+                        <div class="dropdown_menu">
+                            <button class="dropbtn">Manage Beverages</button>
+                                <div class="dropdown-content">
+                                    <a href="admin_manage_beverages.html" class = "current">Edit Slots</a>
+                                    <a href="admin_view_beverages.html" class = "current">Edit Stock/Price</a>
+                            </div>
+                            </div>
                </ul>
             </nav>
             <div id = "personal_info">
@@ -56,65 +70,49 @@
                         <li id = "non_cat">Non-Alcoholic</li>
                             </ul></div>
                     <tr>
-                        <td>
+                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice1">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
-                               </select>
-                            </div>
-                            <form>
-                                <div class = "price" id="manPrice1"> price </div>
-                                <div class = "amount" id="manAmount1"> amount </div>
-                            </form>
+                                    
+                               </select> 
+                           </div>
+                            <div class = "price" id="manPrice1"> price </div>
+                            <div class = "amount" id="manAmount1"> amount </div> 
                         </td>
-                        <td>
+                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice2">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
-                               </select>
-                            </div>
+                                    
+                               </select> 
+                           </div>
                             <div class = "price" id="manPrice2"> price </div>
-                            <div class = "amount" id="manAmount2"> amount </div>
+                            <div class = "amount" id="manAmount2"> amount </div> 
                         </td>
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice3">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                    
                                </select> 
                            </div>
                             <div class = "price" id="manPrice3"> price </div>
                             <div class = "amount" id="manAmount3"> amount </div> 
-                        </td> 
-                        <td>
+                        </td>
+                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice4">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                    
                                </select> 
                            </div>
                             <div class = "price" id="manPrice4"> price </div>
                             <div class = "amount" id="manAmount4"> amount </div> 
                         </td>
+                
                     </tr>
                     <tr>
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice5">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                    
                                </select> 
                            </div>
                             <div class = "price" id="manPrice5"> price </div>
@@ -123,10 +121,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice6">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                            
                                </select> 
                            </div>
                             <div class = "price" id="manPrice6"> price </div>
@@ -135,10 +130,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice7">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                    
                                </select> 
                            </div>
                             <div class = "price" id="manPrice7"> price </div>
@@ -147,10 +139,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice8">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                    
                                </select> 
                            </div>
                             <div class = "price" id="manPrice8"> price </div>
@@ -161,10 +150,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice9">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                   
                                </select> 
                            </div>
                             <div class = "price" id="manPrice9"> price </div>
@@ -173,10 +159,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice10">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                  
                                </select> 
                            </div>
                             <div class = "price" id="manPrice10"> price </div>
@@ -185,10 +168,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice11">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                    
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice11"> price </div>
@@ -197,10 +177,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice12">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                 
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice12"> price </div>
@@ -211,10 +188,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice13">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                   
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice13"> price </div>
@@ -223,10 +197,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice14">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                 
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice14"> price </div>
@@ -235,10 +206,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice15">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                   
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice15"> price </div>
@@ -247,10 +215,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice16">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                  
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice16"> price </div>
@@ -261,10 +226,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice17">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                   
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice17"> price </div>
@@ -273,10 +235,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice18">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                  
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice18"> price </div>
@@ -285,10 +244,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice19">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                    
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice19"> price </div>
@@ -297,10 +253,7 @@
                         <td>
                            <div class = "dropdown_bev"> 
                                <select id="drinkChoice20">
-                                    <!--<option selected="selected">Beer</option>
-                                    <option>Cider</option>
-                                    <option>Wine</option>
-                                    <option>Non-Alcohol</option>-->
+                                   
                                </select> 
                            </div>
                                 <div class = "price" id="manPrice20"> price </div>
@@ -311,10 +264,8 @@
                 </table>
             </div>
              
-           <div id = "buttonarea">
+           <div id = "buttonarea_manbev">
                         <button type="submit" id="save_button"> Save changes </button>
-                        <button type="submit" id="beverage_button" onclick="window.location.assign('admin_view_beverages.html')"> Edit stock and price </button>
-                      
                 </div>
         </div>
         
