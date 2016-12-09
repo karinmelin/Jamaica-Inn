@@ -262,13 +262,11 @@ td {
     width: 80px;
     font-weight: bold;
     background-color: white;
-    /*border-radius: 2em;
-    border:2px solid #009933;*/
+
     padding-top: 5px;
-    /*margin-left: auto;
-    margin-right: auto;*/
+
     display: inline-block;
-    /*margin-bottom: 4px;*/
+  
  
     
 }
@@ -277,10 +275,6 @@ td {
     width: 80px;
     font-weight: bold;
     background-color: white;
-    /*border:2px solid #009933;
-    border-radius: 2em;*/
-    /*margin-left: auto;
-    margin-right: auto;*/
     display:inline-block;
 
 }
@@ -326,6 +320,16 @@ table{
     background-color: #0B231C;
     color:white;
 }
+#totalamount{
+    width:auto;
+    background-color: white;
+    color:#0B231C;
+    height:30px;
+    text-align: left;
+    padding-left: 10px;
+    
+}
+
 
 #purchase_button {
         width:100px;
