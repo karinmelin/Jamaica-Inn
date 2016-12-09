@@ -1,4 +1,12 @@
-// check if page loaded
+/* 
+Script for loading all users from the API into
+the 'Manage users' page for the admin to view.
+
+Author: Filip Törnqvist 2016-12-06
+*/
+
+
+/* check if page loaded, then continuing to the function called from page */
 function docLoaded(fn) {
     if (document.readyState !== 'loading') {
         fn();
@@ -7,17 +15,19 @@ function docLoaded(fn) {
 	}
 }
 
-
-
 function loadAllUsers() {
+    //create the connection object to the APi
 	var api = new APIConnect();
     
+    /* fetching the logged in user and setting 
+    the username and password for building the
+    url used to connect to the API */
 	var username = localStorage.localUsername;
     var password = localStorage.localUsername;
-    
     api.setUser(username, password);
     
-    //fetch info about the user of choice
+    /* from the API, fetching the name and assets
+    for the user for display in header */
     api.fetchIOU(function(usr) {
         
         var json = JSON.parse(usr);
@@ -31,6 +41,9 @@ function loadAllUsers() {
         
     });
     
+    /* Looping through all users from API
+    and displaying their info under 'All users'
+    in 'Manage users'page */
 	api.fetchUsers(function(list) {
 
 		var json = JSON.parse(list);
@@ -44,23 +57,12 @@ function loadAllUsers() {
 			var phone = payload[i+13].phone;
 
 			para = document.createElement("div");
-			//para.onclick = function (e) { alert('test') };
 			
 			var node = document.createTextNode(first_name + ' ' +last_name + ' ' + email + ' ' + username + ' ' + phone);
 			para.appendChild(node);
 
 			var userList = document.getElementById("users");
 			userList.appendChild(para);
-			
-
         }
-		
     });
 }
-	
-
-
-/*function copyToEditUserForm() {
-
-
-}*/

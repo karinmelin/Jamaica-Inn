@@ -1,4 +1,4 @@
-// check if page loaded
+/* check if page loaded, then continuing to the function called from page */
 function docLoaded(fn) {
     if (document.readyState !== 'loading') {
         fn();

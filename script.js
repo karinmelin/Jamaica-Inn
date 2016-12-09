@@ -1,3 +1,12 @@
+/* 
+Script for login of the user from the startpage.
+Saves the username, password and the original drinks
+found in the vending machine locally.
+
+Authors: Filip Törnqvist & Karin Melin, 2016-12-06
+*/
+
+/* check if page loaded, then continuing to the function called from page */
 function docLoaded(fn) {
     if (document.readyState !== 'loading') {
         fn();
@@ -7,45 +16,33 @@ function docLoaded(fn) {
 }
 
 function connectToAPI() {
-    var api = new APIConnect();
-
-    /*var btn = document.getElementById("staffBtn");*/
+    //create the connection object to the APi
+	var api = new APIConnect();
     
-    var username = localStorage.localUsername;
+    /* fetching the logged in user and setting 
+    the username and password for building the
+    url used to connect to the API */
+	var username = localStorage.localUsername;
     var password = localStorage.localUsername;
     api.setUser(username, password);
 
     btn.addEventListener('click', function() { checkLogin(api); });
-    
 }
 
 function pageLoaded() {
 	connectToAPI();
 }
 
-/* ------------------------- Login  ------------------- */
-
+/* ----- Login  ----- */
 function loginAdmin() {
     checkLogin();
-
 }
 
-/*function openNewWindow() {
-window.location.assign('allbeverages.html');
-}
-
-function openCreateUser() {
-window.location.assign('admin_addusers.html');
-}
-
-function openAdminUsers() {
-window.location.assign('adminusers.html');
-	
-}
-*/
-
+/* Function that validates the username and password
+input and if exist in API logs in the user */
 function checkLogin() {
-    /*Here we get values from the login form and save APIConnect() in a variable*/
+    /* Get the values from the login form and
+    create the api-object that will connect to the API */
     var loginForm = document.forms["loginform"];
     var username = loginForm.elements["uname"].value;
     var password = loginForm.elements["psw"].value;
@@ -55,7 +52,9 @@ function checkLogin() {
     /*set the user to the values the user entered through the form*/
     api.setUser(username, password);
 
-	/*FetchIOU and store username and password in localStorage*/
+	/*Validates against the API if user or admin
+    and logs into the user/adminpage,
+    storing the username and password in localStorage*/
     api.fetchIOU(function(data){
         var json = JSON.parse(data);
         var payload = json.payload;
@@ -71,13 +70,6 @@ function checkLogin() {
             localStorage.localPassword = password; 
             localStorage.localUsername = username;
 		}
-    
-        /*//setting the logged in user as the current user and store it locally
-        alert(payload[0].first_name);
-        
-        var currentUser = {"info":[{"user_id": payload[0].user_id, "first_name": payload[0].first_name, "last_name": payload[0].last_name, "assets": payload[0].assets}]};
-        
-        localStorage.setItem("currentUser", JSON.stringify(currentUser));*/
     });
     
     /*add a dictionary locally stored, for containing drinks
