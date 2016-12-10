@@ -230,13 +230,13 @@ header{
 }
 
 
-td {
+/*td {
     border: 1px solid #0B231C;
     border-radius: 2em;
     background-color: white;
     color:#0B231C;
     text-align: center;  
-}
+}*/
 
 
 #category li{
@@ -515,9 +515,9 @@ table{
 }
 
 #users_category:after {
-      content: "";
-      display: inline-block;
-      width: 100%;
+    content: "";
+    display: inline-block;
+    width: 100%;
 }
 
 #adduser {
@@ -552,9 +552,9 @@ table{
 }
 
 #all_beverages div:after {
-      content: "";
-      display: inline-block;
-      width: 100%; 
+    content: "";
+    display: inline-block;
+    width: 100%; 
 }
 
 #bev_category {
@@ -563,13 +563,15 @@ table{
     padding-left: 10px;
     padding-right: 10px;
     }
+
 #bev_category:after {
-      content: "";
-      display: inline-block;
-      width: 100%;
-    }
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
 #addbeverage {
-     width: 350px;
+    width: 350px;
     height:350px;
     background-color:darkgreen;
     border-radius:2px;
@@ -595,6 +597,18 @@ table{
   
 }
 
+#all_users {
+    padding-left:10px;
+}
+
 .dropdown_bev select {
     width: 150px;
+}
+
+#user_balance_tbl th{
+    font-size:22px;
+}
+
+#user_balance_tbl td{
+    font-size:20px;
 }

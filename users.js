@@ -97,13 +97,25 @@ function loadAllUsersAndBalance() {
         for (var i = 0; i < t; i++) {
             var username = payload[i+13].username;
 			var assets = payload[i+13].assets;
-			para = document.createElement("div");
+            
+            var user_balance_table = document.getElementById("user_balance_tbl");
+            
+            var tr = document.createElement('TR');
+            var td1 = document.createElement('TD');
+            var td2 = document.createElement('TD');
+            var node1 = document.createTextNode(username);
+            var node2 = document.createTextNode(assets + ':-');
+            td1.appendChild(node1);
+            td2.appendChild(node2);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            user_balance_table.appendChild(tr);
+			//para = document.createElement("div")
 			
-			var node = document.createTextNode(username + ' ' + assets);
-			para.appendChild(node);
+			//para.appendChild(node);
 
-			var userList = document.getElementById("users_balance_category");
-			userList.appendChild(para);
+			//var userList = document.getElementById("users_balance_category");
+			//userList.appendChild(para);
         }
     });
 		
