@@ -230,13 +230,13 @@ header{
 }
 
 
-/*td {
+#container td {
     border: 1px solid #0B231C;
     border-radius: 2em;
     background-color: white;
     color:#0B231C;
     text-align: center;  
-}*/
+}
 
 
 #category li{
@@ -520,7 +520,7 @@ table{
     width: 100%;
 }
 
-#adduser {
+.adduser {
     width: 350px;
     height:350px;
     background-color:darkgreen;
@@ -530,6 +530,7 @@ table{
     overflow: auto;
     padding-left: 10px;
 }
+
 #container_view_all_beverages{
     border-spacing: 4px;
     height:430px;
@@ -589,12 +590,22 @@ table{
     right:0;
     position:absolute;
 }
+
 #savebeverage_button{
         width:200px;
         height:50px;
         background:#0B231C;;         
         color:white;
   
+}
+
+#savebalance_button {
+    width:200px;
+    height:50px;
+    background:#0B231C;;         
+    color: white;
+    margin-left: 1040px;
+    margin-top: 10px;
 }
 
 #all_users {

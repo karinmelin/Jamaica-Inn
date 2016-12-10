@@ -93,6 +93,8 @@ function loadAllUsersAndBalance() {
 		var json = JSON.parse(list);
         var payload = json.payload;
         
+        /* Looping through all users in API and loading
+        their name and current assets into a table*/
         var t = payload.length-13;
         for (var i = 0; i < t; i++) {
             var username = payload[i+13].username;
@@ -110,12 +112,6 @@ function loadAllUsersAndBalance() {
             tr.appendChild(td1);
             tr.appendChild(td2);
             user_balance_table.appendChild(tr);
-			//para = document.createElement("div")
-			
-			//para.appendChild(node);
-
-			//var userList = document.getElementById("users_balance_category");
-			//userList.appendChild(para);
         }
     });
 		

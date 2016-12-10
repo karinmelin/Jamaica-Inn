@@ -60,7 +60,7 @@
       
         <div id = "container_user">
             <div id="users">
-                <h3 class="transl" id="all_users">All users</h3> 
+                <h3 class="transl" id="all_users">All users and their balance</h3> 
                 <div id = "users_balance_category">
                 <table id="user_balance_tbl">
                     <tr>
@@ -72,9 +72,9 @@
                 <br>
             </div>
 			
-            <div id= "edituser">
+            <div class= "adduser">
                 <h3 class="transl" id="edit_user_balance"> Edit User Balance</h3>
-                <form name="adduserform">
+                <form name="manage_balance_form">
 					<p class="transl" id="username_p">Username</p>
                     <input type="text" class="transl" id="usernameBalance" required="required" placeholder="Username">
                     <p class="transl" id="usernameBalance_p">Balance</p>
@@ -82,10 +82,9 @@
                 </form>
             </div>
             
-            <div id="buttonarea_users">
+            <!--<div id="buttonarea_users">-->
                 <button id = "savebalance_button" class="uppdate_user_balance" type="button" value="Add" onclick="setPaymentAppend();">Update User Balance</button>
-            
-            </div>
+            <!--</div>-->
         </div>
                
                 
