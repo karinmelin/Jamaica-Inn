@@ -69,11 +69,25 @@ function loadAllUsers() {
 }
 /*Loads all users and their balance into admin_manage_balance.html */
 function loadAllUsersAndBalance() {
-        checkLang();
+    checkLang();
+    
 	var api = new APIConnect();
+    
 	var username = localStorage.localUsername;
     var password = localStorage.localUsername;
     api.setUser(username, password);
+    
+    api.fetchIOU(function(usr) {
+        var json = JSON.parse(usr);
+        var payload = json.payload;
+        console.log(payload);
+        
+        var assets = payload[0].assets;
+        var name = payload[0].first_name;
+        document.querySelector('#assets').innerHTML = assets;
+        document.querySelector('#headerName').innerHTML = name;
+    });
+    
 	api.fetchAllIOU(function(list) {
 
 		var json = JSON.parse(list);
