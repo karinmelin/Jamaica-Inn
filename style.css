@@ -182,25 +182,6 @@ header{
   margin:auto;
   display:block;
 }
-#welcome {
-    color: #0B231C;
-    position: absolute;
-    top:10px;
-    right:180px;
-    
-    
-}
-#userBalance {
-    color: #0B231C;
-    position: absolute;
-    right:-25px;
-    bottom:40px;
-    font-size: 16px;
-    height:40px;
-    width: 200px;
-}
-
-
 
 #logout a{
     color:#0B231C;
@@ -214,10 +195,44 @@ header{
     right:10px;
     
 }
+#welcome {
+    color: #0B231C;
+    position: absolute;
+    width:200px;
+    top:5px;
+    right:5px;
+}
+
+#user_img{
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+#user_img img
+{
+  max-width:100%; 
+  max-height:100%;
+  margin:auto;
+  display:block;
+}
+
+#userBalance {
+    color: #0B231C;
+    position: absolute;
+    right:5px;
+    bottom:40px;
+    font-size: 16px;
+    height:40px;
+    width: 200px;
+}
+
 
 #language_choice{
     position: absolute;
-    right:  10px;
+    right:  100px;
     bottom:10px;   
 }
 #language_choice_index{
