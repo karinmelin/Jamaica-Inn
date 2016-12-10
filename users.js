@@ -102,7 +102,7 @@ function loadAllUsersAndBalance() {
 			var node = document.createTextNode(username + ' ' + assets);
 			para.appendChild(node);
 
-			var userList = document.getElementById("users_balance");
+			var userList = document.getElementById("users_balance_category");
 			userList.appendChild(para);
         }
     });
