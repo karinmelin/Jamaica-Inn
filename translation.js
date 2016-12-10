@@ -30,15 +30,14 @@ function dictionary() {
         sv: {
             // translatable elements for index.html
             /*
-            OBS!---Ej uppdaterade noder, från gammal Master---OBS!
             */
             all_beverages: 'Alla drycker',
             previously_bought: 'Tidigare köp',
             manage_users: 'Hantera användare',
             manage_beverages: 'Hantera drycker',
             log_out: 'Logga ut',
-            welcome_p: 'Välkommen <span id="headerName"></span>',
-            userBalance_p: 'Saldo:  ',
+            welcome_p: 'Välkommen  ',
+            user_balance_p: 'Saldo:  ',
             all_users: 'Alla användare',
             edit_user_balance: 'Redigera användarsaldo',
             edit_user: 'Redigera användare',
@@ -60,7 +59,7 @@ function dictionary() {
             edit_balance: 'Redigera användarsaldo',
             edit_slots: 'Redigera tillgängliga drycker',
             edit_stock_price: 'Redigera lager/pris',
-            Balance: 'Saldo:  <span id="assets"></span>:-',
+            //Balance: 'Saldo:  ',
             beverage_choose: 'Välj vilka drycker som finns i automaten',
             save_button: 'Spara ändringar',
             to_purchase: 'För att köpa en dryck, dra och släpp en dryck i kundvagnen',
@@ -97,7 +96,7 @@ function dictionary() {
             manage_beverages: 'Manage Beverages',
             log_out: 'Log out',
             welcome_p: 'Welcome  ',
-            userBalance_p: 'Balance:  ',
+            user_balance_p: 'Balance:  ',
             all_users: 'All users',
             edit_user_balance: ' Edit User Balance',
             edit_user: ' Edit user',
@@ -119,10 +118,10 @@ function dictionary() {
             edit_balance: 'Edit Balance',
             edit_slots: 'Edit Slots',
             edit_stock_price: 'Edit Stock/Price',
-            Balance: 'Balance:  <span id="assets"></span>:-',
+            //Balance: 'Balance:  ',
             beverage_choose: 'Choose which beverages you want in the vending machine',
             save_button: ' Save changes ',
-            welcome: '<p id="welcome" class="transl">Welcome <span id="headerName"></span></p>',
+            //welcome: '<p id="welcome" class="transl">Welcome <span id="headerName"></span></p>',
             to_purchase: 'To purchase a beverage, drag and drop a drink into the shopping cart',
             users_category: 'Username Firstname Lastname Email Phone',
             first_name: 'First name',

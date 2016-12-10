@@ -5,6 +5,17 @@ Script for administrating the drag and drop
 Author: Nils Hansander
 */
 
+/*document.getElementById("drink1").addEventListener("dblclick", function(event) {
+
+    var cart = document.getElementById('shop');
+    var drink_id = event.targetTextContent // dataTransfer.getData('text');
+    
+    console.log(drink_id);
+    var drink_ptag = document.getElementById(drink_id);
+    
+    addToCart(cart, drink_id, drink_ptag);
+});*/
+
 document.addEventListener("drop", function(event) {
     
     var cart = document.getElementById('shop');
@@ -18,6 +29,12 @@ document.addEventListener("drop", function(event) {
         div1.setAttribute('id', 'sum_cart');
         cart.appendChild(div1);
     }*/
+    
+    addToCart(cart, drink_id, drink_ptag);
+    
+});
+
+function addToCart(cart, drink_id, drink_ptag) {
     
     var units = drink_ptag.getElementsByClassName('amount')[0].innerHTML;
     units = parseInt(units);
@@ -83,7 +100,7 @@ document.addEventListener("drop", function(event) {
         //cart.appendChild(x);
     }
     console.log(drink_name);
-});
+}
 
 function allowDrop(allowdropevent) {
     allowdropevent.target.style.color = 'black';

@@ -20,43 +20,40 @@
         <div id = "wrapper">
             
         <header>
-	        <nav>
+            <nav>
                <div id = "logo_img"> <img src="logo.png"> </div>
 	           <ul>
-                        <li><a href="admin_allbeverages.html" id="all_beverages" class = "transl" >All Beverages</a></li>
-                        <li><a href="admin_history.html" id="admin_history" class = "transl">Previously Bought</a></li>
-                   
-                        <div class="dropdown_menu">
-                            <button class="dropbtn current2 transl" id="manage_users">Manage Users</button>
-                                <div class="dropdown-content">
-                                    <a href="admin_add_users.html" id="add_users" class = "transl" >Add Users</a>
-                                    <a href="admin_manage_users.html" id="edit_users" class = "transl" >Edit Users</a>
-                                    <a href="admin_manage_balance.html" id="edit_balance" class = "transl" >Edit Balance</a>
-                                  </div>
-                                </div>
-                        <div class="dropdown_menu">
-                            <button class="dropbtn transl" id="manage_beverages">Manage Beverages</button>
-                                <div class="dropdown-content">
-                                    <a href="admin_manage_beverages.html" id="edit_slots" class = "transl">Edit Slots</a>
-                                    <a href="admin_view_beverages.html" id="edit_stock_price" class = "transl">Edit Stock/Price</a>
-                            </div>
-                            </div>
-               </ul>
+                   <li><a href="admin_allbeverages.html" id="all_beverages" class="transl" >All Beverages</a>
+                   </li>
+                   <li><a href="admin_history.html" id="admin_history" class="transl">Previously Bought</a></li>
+                   <div class="dropdown_menu">
+                       <button class="dropbtn transl current2" id="manage_users">Manage Users</button>
+                       <div class="dropdown-content">
+                            <a href="admin_add_users.html" id="add_users" class="transl" >Add Users</a>
+                            <a href="admin_manage_users.html" id="edit_users" class="transl" >Edit Users</a>
+                            <a href="admin_manage_balance.html" id="edit_balance" class="transl" >Edit Balance</a>
+                        </div>
+                    </div>
+                    <div class="dropdown_menu">
+                        <button class="dropbtn transl" id="manage_beverages">Manage Beverages</button>
+                        <div class="dropdown-content">
+                            <a href="admin_manage_beverages.html" id="edit_slots" class = "transl">Edit Slots</a>
+                            <a href="admin_view_beverages.html" id="edit_stock_price" class = "transl">Edit Stock/Price</a>
+                        </div>
+                    </div>
+                </ul>
             </nav>
-              <div id = "logout">
-                    <a href="index.html" class = "transl" id="log_out">Log out</a>
-                </div>
-                
-                <div id = "welcome"><p class = "transl" id="welcome">Welcome <span id="headerName"></span></p></div>
-                <div id = "user_img"> <img src="user.png"> </div>
-                <div id ="userBalance"><p class = "transl" id="Balance">Balance:  <span id="assets"></span>:-</p></div>
-                <select id="language_choice">
-				    <option id="en" value="en">English</option>
-                    <option id="sv" value="sv">Svenska</option>
-                </select> 
             
-            
-            
+            <div id = "logout">
+                <a href="index.html" class="transl" id="log_out">Log out</a>
+            </div>
+            <div id = "welcome"><p class = "transl" id="welcome_p">Welcome </p><span id="headerName"></span></div>
+            <div id = "user_img"> <img src="user.png"> </div>
+            <div id ="user_balance"><p class = "transl" id="user_balance_p">Balance:  </p><span id="assets"></span><span>:-</span></div>
+            <select id="language_choice">
+				<option id="en" value="en">English</option>
+                <option id="sv" value="sv">Svenska</option>
+            </select> 
         </header>
 
         <br>
