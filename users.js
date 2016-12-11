@@ -51,19 +51,55 @@ function loadAllUsers() {
         var payload = json.payload;
 
         for (var i = 0; i < payload.length-13; i++) {
-			var email = payload[i+13].email;
+			var username = payload[i+13].username;
             var first_name = payload[i+13].first_name;
             var last_name = payload[i+13].last_name;
-            var username = payload[i+13].username;
+            var email = payload[i+13].email;
 			var phone = payload[i+13].phone;
-
-			para = document.createElement("div");
+            
+            var edit_user_table = document.getElementById("edit_user_tbl");
+            
+            var tr = document.createElement('TR');
+            var username_td = document.createElement('TD');
+            var first_name_td = document.createElement('TD');
+            var last_name_td = document.createElement('TD');
+            var email_td = document.createElement('TD');
+			var phone_td = document.createElement('TD');
+            var edit_btn_td = document.createElement('TD');
+            var edit_btn = document.createElement('BUTTON');
+            
+            edit_btn.setAttribute('type','submit');
+            edit_btn.innerHTML = 'Edit';
+            
+            var username_node = document.createTextNode(username);
+            var first_name_node = document.createTextNode(first_name);
+            var last_name_node = document.createTextNode(last_name);
+            var email_node = document.createTextNode(email);
+            var phone_node = document.createTextNode(phone);
+            
+            username_td.appendChild(username_node);
+            first_name_td.appendChild(first_name_node);
+            last_name_td.appendChild(last_name_node);
+            email_td.appendChild(email_node);
+            phone_td.appendChild(phone_node);
+            edit_btn_td.appendChild(edit_btn);
+            
+            tr.appendChild(username_td);
+            tr.appendChild(first_name_td);
+            tr.appendChild(last_name_td);
+            tr.appendChild(email_td);
+            tr.appendChild(phone_td);
+            tr.appendChild(edit_btn_td);
+            
+            edit_user_table.appendChild(tr);
+            
+			/*para = document.createElement("div");
 			
 			var node = document.createTextNode(username + ' ' + first_name + ' ' + last_name + ' ' + email  + ' ' + phone);
 			para.appendChild(node);
 
 			var userList = document.getElementById("users");
-			userList.appendChild(para);
+			userList.appendChild(para);*/
         }
     });
 }

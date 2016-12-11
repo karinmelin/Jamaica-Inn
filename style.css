@@ -616,12 +616,13 @@ table{
     width: 150px;
 }
 
-#user_balance_tbl th{
-    font-size:22px;
+.user_tables th {
+    font-size:18px;
+    text-align: left;
 }
 
-#user_balance_tbl td{
-    font-size:20px;
+.user_tables td{
+    font-size:14px;
 }
 
 /*Making the site responsive */
