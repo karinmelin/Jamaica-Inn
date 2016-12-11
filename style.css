@@ -773,10 +773,24 @@ header{
 #container_user h2 {
     padding-left: 0px;
 }
+.adduser {
+    width: 26%;
+    height:100%;
+    position: absolute; 
+    top: 210%; 
+    left: 0.3%; 
+    background-color:darkgreen;
+    border-radius:2px;
+    border: 10px solid green;
+    float:right;
+    overflow: auto;
+    padding-left: 10px;
+}
 
+  
 #users {
-    width: 64%;
-    height:45%;
+    width: 25%;
+    height:100%;
     overflow: auto;
     float:left;
     position: absolute;
