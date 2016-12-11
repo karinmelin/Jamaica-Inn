@@ -507,7 +507,7 @@ table{
 	  
 }
 
-#users_category {
+/* #users_category {
     font-size:24px;
     text-align: justify;
     padding-left: 10px;
@@ -518,7 +518,7 @@ table{
     content: "";
     display: inline-block;
     width: 100%;
-}
+}*/
 
 .adduser {
     width: 350px;
@@ -558,7 +558,7 @@ table{
     width: 100%; 
 }
 
-#bev_category {
+/* #bev_category {
     font-size:24px;
     text-align: justify;
     padding-left: 10px;
@@ -569,7 +569,7 @@ table{
     content: "";
     display: inline-block;
     width: 100%;
-}
+}*/
 
 #addbeverage {
     width: 350px;

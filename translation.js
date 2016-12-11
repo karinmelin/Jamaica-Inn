@@ -60,6 +60,17 @@ function dictionary() {
             timestamp_th: 'Tidsstämpel',
             price_th: 'Pris',
             
+            /* Manage user - 'Add user' & 'Edit user' tableheaders */
+            username_th: 'Användarnamn',
+            first_name_th: 'Förnamn',
+            last_name_th: 'Efternamn',
+            email_th: 'Email',
+            phone_th: 'Telefonnr',
+            /* 'Edit balance' page tablehead */
+            quantity_th: 'Antal i lager',
+            /* 'Edit user and balance' page tablehead */
+            balance_th: 'Saldo',
+
             all_users_and_balance: 'Alla användare och deras saldo',
             all_users: 'Alla användare',
             edit_user_balance: 'Redigera användarsaldo',
@@ -135,6 +146,17 @@ function dictionary() {
             drink_th: 'Drink',
             timestamp_th: 'Time bought',
             price_th: 'Price',
+            
+            /* Manage user - 'Add user' & 'Edit user' tableheaders */
+            username_th: 'Username',
+            first_name_th: 'First Name',
+            last_name_th: 'Last Name',
+            email_th: 'Email',
+            phone_th: 'Phone number',
+            /* 'Edit balance' page tablehead */
+            quantity_th: 'Quantity in stock',
+            /* 'Edit user and balance' page tablehead */
+            balance_th: 'Balance',
             
             /*  */
             all_users_and_balance: 'All users and their balance',

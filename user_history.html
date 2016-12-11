@@ -6,9 +6,10 @@
         <script src="api.js"></script>
         <script src="dragdrop.js"></script>
         <script src="history.js"></script>
+        <script src="users.js"></script>
         <script src="translation.js"></script>
         <script>
-            docLoaded(loadHistory)
+            docLoaded(loadHistory) //history.js
         </script>
     </head>
     
@@ -38,8 +39,17 @@
 
         
         <br>
-        
-        <div id="prevDrinks"></div>
+        <div id="users">
+            <h3 class="transl" id="prev_bought_drinks">Previosly bought drinks</h3>
+            <table class="user_tables" id="history_tbl">
+                <tr>
+                    <th class="transl" id="drink_th">Drink</th>
+                    <th class="transl" id="timestamp_th">Time bought</th>
+                    <th class="transl" id="price_th">Price</th>
+                </tr>
+            </table>
+        </div>
+        <!--<div id="prevDrinks"></div>-->
      
         </div>
     </body>
