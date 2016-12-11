@@ -40,22 +40,24 @@ function loadAllBeverages() {
         for (var i = 0; i < payload.length-7; i++) {
 			var namn = payload[i+7].namn;
             var namn2 = payload[i+7].namn2;
-            var sbl_price = payload[i+7].sbl_price;
-            var pub_price = payload[i+7].pub_price;
+            //var sbl_price = payload[i+7].sbl_price;
+            //var pub_price = payload[i+7].pub_price;
 			var beer_id = payload[i+7].beer_id;
 			var count = payload[i+7].count;
 			var price = payload[i+7].price;
-			para = document.createElement("p");
+			//para = document.createElement("p");
 			
-			var node = document.createTextNode(namn + ' ' + namn2 + '\u00A0\u00A0\u00A0\u00A0' + price + ':-' +'\u00A0\u00A0\u00A0\u00A0' + count);
+            var var_array = [namn + namn2, price, count];
+            var edit_stock_table = document.getElementById('edit_stock_tbl');
+            
+            loadIntoTable(var_array, edit_stock_table, i); //users.js
+            
+			/*var node = document.createTextNode(namn + ' ' + namn2 + '\u00A0\u00A0\u00A0\u00A0' + price + ':-' +'\u00A0\u00A0\u00A0\u00A0' + count);
 			para.appendChild(node);
 
 			var userList = document.getElementById("view_beverages");
-			userList.appendChild(para);
-			
-
+			userList.appendChild(para);*/
         }
-		
     });
 }
 	

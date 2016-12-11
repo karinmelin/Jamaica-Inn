@@ -33,7 +33,7 @@ function setNewUser(new_username, new_password, first_name,last_name, email, pho
     api.setUser(username, password);
     
 	api.setNewUser(function(list) {
-		
-		},new_username, new_password, first_name, last_name, email, phone); 
-	}
+        
+    },new_username, new_password, first_name, last_name, email, phone); 
+}
 
