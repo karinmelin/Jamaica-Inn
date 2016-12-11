@@ -33,7 +33,7 @@ function loadAllUsers() {
         
         var json = JSON.parse(usr);
         var payload = json.payload;
-        console.log(payload);
+        //console.log(payload);
         
         var assets = payload[0].assets;
         var name = payload[0].first_name;
@@ -125,7 +125,6 @@ and append the variables together with an edit button
 */
 function loadIntoTable(var_array, var_table, i, add_edit_btn) {
     
-    console.log(add_edit_btn);
     var var_tr = document.createElement('TR');
     
     for (var j = 0; j < var_array.length; j++) {

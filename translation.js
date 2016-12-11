@@ -51,7 +51,7 @@ function dictionary() {
             user_balance_p: 'Saldo:  ',
             
             /* All beverages page */
-            purchase_p: 'För att köpa en dryck, dra och släpp en dryck i kundvagnen',
+            purchase_p: 'För att köpa en dryck, klicka på Buy-knappen eller dra och släpp en dryck i kundvagnen',
             beer_cat: 'Öl',
             cider_cat: 'Cider',
             wine_cat: 'Vin',
@@ -116,6 +116,7 @@ function dictionary() {
             pricetxt: 'Pris',
             pricePlaceholder: 'Välj nytt pris',
             savebeverage_button: 'Spara dryck',
+            savebalance_button: 'Spara nytt saldo',
             
             // translatable elements for allbeverages.html
         },
@@ -144,7 +145,7 @@ function dictionary() {
             user_balance_p: 'Balance:  ',
             
             /* All beverages page */
-            purchase_p: 'To purchase a beverage, drag and drop a drink into the shopping cart',
+            purchase_p: 'To purchase a beverage: click the Buy-button or drag and drop a drink into the shopping cart',
             beer_cat: 'Beer',
             cider_cat: 'Cider',
             wine_cat: 'Wine',
@@ -208,7 +209,8 @@ function dictionary() {
             quantityPlaceholder: 'Enter a new quantity',
             pricetxt: 'Price',
             pricePlaceholder: 'Enter a new price',
-            savebeverage_button: 'Save beverage'
+            savebeverage_button: 'Save beverage',
+            savebalance_button: 'Update user balance',
             
             // translatable elements for allbeverages.html
         }    

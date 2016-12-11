@@ -34,7 +34,7 @@ function connectAPI() {
             drink_ptag = document.getElementById(drink_id);
 
         buy_btn.setAttribute('onclick','clickedBuy(this.name);');
-        buy_btn.setAttribute('class','buy_btn');
+        buy_btn.setAttribute('class','buy_btn transl');
         buy_btn.setAttribute('name', i);
         buy_btn.innerHTML = 'Buy';
         
@@ -48,6 +48,7 @@ function connectAPI() {
 
             addToCart(cart, drink_id, drink_ptag);
         });
+        
     }
     
     /* create the connection object to the API */
@@ -108,6 +109,8 @@ function loadDrinks() {
         
         if (amount <= 0) {
             document.querySelector('#amount' + n).innerHTML = 'Refill me';
+            document.getElementById('drink'+ n).setAttribute('draggable', 'false');
+            document.getElementById("drink"+n).style.cursor = "not-allowed";
         } /*else if (amount > 10){
             document.querySelector('#amount' + n).innerHTML = 10 + ' units';
         } */else {
@@ -131,6 +134,7 @@ function checkAlcohol(api, beer_id, n) {
 
         if (beer_type === 'Alkoholfritt, Övrigt'|| beer_type === 'Alkoholfritt, Öl' || beer_type === 'Alkoholfritt, Must') {
             var node = document.querySelector('#drinktype' + n).innerHTML = 'non-alcoholic';
+            node.setAttribute('class','non-alcoholic_label')
         }
                 
     }, beer_id);

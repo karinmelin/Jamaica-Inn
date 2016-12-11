@@ -5,7 +5,7 @@ html {
 }
 body{
     background-color: #0B231C;
-	font-family: 'Arial ',sans-serif;
+	font-family: 'Arial', 'Arial', sans-serif;
 
 }
 
@@ -30,7 +30,7 @@ body{
     color:white;
     font-family: 'Courier New';
     margin-left: 250px;
-      text-align: center;
+    text-align: center;
     
 }
 
@@ -38,8 +38,7 @@ body{
 #login{
     margin-left: auto;
     margin-right: auto;
-   
-    height: 200px;
+    height: 210px;
     width: 500px;
     border: 3px solid forestgreen;
     border-radius: 1em;
@@ -54,14 +53,15 @@ body{
     max-height: 468px;
     min-width: 1240px;
     min-height: 468px;
- padding-top: 300px;
+    padding-top: 300px;
    
 }
 
 label {
-  display: inline-block;
-  width: 140px;
-  text-align: right;
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+
 }
 
 
@@ -69,19 +69,34 @@ label {
     display: inline;
 }
 
-#loginform{
-    width:150px;
-}
+/*#loginform{
+    width:60px;
+}*/
 
 #login_button {
  position: absolute;
-    top: 135px;
-    right:100px;
-    
+    top: 145px;
+    right:70px;
     height:30px;
-    width:100px;
-    
-}                                   /*LOG IN SIDAN SLUT*/
+    width:100px; 
+}       
+
+#username_placeholder_index {
+    height: 30px;
+    font-size: 14px;
+}
+
+#password_placeholder_index {
+    height: 30px;
+    font-size: 14px;
+}
+
+.login_div {
+    margin: 5px;
+    width: 307px;
+}
+
+            /*LOG IN SIDAN SLUT*/
 
 
 
@@ -165,6 +180,10 @@ header{
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    border-top: #ccc 3px solid;
+    border-right: #ccc 3px solid;
+    border-bottom: #777 3px solid;
+    border-left: #777 3px solid;
 	
 }
 
@@ -245,6 +264,7 @@ header{
     1px 1px #939393,
     2px 2px #939393,
     3px 3px #939393;
+    cursor: move;
 }
 
 
@@ -290,12 +310,18 @@ header{
     margin:0;
 }
 
+.drinktype {
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 14px;
+}
+
 .price{
     height: 15px;
     width: 65px;
     font-weight: bold;
     background-color: white;
-    padding-top: 5px;
+    /*padding-top: 0px;*/
     display: inline-block;
 }
 
