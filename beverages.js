@@ -111,12 +111,12 @@ function checkAlcohol(api, beer_id, n) {
     
     api.fetchBevType(function(bev){   
 
-    var json = JSON.parse(bev);
-    var payload_type = json.payload;
-    var beer_type = payload_type[0].varugrupp;
-            
-    if (beer_type === 'Alkoholfritt, Övrigt'|| beer_type === 'Alkoholfritt, Öl' || beer_type === 'Alkoholfritt, Must') {
-        var node = document.querySelector('#drinktype' + n).innerHTML = 'non-alcoholic';
+        var json = JSON.parse(bev);
+        var payload_type = json.payload;
+        var beer_type = payload_type[0].varugrupp;
+
+        if (beer_type === 'Alkoholfritt, Övrigt'|| beer_type === 'Alkoholfritt, Öl' || beer_type === 'Alkoholfritt, Must') {
+            var node = document.querySelector('#drinktype' + n).innerHTML = 'non-alcoholic';
         }
                 
     }, beer_id);
