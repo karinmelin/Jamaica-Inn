@@ -163,7 +163,7 @@ function purchase() {
         
         // Dra bort sum från balance här
         
-        alert("Your purchase have been made!");
+        alert("Your purchase has been made!");
         loadDrinks();
         clearCart();
     }
