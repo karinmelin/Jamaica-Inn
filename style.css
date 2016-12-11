@@ -428,18 +428,15 @@ table{
 #beverage_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;       
         color:white;
       
 }
 #save_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;        
         color:white;
-  
-
-      
 }
 
 .dropdown_bev{
@@ -473,14 +470,14 @@ table{
 #createuser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
       
 }
 #edituser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
     
       
@@ -488,7 +485,7 @@ table{
 #saveuser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
 		margin-left: 1040px;
     
@@ -606,15 +603,14 @@ table{
 #savebeverage_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
-  
 }
 
 #savebalance_button {
     width:200px;
     height:50px;
-    background:#0B231C;;         
+    background:#0B231C;         
     color: white;
     margin-left: 1040px;
     margin-top: 10px;
@@ -763,18 +759,18 @@ header{
 #createuser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
       
 }
 #edituser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
     
-      
 }
+    
 #savebalance_button{
         width:150px;
         height:50px;

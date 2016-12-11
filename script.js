@@ -244,6 +244,7 @@ function checkLogin() {
 
 /* function that makes the slots contain a maximum of 10 bottles */
 function setStock(data) {
+    console.log('inne i setStock');
     for (var i = 0; i < 20; i++) {
         var count = data[i].count;
             if (count > 10) {

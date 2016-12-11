@@ -80,8 +80,12 @@ function chooseDrinks() {
             var currentDrinkName2 = data[n].namn2;
             var currentDrink = currentDrinkName + "-" + currentDrinkName2;
             
+            //console.log(payload.length);
+            //console.log(dropDown.options[160].text)
+            
             var k = 0;
             while (k < payload.length && k > -1) {
+                //console.log(k);
                 var drinkInList = dropDown.options[k].text;
                 var drinkInListOption = dropDown[k];
                 
@@ -110,6 +114,8 @@ document.addEventListener("change", function(event) {
     
     var api = new APIConnect();
     
+    console.log('inne i event');
+    
     /* getting then name of the new drink chosen in dropdown */
     var elem = (typeof this.selectedIndex === "undefined" ? window.event.srcElement : this);
     var newDrink = elem.value || elem.options[elem.selectedIndex].value;
@@ -117,9 +123,13 @@ document.addEventListener("change", function(event) {
     /* Gettin the number of the drink from the id
     which gives the index of the drink list where the current drink can be found*/
     var newDrink_id = elem.id;
-    var id_nrPlus = newDrink_id.substr(newDrink_id.length - 1);
-    var id_nr = id_nrPlus - 1;
+    if (newDrink_id.length == 13) {
+        var id_nr = newDrink_id.substr(newDrink_id.length - 2);
+    } else {
+        var id_nr = newDrink_id.substr(newDrink_id.length - 1);
+    }
     
+    var id_nr = id_nr - 1;
     /* fetching the locally stored drink list */
     var drinkList = JSON.parse(localStorage.getItem("drinkList"));
     var data = drinkList.data;
@@ -132,20 +142,27 @@ document.addEventListener("change", function(event) {
         var payload = json.payload;
         
         for (var i = 0; i < payload.length; i++) {
-            var payload_drink = payload[i].namn + '-' + payload[i].namn2;
+            if (payload[i].namn != undefined) {
+                var payload_drink = payload[i].namn + '-' + payload[i].namn2;
 
-            if (payload_drink == newDrink) {
-                data[id_nr].namn = payload[i].namn;
-                data[id_nr].namn2 = payload[i].namn2;
-                data[id_nr].sbl_price = payload[i].sbl_price;
-                data[id_nr].pub_price = payload[i].pub_price;
-                data[id_nr].beer_id = payload[i].beer_id;
-                data[id_nr].count = payload[i].count;
-                data[id_nr].price = payload[i].price;
-                break;
-                
-                document.querySelector('#manPrice' + n1).innerHTML = price + ":-";
-                document.querySelector('#manAmount' + n1).innerHTML = amount + " units";
+                console.log(newDrink_id);
+                console.log(i);
+                console.log(id_nr);
+                console.log(newDrink);
+                console.log(payload_drink);
+                if (payload_drink == newDrink) {
+                    data[id_nr].namn = payload[i].namn;
+                    data[id_nr].namn2 = payload[i].namn2;
+                    data[id_nr].sbl_price = payload[i].sbl_price;
+                    data[id_nr].pub_price = payload[i].pub_price;
+                    data[id_nr].beer_id = payload[i].beer_id;
+                    data[id_nr].count = payload[i].count;
+                    data[id_nr].price = payload[i].price;
+                    break;
+
+                    document.querySelector('#manPrice' + n1).innerHTML = price + ":-";
+                    document.querySelector('#manAmount' + n1).innerHTML = amount + " units";
+                }
             }
         }
         /* save the drink list locally */
