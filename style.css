@@ -726,6 +726,68 @@ header{
     height: 20px;
 }
 
+.dropdown_bev select{
+    margin-top: 10px;
+}
 
+
+#container_user{
+    border-spacing: 4px;
+    height: 230px;
+    width: 100%;
+    position: relative;
+    
+}
+
+#buttonarea_users{
+    height:50px;
+    width: 240px;
+    bottom:0;
+    left:0;
+    position:absolute;
+}
+#createuser_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+      
+}
+#edituser_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+    
+      
+}
+#saveuser_button{
+        width:200px;
+        height:50px;
+        background:#0B231C;;         
+        color:white;
+		margin-left: 1040px;
+    
+}
+
+#container_user h2 {
+    padding-left: 0px;
+}
+
+#users {
+    width: 64%;
+    height:45%;
+    overflow: auto;
+    float:left;
+    position: absolute;
+    top: 100%;
+    left:0.3%;
+    border-radius:2px;
+    border: 10px solid green;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+	
+}
     
 }
