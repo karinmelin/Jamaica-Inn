@@ -5,23 +5,11 @@ Script for administrating the drag and drop
 Author: Nils Hansander
 */
 
-/*document.getElementById("drink1").addEventListener("dblclick", function(event) {
-
-    var cart = document.getElementById('shop');
-    var drink_id = event.targetTextContent // dataTransfer.getData('text');
-    
-    console.log(drink_id);
-    var drink_ptag = document.getElementById(drink_id);
-    
-    addToCart(cart, drink_id, drink_ptag);
-});*/
-
 document.addEventListener("drop", function(event) {
     
     var cart = document.getElementById('shop');
     var drink_id = event.dataTransfer.getData('text');
     
-    console.log(drink_id);
     var drink_ptag = document.getElementById(drink_id);
     
     /*if(!document.getElementById('sum_cart')) {
@@ -34,6 +22,9 @@ document.addEventListener("drop", function(event) {
     
 });
 
+/* Function that adds one chosen drink (either dragged and dropped or doubleclicked) 
+and adding the name, the current quantity chosen and the price for those drinks into the cart.
+The function also calculates and displays the total price of the cart. */
 function addToCart(cart, drink_id, drink_ptag) {
     
     var units = drink_ptag.getElementsByClassName('amount')[0].innerHTML;
@@ -55,7 +46,8 @@ function addToCart(cart, drink_id, drink_ptag) {
                 amount += parseInt(cartAmount[i].innerHTML);
                 if(amount <= units) {
                     cartAmount[i].innerHTML = amount;
-                    cartPrice[i].innerHTML = amount*price;
+                    cartPrice[i].innerHTML = Number((amount*price).toFixed(1));
+                    console.log(cartPrice[i].innerHTML);
                 }
                 break;
             }
@@ -87,15 +79,16 @@ function addToCart(cart, drink_id, drink_ptag) {
             cart.appendChild(para3);
             cart.appendChild(para6);
             cart.appendChild(para5);
+            
         }
         var prices = cart.getElementsByClassName('price_cart');
         var sum = 0;
         for (i=0; i<prices.length; i++) {
             sum += parseFloat(prices[i].innerHTML);
         }
-        sum = Number((sum).toFixed(1));
+        var sum_round = Number((sum).toFixed(1));
         //var x = document.getElementById('totalamount').innerHTML; //added .innerHTML, changed id
-        document.getElementById('totalamount').innerHTML = "Total: " + sum + ":-";
+        document.getElementById('totalamount').innerHTML = "Total: " + sum_round + ":-";
         //x.innerHTML = sum;
         //cart.appendChild(x);
     }
@@ -126,11 +119,15 @@ function drop(dropevent) {
   dropevent.target.appendChild(nodeCopy);*/
 }
 
+/* Clears what's currently in the cart by setting all text to nothing */
 function clearCart() {
     document.getElementById("shop").innerHTML = "";
     document.getElementById('totalamount').innerHTML = "Total:";
 }
 
+/* Decreases the amount of the drinks in the locally stored drinklist.
+Is supposed to connect to the API to decrease the balance of
+the current user - this is to be fixed!*/
 function purchase() {
     var cart = document.getElementById('shop');
     var inCart = cart.getElementsByClassName('drink_cart');
@@ -168,7 +165,3 @@ function purchase() {
         clearCart();
     }
 }
-
-/*function clearDrink(elementID) {
-    document.getElementById(elementID).innerHTML = "";
-}*/

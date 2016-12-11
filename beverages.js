@@ -24,6 +24,19 @@ function bevPageLoaded() {
 function connectAPI() {
     document.getElementById("clear_button").addEventListener("click", clearCart);
     
+    /* adding eventlistener to all slots
+    if double-clicking adding the drink to the cart */
+    for (var i = 1; i < 21; i++) {
+        document.getElementById("drink" + i).addEventListener("dblclick", function(event) {
+            //console.log("dubbelklickat!")
+            var cart = document.getElementById('shop'),
+                drink_id = this.id,
+                drink_ptag = document.getElementById(drink_id);
+
+            addToCart(cart, drink_id, drink_ptag);
+        });
+    }
+    
     /* create the connection object to the API */
 	var api = new APIConnect();
     
