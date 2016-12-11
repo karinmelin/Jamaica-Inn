@@ -66,10 +66,10 @@ function loadAllUsers() {
             user list should be loaded into */
             if (edit_user_table != null) {
                 //console.log("edit_user_table inte null");
-                loadIntoTable(var_array, edit_user_table, i);
+                loadIntoTable(var_array, edit_user_table, i, "yes");
             } else if (add_user_table != null) {
                 //console.log("add_user_table inte null");
-                loadIntoTable(var_array, add_user_table, i);
+                loadIntoTable(var_array, add_user_table, i, "no");
             }
             
         }
@@ -113,7 +113,7 @@ function loadAllUsersAndBalance() {
             
             var user_balance_table = document.getElementById("user_balance_tbl");
             
-            loadIntoTable(var_array, user_balance_table, i);
+            loadIntoTable(var_array, user_balance_table, i, "yes");
         }
     });
 }
@@ -123,9 +123,9 @@ loadIntoTable();
 function that takes variables from a list and a table 
 and append the variables together with an edit button 
 */
-function loadIntoTable(var_array, var_table, i) {
+function loadIntoTable(var_array, var_table, i, add_edit_btn) {
     
-    //console.log(var_array);
+    console.log(add_edit_btn);
     var var_tr = document.createElement('TR');
     
     for (var j = 0; j < var_array.length; j++) {
@@ -137,14 +137,17 @@ function loadIntoTable(var_array, var_table, i) {
         var_tr.appendChild(var_td);
     }
     
-    var edit_btn_td = document.createElement('TD');
-    var edit_btn = document.createElement('BUTTON');
-            
-    edit_btn.setAttribute('type','submit');
-    edit_btn.setAttribute('id','edit_btn' + i);
-    edit_btn.innerHTML = 'Edit';
+    if (add_edit_btn == "yes") {
+        var edit_btn_td = document.createElement('TD');
+        var edit_btn = document.createElement('BUTTON');
+
+        edit_btn.setAttribute('type','submit');
+        edit_btn.setAttribute('id','edit_btn' + i);
+        edit_btn.innerHTML = 'Edit';
+
+        edit_btn_td.appendChild(edit_btn);
+        var_tr.appendChild(edit_btn_td);
+    }
     
-    edit_btn_td.appendChild(edit_btn);
-    var_tr.appendChild(edit_btn_td);
     var_table.appendChild(var_tr);
 }

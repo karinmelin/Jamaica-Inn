@@ -28,24 +28,22 @@ function dictionary() {
         },
 */
         sv: {
-            // translatable elements for index.html
-            /*
-            */
+            /* ---- Header for all pages ----*/
+            /* nav links */
             all_beverages: 'Alla drycker',
             previously_bought: 'Tidigare köp',
             manage_users: 'Hantera användare',
             manage_beverages: 'Hantera drycker',
+            edit_users: 'Redigera användare',
+            edit_balance: 'Redigera användarsaldo',
+            edit_slots: 'Redigera tillgängliga drycker',
+            edit_stock_price: 'Redigera lager/pris',
+            /* User info in header */
             log_out: 'Logga ut',
             welcome_p: 'Välkommen  ',
             user_balance_p: 'Saldo:  ',
-            all_users_and_balance: 'Alla användare och deras saldo',
-            all_users: 'Alla användare',
-            edit_user_balance: 'Redigera användarsaldo',
-            edit_user: 'Redigera användare',
-            add_user: 'Lägg till användare',
-            username_p: 'Användarnamn',
-            usernameBalance: 'Användarnamn',
-            usernameBalance_p: 'Saldo',
+            
+            /* All beverages page */
             purchase_p: 'För att köpa en dryck, dra och släpp en dryck i kundvagnen',
             beer_cat: 'Öl',
             cider_cat: 'Cider',
@@ -55,12 +53,25 @@ function dictionary() {
             totalamount: 'Totalt:',
             purchase_button: 'Köp',
             clear_button: 'Töm kundvagn',
+            
+            /* Previously bought/history page */
+            prev_bought_drinks: 'Tidigare köpta drycker',
+            drink_th: 'Dryck',
+            timestamp_th: 'Tidsstämpel',
+            price_th: 'Pris',
+            
+            all_users_and_balance: 'Alla användare och deras saldo',
+            all_users: 'Alla användare',
+            edit_user_balance: 'Redigera användarsaldo',
+            edit_user: 'Redigera användare',
+            add_user: 'Lägg till användare',
+            username_p: 'Användarnamn',
+            usernameBalance: 'Användarnamn',
+            usernameBalance_p: 'Saldo',
+            /*  */
             admin_history: 'Tidigare köp',
             add_users: 'Lägg till användare',
-            edit_users: 'Redigera användare',
-            edit_balance: 'Redigera användarsaldo',
-            edit_slots: 'Redigera tillgängliga drycker',
-            edit_stock_price: 'Redigera lager/pris',
+
             //Balance: 'Saldo:  ',
             beverage_choose: 'Välj vilka drycker som finns i automaten',
             save_button: 'Spara ändringar',
@@ -92,21 +103,23 @@ function dictionary() {
         },
         en: {
             // translatable elements for index.html
+            /* ---- Header for all pages ----*/
+            /* nav links */
             all_beverages: 'All Beverages',
             previously_bought: 'Previously Bought',
             manage_users: 'Manage Users',
             manage_beverages: 'Manage Beverages',
+            add_users: 'Add Users',
+            edit_users: 'Edit Users',
+            edit_balance: 'Edit Balance',
+            edit_slots: 'Edit Slots',
+            edit_stock_price: 'Edit Stock/Price',
+            /* User info in header */
             log_out: 'Log out',
             welcome_p: 'Welcome  ',
             user_balance_p: 'Balance:  ',
-            all_users_and_balance: 'All users and their balance',
-            all_users: 'All users',
-            edit_user_balance: ' Edit User Balance',
-            edit_user: ' Edit user',
-            add_user: 'Add user',
-            username_p: 'Username',
-            usernameBalance: 'Username',
-            usernameBalance_p: 'Balance',
+            
+            /* All beverages page */
             purchase_p: 'To purchase a beverage, drag and drop a drink into the shopping cart',
             beer_cat: 'Beer',
             cider_cat: 'Cider',
@@ -116,12 +129,24 @@ function dictionary() {
             totalamount: 'Total:',
             purchase_button: ' Purchase ',
             clear_button: ' Clear ',
+            
+            /* Previously bought/history page */
+            prev_bought_drinks: 'Previosly bought drinks',
+            drink_th: 'Drink',
+            timestamp_th: 'Time bought',
+            price_th: 'Price',
+            
+            /*  */
+            all_users_and_balance: 'All users and their balance',
+            all_users: 'All users',
+            edit_user_balance: ' Edit user balance',
+            edit_user: ' Edit user',
+            add_user: 'Add user',
+            username_p: 'Username',
+            usernameBalance: 'Username',
+            usernameBalance_p: 'Balance',
             admin_history: 'Previously Bought',
-            add_users: 'Add Users',
-            edit_users: 'Edit Users',
-            edit_balance: 'Edit Balance',
-            edit_slots: 'Edit Slots',
-            edit_stock_price: 'Edit Stock/Price',
+            
             //Balance: 'Balance:  ',
             beverage_choose: 'Choose which beverages you want in the vending machine',
             save_button: ' Save changes ',

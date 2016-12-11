@@ -50,7 +50,7 @@ function loadAllBeverages() {
             var var_array = [namn + namn2, price, count];
             var edit_stock_table = document.getElementById('edit_stock_tbl');
             
-            loadIntoTable(var_array, edit_stock_table, i); //users.js
+            loadIntoTable(var_array, edit_stock_table, i, "yes"); //users.js
             
 			/*var node = document.createTextNode(namn + ' ' + namn2 + '\u00A0\u00A0\u00A0\u00A0' + price + ':-' +'\u00A0\u00A0\u00A0\u00A0' + count);
 			para.appendChild(node);
