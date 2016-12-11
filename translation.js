@@ -28,6 +28,13 @@ function dictionary() {
         },
 */
         sv: {
+            /* Index page */
+            username_label_index: ' Användarnamn',
+            username_placeholder_index: 'Användarnamn',
+            password_label_index: ' Lösenord',
+            password_placeholder_index: 'Lösenord',
+            login_button: 'Logga in',
+            
             /* ---- Header for all pages ----*/
             /* nav links */
             all_beverages: 'Alla drycker',
@@ -113,7 +120,13 @@ function dictionary() {
             // translatable elements for allbeverages.html
         },
         en: {
-            // translatable elements for index.html
+            /* Index page */
+            username_label_index: ' Username',
+            username_placeholder_index: 'Username',
+            password_label_index: ' Password',
+            password_placeholder_index: 'Password',
+            login_button: 'Log in',
+            
             /* ---- Header for all pages ----*/
             /* nav links */
             all_beverages: 'All Beverages',
@@ -223,7 +236,7 @@ function translate() {
             else {
                 x = document.getElementById(textElem[j].id).innerHTML;
             }
-            //console.log(textElem[j].id + ": '" + x + "'" + ",");
+            console.log(textElem[j].id + ": '" + x + "'" + ",");
         }
         else {
             if(textElem[j].nodeName === 'INPUT') {
@@ -243,7 +256,11 @@ function translate() {
 
 
 function langSelect() {
-    var x = document.getElementById('language_choice').value;
+    var y = document.getElementById("language_choice");
+    if (y == null) {
+        y = document.getElementById("language_choice_index");
+    }
+    var x = y.value;
     sessionStorage.setItem('sprak', x);
     translate();
 }
