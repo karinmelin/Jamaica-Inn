@@ -628,6 +628,14 @@ table{
 
 @media screen and (max-width: 1239px){
     
+#wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%; 
+   
+}      
+    
     
 .dropbtn {
     font-size: 0.65em;
@@ -647,27 +655,28 @@ table{
 nav a {
 	font-size: 0.65em;
 	padding: 0 .25em 0 .25em;
-   
-    
+     
 }
 nav ul{
-    margin-left: 0px auto; /*ändra hur du vill*/
+    margin-left: 0%; /*ändra hur du vill*/
 
 }
 
 header{
-    height: 16%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;	
+    height: 30%;
+    width: 30%;
+    float: left; 
+    margin-left: 0px auto;
+    margin-right: 0px auto;	
 }
 
 #user_img{
     position: absolute;
-    right: 8%;
-    top: 4%;
-    height: 8%x;
-    width: 8%px;
+    left: 180px;
+    top: 117px;
+    height: 20%;
+    width: 20%;
+    
 }
 
 #user_img img
@@ -678,26 +687,23 @@ header{
 }
 #welcome {
     position: absolute;
-    top:10px;
-    right:180px;
+    left: 10px;
+    top:50px;
     
 }
 #user_balance {
-    color: #0B231C;
     position: absolute;
-    right:-25px;
-    bottom:40px;
-    font-size: 16px;
-    height:40px;
-    width: 200px;
+    left:240px;
+    top: 110px; 
+    font-size: 10px;
+    height:20px;
+    width: 100px;
 }
 
 
 
 #logout a{
-    color:#0B231C;
-    text-decoration: none;
-    
+    font-size: 14px;
 }
 
 #logout{
@@ -718,162 +724,6 @@ header{
     top:20px;   
     width:100px;
     height: 20px;
-}
-
-
-#container td {
-    border: 1px solid #0B231C;
-    border-radius: 2em;
-    background-color: white;
-    color:#0B231C;
-    text-align: center;  
-}
-
-
-#category li{
-	display: inline;
-}
-
-#category ul{
-    width:900px;
-    float: left;
-    position: relative;
-}
-
-#beer_cat{
-    position: absolute;
-    left: 100px;
-}
-
-#cider_cat{
-    position: absolute;
-    left: 350px;
-}
-
-#wine_cat{
-    position: absolute;
-    left: 580px;
-}
-
-#non_cat{
-    position: absolute;
-    left: 780px;
-}
-
-.drink {
-    font-size: 15px;
-    width: 225px;
-    height:70px;
-
-}
-
-.drink p {
-    padding-top: 5px;
-    margin:0;
-}
-
-.price{
-    height: 15px;
-    width: 80px;
-    font-weight: bold;
-    background-color: white;
-
-    padding-top: 5px;
-
-    display: inline-block;
-  
- 
-    
-}
-.amount{
-    height: 15px;
-    width: 80px;
-    font-weight: bold;
-    background-color: white;
-    display:inline-block;
-
-}
-
-#table_all{
-    background-color: #0B231C;
-    width:900px;
-    height: 500px;
-    float: left;
-    
-}
-
-
-table{
-    border-spacing: 10px;
-}
-
-#shoppingarea{
-    margin-top: 100px;
-    width:200px;
-    height: 350px;
-    float:LEFT;  
-    margin-left:6.5em;
-    display: table; 
-    position: relative;
-}
-.shopping_cart{
-    background-color: white;
-    width:200px;
-    height: 300px; 
-    overflow:auto;
-    
-}
-.shopping_cart p{
-   display: inline;
-    font-size: 14px;
-    text-align: left;
-    
-}
-
-#Heading_cart{
-    width:auto;
-    background-color: #0B231C;
-    color:white;
-}
-#totalamount{
-    width:auto;
-    background-color: white;
-    color:#0B231C;
-    height:30px;
-    text-align: left;
-    padding-left: 10px;
-    
-}
-
-
-#purchase_button {
-        width:100px;
-        height:50px;
-        float:left;
-        background:#0B231C;         
-        color:white;
-        bottom:0;    
-    display: inline;
-    }
-#clear_button {
-        width:100px;
-        height:50px;
-        background:darkred;         
-        color:white;
-        bottom:0;  
-        display: inline;
-    float:right
-    
-}
-
-
-#container{
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    width: 1240px;
-    float:left;
-    
 }
 
 
