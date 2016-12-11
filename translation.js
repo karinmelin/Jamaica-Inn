@@ -236,7 +236,7 @@ function translate() {
             else {
                 x = document.getElementById(textElem[j].id).innerHTML;
             }
-            console.log(textElem[j].id + ": '" + x + "'" + ",");
+            //console.log(textElem[j].id + ": '" + x + "'" + ","); //if find translations id:s uncomment this
         }
         else {
             if(textElem[j].nodeName === 'INPUT') {

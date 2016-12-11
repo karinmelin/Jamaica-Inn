@@ -1,8 +1,10 @@
 /*  
-Script for administrating the drag and drop
+Script for administrating the drag and drop,
+adding drinks to the cart by doubleclick or button
+and for the purchase-function.
 
 
-Author: Nils Hansander
+Author: Nils Hansander & Karin Melin 2016
 */
 
 document.addEventListener("drop", function(event) {
@@ -29,7 +31,7 @@ function addToCart(cart, drink_id, drink_ptag) {
     
     var units = drink_ptag.getElementsByClassName('amount')[0].innerHTML;
     units = parseInt(units);
-    if(!isNaN(units)) {
+    if(!isNaN(units) && units > 0) {
         var price = drink_ptag.getElementsByClassName('price')[0].innerHTML;
         price = parseFloat(price);
         
@@ -162,6 +164,7 @@ function purchase() {
         // Dra bort sum från balance här
         
         alert("Your purchase have been made!");
+        loadDrinks();
         clearCart();
     }
 }
