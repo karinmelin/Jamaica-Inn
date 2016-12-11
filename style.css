@@ -79,6 +79,8 @@ label {
     right:70px;
     height:30px;
     width:100px; 
+    font-size: 14px;
+    background-color: gray;
 }       
 
 #username_placeholder_index {
