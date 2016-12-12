@@ -2,14 +2,14 @@
     <head>
         <meta charset='utf-8'>
         <link href="style.css" rel="stylesheet">
-        <link href="style2.css" rel="stylesheet">
-        <script src="script.js"></script>
+        <title>Jamaica inn</title>
         <script src="api.js"></script>
+        <script src="script.js"></script>
         <script src="beverages.js"></script>
         <script src="dragdrop.js"></script>
 		<script src="translation.js"></script>
         <script>
-            docLoaded(bevPageLoaded);
+            docLoaded(bevPageLoaded); //beverages.js
         </script>
     </head>
     
@@ -233,8 +233,8 @@
                 <div class = "shopping_cart" id="shop" ondragover="allowDrop(event)"></div>
                 <div class="transl" id = "totalamount">Total:</div>
                 <div class = "buttons">
-                    <button type="submit" id="purchase_button" class="transl" onclick="purchase()"> Purchase </button>
-                    <button type="submit" id="clear_button" class="transl" onclick="clearCart()"> Clear </button>
+                    <button type="submit" class="transl" id="purchase_button" onclick="purchase();">Purchase</button>
+                    <button type="submit" class="transl" id="clear_button" onclick="clearCart();">Clear</button>
                 </div>
             </div>
             

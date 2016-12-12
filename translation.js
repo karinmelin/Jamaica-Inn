@@ -152,8 +152,8 @@ function dictionary() {
             non_cat: 'Non-Alcoholic',
             Heading_cart: 'Shopping cart',
             totalamount: 'Total:',
-            purchase_button: ' Purchase ',
-            clear_button: ' Clear ',
+            purchase_button: 'Purchase',
+            clear_button: 'Clear',
             
             /* Previously bought/history page */
             prev_bought_drinks: 'Previosly bought drinks',

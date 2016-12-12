@@ -81,6 +81,7 @@ label {
     width:100px; 
     font-size: 14px;
     background-color: gray;
+    cursor: pointer;
 }       
 
 #username_placeholder_index {
@@ -150,6 +151,7 @@ a.button {
     appearance: button;
     text-decoration: none;
     color: initial;
+    cursor: pointer;
 }
 
 nav a.current  {
@@ -170,6 +172,7 @@ nav a {
 }
 nav a:hover {
     color: #21c559;
+    cursor: pointer;
 }
 nav ul{
     position: absolute;
@@ -219,8 +222,12 @@ header{
     top:10px;
     right:180px;
     
-    
 }
+
+#headerName {
+    font-weight: bold;
+}
+
 #user_balance {
     color: #0B231C;
     position: absolute;
@@ -231,6 +238,9 @@ header{
     width: 200px;
 }
 
+#assets {
+    font-weight: bold;
+}
 
 
 #logout a{
@@ -242,8 +252,13 @@ header{
 #logout{
     position: absolute;
     top:10px;
-    right:10px;
-    
+    right:10px;   
+}
+
+#log_out:hover {
+    text-decoration: underline;
+    color: dimgray;
+    cursor: pointer;
 }
 
 #language_choice{
@@ -349,6 +364,7 @@ header{
     font-weight: bold;
     background-color: darkseagreen;
     display:inline-block;
+    cursor: pointer;
 }
 
 #table_all{
@@ -365,7 +381,7 @@ table{
 }
 
 #shoppingarea{
-    margin-top: 100px;
+    margin-top: 90px;
     width:200px;
     height: 350px;
     float:LEFT;  
@@ -413,25 +429,41 @@ table{
 
 
 #purchase_button {
-        width:102px;
-        height:50px;
-        float:left;
-        background:#0B231C;         
-        color:white;
-        bottom:0;    
+    width:102px;
+    height:50px;
+    float:left;
+    //background:#0B231C;         
+    background-color: #009933;
+    color:white;
+    bottom:0;    
     display: inline;
-    }
-#clear_button {
-        width:102px;
-        height:50px;
-        background:darkred;         
-        color:white;
-        bottom:0;  
-        display: inline;
-    float:right
-    
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: inset 0 -3px 3px rgba(0,0,0,0.5), /*bottom internal shadow*/
+                inset 0 3px 3px rgba(255,255,255,1); /*top internal highlight*/
 }
 
+#clear_button {
+    width:102px;
+    height:50px;
+    background:darkred;         
+    color:white;
+    bottom:0;  
+    display: inline;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    box-shadow: inset 0 -3px 3px rgba(0,0,0,0.5), /*bottom internal shadow*/
+                inset 0 3px 3px rgba(255,255,255,1); /*top internal highlight*/
+}
+
+#purchase_button:hover {
+    background-color: limegreen;
+}
+
+#clear_button:hover {
+    background: red; 
+}
 
 #container{
     margin: 0 auto;
@@ -688,9 +720,7 @@ table{
     margin-left: auto;
     margin-right: auto;
     
-   
 }
-    
     
 .dropbtn {
     font-size: 0.65em;
@@ -717,7 +747,7 @@ nav ul{
 
 }
 
-header{
+header {
     height: 30%;
     width: 100%;
     float: left; 
@@ -725,7 +755,7 @@ header{
     margin-right: 0px auto;	
 }
 
-#user_img{
+#user_img {
     position: absolute;
     left: 180px;
     top: 117px;
@@ -734,18 +764,19 @@ header{
     
 }
 
-#user_img img
-{
+#user_img img {
   max-width:100%; 
   max-height:100%;
   margin:auto;
 }
+    
 #welcome {
     position: absolute;
     left: 10px;
     top:50px;
     
 }
+    
 #user_balance {
     position: absolute;
     left:240px;
@@ -756,7 +787,6 @@ header{
 }
 
 
-
 #logout a{
     font-size: 14px;
 }
@@ -765,8 +795,8 @@ header{
     position: absolute;
     top:10px;
     right:10px;
+    }
     
-}
 
 #language_choice{
     position: absolute;
