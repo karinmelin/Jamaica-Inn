@@ -89,10 +89,7 @@ function addToCart(cart, drink_id, drink_ptag) {
             sum += parseFloat(prices[i].innerHTML);
         }
         var sum_round = Number((sum).toFixed(1));
-        //var x = document.getElementById('totalamount').innerHTML; //added .innerHTML, changed id
         document.getElementById('totalamount').innerHTML = "Total: " + sum_round + ":-";
-        //x.innerHTML = sum;
-        //cart.appendChild(x);
     }
     console.log(drink_name);
 }

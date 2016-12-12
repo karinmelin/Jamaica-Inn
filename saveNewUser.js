@@ -15,8 +15,8 @@ function saveNewUser() {
 	new_password = adduserform.elements["psw"].value;
 	first_name = adduserform.elements["uname"].value;
 	last_name = adduserform.elements["lname"].value;
-	email = adduserform.elements["email"].value;
-	phone = adduserform.elements["phone"].value;
+	email = adduserform.elements["emailplaceholder"].value;
+	phone = adduserform.elements["phoneplaceholder"].value;
 	
 	setNewUser(new_username, new_password, first_name,last_name, email, phone);
 }

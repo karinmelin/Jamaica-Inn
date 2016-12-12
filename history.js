@@ -1,3 +1,10 @@
+/* 
+Script for managing the 'Previosly bought' page
+both for admin and user page
+
+Author: Karin Melin 2016 
+*/
+
 /* check if page loaded */
 function docLoaded(fn) {
     if (document.readyState !== 'loading') {

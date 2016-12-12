@@ -134,7 +134,6 @@ function checkAlcohol(api, beer_id, n) {
 
         if (beer_type === 'Alkoholfritt, Övrigt'|| beer_type === 'Alkoholfritt, Öl' || beer_type === 'Alkoholfritt, Must') {
             var node = document.querySelector('#drinktype' + n).innerHTML = 'non-alcoholic';
-            node.setAttribute('class','non-alcoholic_label')
         }
                 
     }, beer_id);

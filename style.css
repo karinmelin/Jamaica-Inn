@@ -98,6 +98,15 @@ label {
     width: 307px;
 }
 
+#latinquote {
+    //font-style: italic;
+    font-family: 'OCR A Std', 'Arial', cursive;
+    font-size: 14px;
+    margin-left: 200px;
+    margin-top: 30px;
+    color: lightgray;
+}
+
             /*LOG IN SIDAN SLUT*/
 
 
@@ -370,6 +379,10 @@ table{
     height: 300px; 
     overflow:auto;
     
+    border-top: #ccc 3px solid;
+    border-right: #ccc 3px solid;
+    border-left: #777 3px solid;
+    
 }
 .shopping_cart p{
    display: inline;
@@ -392,11 +405,15 @@ table{
     text-align: left;
     padding-left: 10px;
     
+    border-top: #ccc 3px solid;
+    border-right: #ccc 3px solid;
+    border-bottom: #777 3px solid;
+    border-left: #777 3px solid;
 }
 
 
 #purchase_button {
-        width:100px;
+        width:102px;
         height:50px;
         float:left;
         background:#0B231C;         
@@ -405,7 +422,7 @@ table{
     display: inline;
     }
 #clear_button {
-        width:100px;
+        width:102px;
         height:50px;
         background:darkred;         
         color:white;
@@ -661,7 +678,7 @@ table{
     font-size:15px;
 }
 
-/*Making the site responsive */
+                    /* ------- Making the site responsive ------- */
 
 @media screen and (max-width: 1239px){
     

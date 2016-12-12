@@ -119,7 +119,6 @@ function loadAllUsersAndBalance() {
 }
 
 /*
-loadIntoTable();
 function that takes variables from a list and a table 
 and append the variables together with an edit button 
 */
@@ -141,6 +140,7 @@ function loadIntoTable(var_array, var_table, i, add_edit_btn) {
         var edit_btn = document.createElement('BUTTON');
 
         edit_btn.setAttribute('type','submit');
+        edit_btn.setAttribute('onclick','loadIntoForm();')
         edit_btn.setAttribute('id','edit_btn' + i);
         edit_btn.innerHTML = 'Edit';
 
@@ -149,4 +149,13 @@ function loadIntoTable(var_array, var_table, i, add_edit_btn) {
     }
     
     var_table.appendChild(var_tr);
+}
+
+/* Function that reads of the current rows values and load them
+into the form for editing */
+function loadIntoForm() {
+    
+    // script for loading the values in the tablerow into the form-inputs
+    // to edit the values and then be able to save them to the API
+    
 }
