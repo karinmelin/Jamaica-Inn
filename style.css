@@ -100,12 +100,10 @@ label {
 }
 
 #latinquote {
-    //font-style: italic;
-    font-family: 'OCR A Std', 'Arial', cursive;
-    font-size: 14px;
-    margin-left: 200px;
-    margin-top: 30px;
+    font-family: 'Monotype corsiva', 'Arial', cursive;
+    font-size: 15px;
     color: lightgray;
+    text-align: center;
 }
 
             /*LOG IN SIDAN SLUT*/
