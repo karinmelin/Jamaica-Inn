@@ -56,7 +56,7 @@ function dictionary() {
             cider_cat: 'Cider',
             wine_cat: 'Vin',
             non_cat: 'Alkoholfritt',
-            Heading_cart: 'Kundvagn',
+            heading_cart: 'Kundvagn',
             totalamount: 'Totalt:',
             purchase_button: 'Köp',
             clear_button: 'Töm kundvagn',
@@ -81,6 +81,7 @@ function dictionary() {
             quantity_th: 'Antal i lager',
             /* 'Edit user and balance' page tablehead */
             balance_th: 'Saldo',
+            user_added_msg: 'Användare tillagd!',
 
             all_users_and_balance: 'Alla användare och deras saldo',
             all_users: 'Alla användare',
@@ -93,6 +94,9 @@ function dictionary() {
             /*  */
             admin_history: 'Tidigare köp',
             add_users: 'Lägg till användare',
+            user_edited_msg: 'Användare uppdaterad!',
+            balance_edited_msg: 'Saldo uppdaterat!',
+            bev_updated_msg: 'Dryck uppdaterad!',
 
             //Balance: 'Saldo:  ',
             beverage_choose: 'Välj vilka drycker som finns i automaten',
@@ -155,7 +159,7 @@ function dictionary() {
             cider_cat: 'Cider',
             wine_cat: 'Wine',
             non_cat: 'Non-Alcoholic',
-            Heading_cart: 'Shopping cart',
+            heading_cart: 'Shopping cart',
             totalamount: 'Total:',
             purchase_button: 'Purchase',
             clear_button: 'Clear',
@@ -180,6 +184,10 @@ function dictionary() {
             quantity_th: 'Quantity in stock',
             /* 'Edit user and balance' page tablehead */
             balance_th: 'Balance',
+            user_added_msg: 'User added!',
+            user_edited_msg: 'User updated!',
+            balance_edited_msg: 'Balance updated!',
+            bev_updated_msg: 'Beverage updated!',
             
             /*  */
             all_users_and_balance: 'All users and their balance',
@@ -234,7 +242,6 @@ function translate() {
     
     for(var j=0; j<textElem.length; j++) {
         var x = dict[textElem[j].id];
-        
         if(x === undefined) {
             if(textElem[j].nodeName === 'INPUT') {
                 if(textElem[j].getAttribute('placeholder')) {

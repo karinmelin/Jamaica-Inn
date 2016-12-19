@@ -397,7 +397,6 @@ table{
     font-size: 14px;
     text-align: left;
     color: black;
-    
 }
 
 #Heading_cart{
@@ -405,6 +404,7 @@ table{
     background-color: #0B231C;
     color:white;
 }
+
 #totalamount{
     width:auto;
     background-color: white;

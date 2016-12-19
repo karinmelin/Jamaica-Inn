@@ -34,7 +34,7 @@ function connectAPI() {
             drink_ptag = document.getElementById(drink_id);
 
         buy_btn.setAttribute('onclick','clickedBuy(this.name);');
-        buy_btn.setAttribute('class','buy_btn transl');
+        buy_btn.setAttribute('class','buy_btn');
         buy_btn.setAttribute('name', i);
         buy_btn.innerHTML = 'Add';
         
