@@ -99,12 +99,7 @@ label {
     width: 307px;
 }
 
-#latinquote {
-    font-family: 'Monotype corsiva', 'Arial', cursive;
-    font-size: 15px;
-    color: lightgray;
-    text-align: center;
-}
+
 
             /*LOG IN SIDAN SLUT*/
 
@@ -218,8 +213,7 @@ header{
     color: #0B231C;
     position: absolute;
     top:10px;
-    right:180px;
-    
+    right:180px; 
 }
 
 #headerName {
@@ -590,6 +584,28 @@ table{
       width: 100%; 
 	  
 }
+
+/* Instructions begin */
+#add_user_instruction {
+	width: 300px;
+	font-size: 17px;
+}
+
+#edit_user_instruction {
+	width: 300px;
+	font-size: 17px;
+}
+
+#edit_balance_instruction {
+	width: 300px;
+	font-size: 17px;
+}
+
+#edit_stock_instruction {
+	width: 300px;
+	font-size: 17px;
+}
+/* Instructions end */
 
 /* #users_category {
     font-size:24px;

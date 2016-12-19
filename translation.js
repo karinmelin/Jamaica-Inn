@@ -73,6 +73,10 @@ function dictionary() {
             last_name_th: 'Efternamn',
             email_th: 'Email',
             phone_th: 'Telefonnr',
+			add_user_instruction: 'Fyll i följande fält för att lägga till en ny användare. Alla fält måste fyllas i.',
+			edit_user_instruction: 'Klicka på edit-knappen bredvid din utvalda användare och ändra fälten som du vill uppdatera för att redigera en användare. Alla fält måste fyllas i och användarnamnet går inte att ändra.',
+			edit_balance_instruction: 'Klicka på edit-knappen bredvid din utvalda användare och ange ett nytt saldo för att redigera användarsaldot. Båda fälten måste fyllas i.',
+			edit_stock_instruction: 'Klicka på edit-knappen bredvid din utvalda dryck och ändra fälten som du vill uppdatera för att redigera en dryck. Alla fält måste fyllas i.',
             /* 'Edit balance' page tablehead */
             quantity_th: 'Antal i lager',
             /* 'Edit user and balance' page tablehead */
@@ -117,6 +121,7 @@ function dictionary() {
             pricePlaceholder: 'Välj nytt pris',
             savebeverage_button: 'Spara dryck',
             savebalance_button: 'Spara nytt saldo',
+			
             
             // translatable elements for allbeverages.html
         },
@@ -167,6 +172,10 @@ function dictionary() {
             last_name_th: 'Last Name',
             email_th: 'Email',
             phone_th: 'Phone number',
+			add_user_instruction: 'To add a new user, enter the following details. All fields must be filled out.',
+			edit_user_instruction: 'To edit a user, click the edit button next to your desired user and change the fields that you want to update. All fields must be filled out and username can not be changed.',
+			edit_balance_instruction: 'To edit the balance of a user, click the edit button next to your desired user and enter a new balance.<br /> Both fields must be filled out.',
+			edit_stock_instruction: 'To edit a beverage, click the edit button next to your desired beverage and enter your new information. All fields must be filled out.',
             /* 'Edit balance' page tablehead */
             quantity_th: 'Quantity in stock',
             /* 'Edit user and balance' page tablehead */
