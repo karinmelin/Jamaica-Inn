@@ -7,7 +7,7 @@
         <script src="api.js"></script>
         <script src="dragdrop.js"></script>
         <script src="beverages.js"></script>
-		<script src="saveNewUser.js"></script>
+		<script src="manage_users.js"></script>
 		<script src="users.js"></script>
         <script src="script.js"></script>
         <script>
@@ -84,8 +84,16 @@
             </div>
             
             <!--<div id="buttonarea_users">-->
-                <button id = "savebalance_button" class="uppdate_user_balance transl" type="button" value="Add" onclick="setPaymentAppend();">Update user balance</button>
+            <!-- Unfinished button. When clicked supposed to send info to API and update the balance of the chosen user -->
+                <button id = "savebalance_button" class="uppdate_user_balance transl" type="button" value="Add" onclick="edit_beverage();">Update user balance</button>
             <!--</div>-->
+        </div>
+            
+        <div id="confirmation_popup_display" style="display:none">
+            <div class="popup_confirmation">
+                <p id="balance_edited_msg">Balance updated!</p>
+                <button id="close_popup" type="button" value="OK" onclick="confirmation_hide();">OK</button>
+            </div>
         </div>
                
                 

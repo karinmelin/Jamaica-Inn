@@ -19,6 +19,8 @@ function saveNewUser() {
 	phone = adduserform.elements["phoneplaceholder"].value;
 	
 	setNewUser(new_username, new_password, first_name,last_name, email, phone);
+    
+    confirmation_show();
 }
 
 /*This function accepts arguments from the function above and sets the entered username and password as localStorage variables.
@@ -37,3 +39,37 @@ function setNewUser(new_username, new_password, first_name,last_name, email, pho
     },new_username, new_password, first_name, last_name, email, phone); 
 }
 
+function add_user() {
+    console.log("inne i add_user");
+    var new_username = adduserform.elements["fname"].value;
+	var new_password = adduserform.elements["psw"].value;
+	var first_name = adduserform.elements["uname"].value;
+	var last_name = adduserform.elements["lname"].value;
+	var email = adduserform.elements["emailplaceholder"].value;
+	var phone = adduserform.elements["phoneplaceholder"].value;
+	
+	setNewUser(new_username, new_password, first_name,last_name, email, phone);
+    
+    confirmation_show();
+
+}
+
+function edit_beverage() {
+    confirmation_show();
+}
+
+//Function To Display Popup
+function confirmation_show() {
+    console.log("inne i confirmation_show");
+    var pop_up = document.getElementById('confirmation_popup_display');
+    pop_up.style.display = "block";
+    console.log(pop_up.style.overflow);
+    console.log(pop_up.style.visibility);
+    
+}
+
+//Function to Hide Popup
+function confirmation_hide(){
+    console.log('inne i confirmation_hide');
+    document.getElementById('confirmation_popup_display').style.display = "none";
+}

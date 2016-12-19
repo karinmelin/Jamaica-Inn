@@ -557,7 +557,29 @@ table{
         background:#0B231C;         
         color:white;
 		margin-left: 1040px;
-    
+}
+
+.popup_confirmation {
+    width: 130px;
+    //height: 36px;
+    font-size: 12px;
+    text-align: center;
+    background-color: darkgreen;
+    border-radius:2px;
+    border: 5px solid green;
+    margin-left: 875px;
+    margin-top: -50px;
+    padding-bottom: 5px;
+}
+
+#user_added_msg {
+    //display: inline-block;
+}
+
+#close_popup {
+    //display: inline-block;
+    margin-left: 5px;
+    width: 30px;
 }
 
 #container_user h2 {

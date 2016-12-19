@@ -6,7 +6,7 @@
         <script src="api.js"></script>
         <script src="dragdrop.js"></script>
         <script src="beverages.js"></script>
-		<script src="saveNewUser.js"></script>
+		<script src="manage_users.js"></script>
 		<script src="users.js"></script>
         <script src="script.js"></script>
         <script src="translation.js"></script>
@@ -87,18 +87,23 @@
                     <p class="transl" id="password">Password</p>
                     <input type="password" class="transl" id="psw" required="required" placeholder="Password">
                     <p class="transl" id="email">Email</p>
-                    <input type="text" class="transl" id="email" required="required" placeholder="Email">
+                    <input type="text" class="transl" id="emailplaceholder" required="required" placeholder="Email">
 				    <p class="transl" id="phone">Phone number</p>
-                    <input type="text" class="transl" id="phone" required="required" placeholder="Phone">
+                    <input type="text" class="transl" id="phoneplaceholder" required="required" placeholder="Phone">
                 </form>
             </div>
             
             <div id="buttonarea_users">
-                <button class="transl" id = "saveuser_button" type="button" value="Add" onclick="saveNewUser();">Add user</button>
-            
+                <button class="transl" id ="saveuser_button" type="button" value="Add" onclick="add_user();">Add user</button>
             </div>
         </div>
-               
+            
+        <div id="confirmation_popup_display" style="display:none">
+            <div class="popup_confirmation">
+                <p id="user_added_msg">User added!</p>
+                <button id="close_popup" type="button" value="OK" onclick="confirmation_hide();">OK</button>
+            </div>
+        </div>
                 
         </div>
     </body>
