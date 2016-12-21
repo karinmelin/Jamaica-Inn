@@ -12,9 +12,9 @@ body{
 #wrapper{
     margin-left: auto;
     margin-right: auto;
-    max-width: 1240px;
+    max-width: 1024px;
     max-height: 768px;
-    min-width: 1240px;
+    min-width: 1024px;
     min-height: 768px;
    
 }                                   /*LOG IN SIDAN START*/
@@ -29,11 +29,9 @@ body{
     font-size:56px;
     color:white;
     font-family: 'Courier New';
-    margin-left: 250px;
+    margin-left: 200px;
     text-align: center;
-    
 }
-
 
 #login{
     margin-left: auto;
@@ -49,19 +47,19 @@ body{
 #wrapper_index{
     margin-left: auto;
     margin-right: auto;
-    max-width: 1240px;
+    max-width: 1024px;
     max-height: 468px;
-    min-width: 1240px;
+    min-width: 1024px;
     min-height: 468px;
     padding-top: 300px;
    
 }
 
+
 label {
     display: inline-block;
     width: 140px;
     text-align: right;
-
 }
 
 
@@ -69,9 +67,7 @@ label {
     display: inline;
 }
 
-/*#loginform{
-    width:60px;
-}*/
+
 
 #login_button {
  position: absolute;
@@ -94,21 +90,110 @@ label {
     font-size: 14px;
 }
 
+
+
 .login_div {
     margin: 5px;
-    width: 307px;
+    display: inline;
+
 }
-
-
-
             /*LOG IN SIDAN SLUT*/
 
 
+                /* HEADER */
+header {
+	background-color:white;
+    height: 150px;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-top: #ccc 3px solid;
+    border-right: #ccc 3px solid;
+    border-bottom: #777 3px solid;
+    border-left: #777 3px solid;
+}
+
+#user_img {
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    height: 60px;
+    width: 60px;
+}
+
+#user_img img {
+  max-width:100%; 
+  max-height:100%;
+  margin:auto;
+  display:block;
+    
+}
+
+#welcome {
+    color: #0B231C;
+    position: absolute;
+    top:5px;
+    right:140px; 
+}
+
+#headerName {
+    font-weight: bold;
+}
+
+#user_balance {
+    color: #0B231C;
+    position: absolute;
+    right:-25px;
+    bottom:20px;
+    font-size: 16px;
+    height:40px;
+    width: 200px;
+}
+
+#assets {
+    font-weight: bold;
+}
+
+
+#logout a{
+    color:#0B231C;
+    text-decoration: none;
+}
+
+#logout{
+    position: absolute;
+    top:10px;
+    right:10px;   
+}
+
+#log_out:hover {
+    text-decoration: underline;
+    color: dimgray;
+    cursor: pointer;
+}
+
+#language_choice{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;   
+}
+#language_choice_index{
+    position: absolute;
+    right: 105px;
+    top:20px;   
+    width:100px;
+    height: 20px;
+}
+            
+            /* HEADER ENDS */
+
+            /* NAVIGATION */
 
 .dropbtn {
     background-color: white;
     color: #0B231C;
-    font-size: 1.3em;
+    font-size: 20px;
     border: none;
     cursor: pointer;
 }
@@ -156,11 +241,10 @@ nav a.current  {
 }
 
 nav a {
-	font-size: 1.3em;
+	font-size: 20px;
 	color: #0B231C;
 	text-decoration: none;
-	padding: 0 .5em 0 .5em;
-   
+	padding: 0 0.5em 0 .5em;   
     
 }
 nav a:hover {
@@ -170,103 +254,19 @@ nav a:hover {
 nav ul{
     position: absolute;
     bottom: 0;
-    margin-left: 50px; /*ändra hur du vill*/
+    margin-left: 20px; /*ändra hur du vill*/
 
 }
 
 nav li{
 	display: inline;
-    
-    
 }
-
-header{
-	background-color:white;
-    height: 200px;
-    width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    border-top: #ccc 3px solid;
-    border-right: #ccc 3px solid;
-    border-bottom: #777 3px solid;
-    border-left: #777 3px solid;
-	
-}
-
-#user_img{
-    position: absolute;
-    right: 100px;
-    top: 50px;
-    height: 100px;
-    width: 100px;
-}
-
-#user_img img
-{
-  max-width:100%; 
-  max-height:100%;
-  margin:auto;
-  display:block;
-}
-#welcome {
-    color: #0B231C;
-    position: absolute;
-    top:10px;
-    right:180px; 
-}
-
-#headerName {
-    font-weight: bold;
-}
-
-#user_balance {
-    color: #0B231C;
-    position: absolute;
-    right:-25px;
-    bottom:40px;
-    font-size: 16px;
-    height:40px;
-    width: 200px;
-}
-
-#assets {
-    font-weight: bold;
-}
+/*--------------- NAVIGATION ENDS ----------- */
 
 
-#logout a{
-    color:#0B231C;
-    text-decoration: none;
-    
-}
-
-#logout{
-    position: absolute;
-    top:10px;
-    right:10px;   
-}
-
-#log_out:hover {
-    text-decoration: underline;
-    color: dimgray;
-    cursor: pointer;
-}
-
-#language_choice{
-    position: absolute;
-    right:  10px;
-    bottom:10px;   
-}
-#language_choice_index{
-    position: absolute;
-    right: 105px;
-    top:20px;   
-    width:100px;
-    height: 20px;
-}
 
 
+/* -----------  CONTAINER STARTS ------------ */
 #container td {
     /*border: 1px solid #0B231C;*/
     border-radius: 1.5em;
@@ -283,43 +283,36 @@ header{
     2px 2px #939393,
     3px 3px #939393;
     cursor: move;
+    height: 93px;
 }
 
+#purchase_p {
+    font-size: 15px;
+}
+
+#category {
+    width: 1024px;
+ }
 
 #category li{
 	display: inline;
+    text-align: center;
+    
 }
 
 #category ul{
-    width:900px;
+    width: 1024px;
     float: left;
     position: relative;
 }
 
-#beer_cat{
-    position: absolute;
-    left: 100px;
-}
 
-#cider_cat{
-    position: absolute;
-    left: 350px;
-}
-
-#wine_cat{
-    position: absolute;
-    left: 580px;
-}
-
-#non_cat{
-    position: absolute;
-    left: 780px;
-}
 
 .drink {
-    font-size: 15px;
-    width: 225px;
-    height:70px;
+    font-size: 12px;
+    width: 170px;
+    height:80px;
+    position: relative;
 
 }
 
@@ -331,7 +324,7 @@ header{
 .drinktype {
     margin-top: 0px;
     padding-top: 0px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .price{
@@ -357,41 +350,38 @@ header{
     background-color: darkseagreen;
     display:inline-block;
     cursor: pointer;
-}
-
-#table_all{
-    background-color: #0B231C;
-    width:900px;
-    height: 500px;
-    float: left;
+ bottom: 0px;
+    left:70px;
     
+    position: absolute;
 }
-
 
 table{
     border-spacing: 10px;
 }
+/* -----------  CONTAINER ENDS ------------ */
+
+
+/* ---------------- SHOPPING-CART AREA STARTS ---------------- */
 
 #shoppingarea{
-    margin-top: 90px;
-    width:200px;
-    height: 350px;
-    float:LEFT;  
-    margin-left:6.5em;
     display: table; 
-    position: relative;
+    position: absolute;
+    top:230px;
+    right:150px;
+    text-align:center;
 }
+
 .shopping_cart{
     background-color: white;
     width:200px;
-    height: 300px; 
+    height: 400px; 
     overflow:auto;
-    
     border-top: #ccc 3px solid;
     border-right: #ccc 3px solid;
     border-left: #777 3px solid;
-    
 }
+
 .shopping_cart p{
    display: inline;
     font-size: 14px;
@@ -399,7 +389,7 @@ table{
     color: black;
 }
 
-#Heading_cart{
+#heading_cart{
     width:auto;
     background-color: #0B231C;
     color:white;
@@ -418,7 +408,6 @@ table{
     border-bottom: #777 3px solid;
     border-left: #777 3px solid;
 }
-
 
 #purchase_button {
     width:102px;
@@ -457,60 +446,33 @@ table{
     background: red; 
 }
 
+#prevDrinks {
+    width: 990px;
+    height:550px;
+    overflow: auto;
+    background-color:darkgreen;
+    float:left;
+    border-radius:2px;
+    border: 10px solid green;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+	
+}
+
 #container{
     margin: 0 auto;
     text-align: center;
     position: relative;
-    width: 1240px;
+    width: 1024px;
     float:left;
     
 }
 
-#prevDrinks {
-    width: 600px;
-    height:350px;
-    overflow: auto;
-    background-color:darkgreen;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius:2px;
-    border: 10px solid green;
-    
-}
 
-#prevDrinks p{
-    color: white;
-   text-align: left;
-    padding-left: 20px;
-    
-}
-#buttonarea_manbev{
-    height: 100px;
-    width:200px;
-    position: absolute;
-    right:50px;
-    top:100px;
-    
-}
-
-
-#beverage_button{
-        width:200px;
-        height:50px;
-        background:#0B231C;       
-        color:white;
-      
-}
-#save_button{
-        width:200px;
-        height:50px;
-        background:#0B231C;        
-        color:white;
-}
 
 .dropdown_bev{
-   
-      font-size: 15px;
+    font-size: 15px;
     width: 225px;
     height:40px;
 }
@@ -520,44 +482,14 @@ table{
     margin-top: 10px;
 }
 
-
-#container_user{
-    border-spacing: 4px;
-    height: 430px;
-    width: 1240px;
-    position: relative;
-    
-}
-
-#buttonarea_users{
-    height:50px;
-    width: 240px;
-    bottom:0;
-    left:0;
-    position:absolute;
-}
-#createuser_button{
-        width:200px;
-        height:50px;
-        background:#0B231C;         
-        color:white;
-      
-}
-#edituser_button{
-        width:200px;
-        height:50px;
-        background:#0B231C;         
-        color:white;
-    
-      
-}
 #saveuser_button{
-        width:200px;
-        height:50px;
-        background:#0B231C;         
-        color:white;
-		margin-left: 1040px;
+        width:220px;
+        height:40px;
+  background:#0B231C;   color:white;
+		margin-left: 800px;
+    margin-top: 5px;
 }
+
 
 .popup_confirmation {
     width: 130px;
@@ -573,80 +505,54 @@ table{
 }
 
 #user_added_msg {
-    //display: inline-block;
+    display: inline-block;
 }
 
 #close_popup {
-    //display: inline-block;
+    display: inline-block;
     margin-left: 5px;
     width: 30px;
 }
 
-#container_user h2 {
-    padding-left: 10px;
-}
-
 #users {
-    width: 800px;
-    height:350px;
+    width: 750px;
+    height:550px;
     overflow: auto;
     background-color:darkgreen;
     float:left;
-    border-radius:2px;
     border: 10px solid green;
-    text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
 	
 }
 
-#users div:after {
-      content: "";
-      display: inline-block;
-      width: 100%; 
-	  
-}
-
 /* Instructions begin */
 #add_user_instruction {
-	width: 300px;
+	width: 200px;
 	font-size: 17px;
 }
 
 #edit_user_instruction {
-	width: 300px;
+	width: 200px;
 	font-size: 17px;
 }
 
 #edit_balance_instruction {
-	width: 300px;
+	width: 200px;
 	font-size: 17px;
 }
 
 #edit_stock_instruction {
-	width: 300px;
+	width: 200px;
 	font-size: 17px;
 }
 /* Instructions end */
 
-/* #users_category {
-    font-size:24px;
-    text-align: justify;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#users_category:after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-}*/
 
 .adduser {
-    width: 350px;
-    height:350px;
+    width: 200px;
+    height:550px;
     background-color:darkgreen;
-    border-radius:2px;
     border: 10px solid green;
     float:right;
     overflow: auto;
@@ -654,48 +560,33 @@ table{
 }
 
 #container_view_all_beverages{
-    border-spacing: 4px;
-    height:430px;
-    width: 1240px;
+    height:550px;
+    width: 1024px;
     position: relative;
     
 }
 
+#all_beverages{
+    width:1024px;
+}
+
+
 #view_beverages {
-    width: 800px;
-    height:350px;
+    width: 750px;
+    height:550px;
     overflow: auto;
     background-color:darkgreen;
     float:left;
     border-radius:2px;
     border: 10px solid green;
-    text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-#all_beverages div:after {
-    content: "";
-    display: inline-block;
-    width: 100%; 
-}
-
-/* #bev_category {
-    font-size:24px;
-    text-align: justify;
-    padding-left: 10px;
-    padding-right: 10px;
-    }
-
-#bev_category:after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-}*/
 
 #addbeverage {
-    width: 350px;
-    height:350px;
+    width: 200px;
+    height:550px;
     background-color:darkgreen;
     border-radius:2px;
     border: 10px solid green;
@@ -705,29 +596,16 @@ table{
     
 }
 
-#buttonarea_beverage{
-    height:50px;
-    width: 200px;
-    bottom:0;
-    right:0;
-    position:absolute;
-}
 
 #savebeverage_button{
-        width:200px;
-        height:50px;
-        background:#0B231C;         
-        color:white;
+       width:220px;
+        height:40px;
+  background:#0B231C;   color:white;
+		margin-left: 800px;
+    margin-top: 5px;
 }
 
-#savebalance_button {
-    width:200px;
-    height:50px;
-    background:#0B231C;         
-    color: white;
-    margin-left: 1040px;
-    margin-top: 10px;
-}
+
 
 #all_users {
     padding-left:10px;
@@ -748,7 +626,7 @@ table{
 
                     /* ------- Making the site responsive ------- */
 
-@media screen and (max-width: 1239px){
+@media screen and (max-width: 1023px){
     
 #wrapper{
     width: 100%; 

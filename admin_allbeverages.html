@@ -58,17 +58,26 @@
          <div id="container">
              
             
-            <div id= "table_all" >
+            
                 <table id = "All beverages">
                     <div id = "category">
-                        <p class="transl" id="purchase_p">To purchase a beverage: click the 'Buy'-button or drag and drop a drink into the shopping cart</p>
-                        <ul>
-                        <li class="transl" id = "beer_cat">Beer</li>
-                        <li class="transl" id = "cider_cat">Cider</li>
-                        <li class="transl" id = "wine_cat">Wine</li>
-                        <li class="transl" id = "non_cat">Non-Alcoholic</li>
-                            </ul>
+                        <p class="transl" id="purchase_p">To purchase a beverage: click the 'Add'-button or drag and drop a drink into the shopping cart</p>
+                    
                     </div>
+                    <tr>
+                        <th class = "bev_cat" "transl">
+                            Beer
+                        </th>
+                        <th class = "bev_cat" "transl">
+                            Cider
+                        </th>
+                        <th class = "bev_cat" "transl">
+                            Wine
+                        </th>
+                        <th class = "bev_cat" "transl">
+                            Non-Alcoholic
+                        </th>
+                    </tr>
                     <tr>
                         <td>
                            <div class="drink" id="drink1" draggable="true" ondragstart="drag(event)">
@@ -254,8 +263,9 @@
                     <button class="transl" type="submit" id="clear_button" value="Clear" onclick="clearCart();">Clear</button>
                 </div>
             </div>
-        </div>
-            
-        </div>
+        
+          
+      </div>
     </body>
+    
 </html>

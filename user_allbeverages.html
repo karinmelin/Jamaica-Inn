@@ -37,21 +37,29 @@
                 </select> 
             </header>
         
-        <br>        
         
         <div id="container">
             
-            <div id= "table_all" >
+            
                 <table id = "All beverages">
                     <div id = "category">
-                        <p id="to_purchase" class="transl">To purchase a beverage: click the 'Buy'-button or drag and drop a drink into the shopping cart</p>
-                        <ul>
-                        <li id = "beer_cat" class="transl">Beer</li>
-                        <li id = "cider_cat" class="transl">Cider</li>
-                        <li id = "wine_cat" class="transl">Wine</li>
-                        <li id = "non_cat" class="transl">Non-Alcoholic</li>
-                            </ul>
+                        <p class="transl" id="purchase_p">To purchase a beverage: click the 'Add'-button or drag and drop a drink into the shopping cart</p>
+                    
                     </div>
+                    <tr>
+                        <th class = "bev_cat" "transl">
+                            Beer
+                        </th>
+                        <th class = "bev_cat" "transl">
+                            Cider
+                        </th>
+                        <th class = "bev_cat" "transl">
+                            Wine
+                        </th>
+                        <th class = "bev_cat" "transl">
+                            Non-Alcoholic
+                        </th>
+                    </tr>
                     <tr>
                         <td>
                            <div class="drink" id="drink1" draggable="true" ondragstart="drag(event)">
@@ -240,6 +248,6 @@
             
         </div>
             
-        </div>
+        
     </body>
 </html>
