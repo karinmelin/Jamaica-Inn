@@ -123,25 +123,35 @@ nav ul{
     
 }
 
-nav li{
-	display: inline;
-    
+nav li{ 
+   width:750px;
+margin:0 auto;
+list-style:none;
+}
+#nav li {
+float:left;
+}
+#nav a {
+display:block;
+text-align:center;
+width:150px; /* fixed width */
+text-decoration:none; 
 }
 
-header{
+header{ 
+    position: relative;  
     background-color:whitesmoke; 
-    border: 2px solid black; 
+    border: 2px solid black;
+    text-align: center; 
     border-radius: 2em; 
     font-size: 30px; 
     color: black; 
-    height: 2em;
-    width: 1200px;
-    text-align: top;  
-    margin-left: left;
-    margin-right: right;
+    height: 50px;
+    width: 970px; 
+    margin-left: 5;
+    margin-right: auto; 
 	
 }
-
 
 td {
     border: 1px solid #0B231C;
@@ -159,11 +169,18 @@ td {
 }
 
 .drink p {
+    font-family: 'Amatic SC';
+    font-size: 25px;
     padding-top: 5px;
     margin:0;
 }
+#drink p:hover{
+    color: #21c559;
+}
 
 .price{
+    font-size: 20px; 
+    color: black;
     height: 15px;
     width: 80px;
     font-weight: bold;
@@ -192,8 +209,10 @@ td {
 }
 
 #table_all{
+    border: 2px solid black; 
+    border-radius: 2em; 
     background-color: whitesmoke;
-    width:970px;
+    width:960px;
     height: 430px;
     float: left;
     
@@ -228,51 +247,68 @@ table{
     position: relative;
 }
 .shopping_cart{
+    border: 2px solid black; 
+    border-radius: 2em; 
     background-color: white;
     width:200px;
     height: 300px; 
     vertical-align: text-top;
+    position: relative; 
     overflow:auto;  
 }
 
 #Heading_cart{
+    font-size: 40px; 
+    border: 2px solid black; 
+    border-radius: 2em; 
     width:auto;
     background-color: whitesmoke;
     color: black;
+    position: relative; 
 }
 
 #purchase_button {
+        font-size:25px; 
+        border: 2px solid black; 
+        border-radius: 2em; 
+        font-family: 'Amatic'; 
+        font-size: px; 
         width:100px;
         height:50px;
         float:left;
-        background:#0B231C;         
+        background-color: green;         
         color:white;
         bottom:0;    
     display: inline;
     }
+#purchase_button:hover{
+    color: #21c559;
+}
 #clear_button {
+        font-family: 'Amatic'; 
+        font-size: 25px; 
+        border: 2px solid black; 
+        border-radius: 2em; 
         width:100px;
         height:50px;
         background:darkred;         
         color:white;
         bottom:0;  
         display: inline;
-    float:right
+        float:right
     
     }
+#clear_button:hover{
+    color: #21c559;
+}
 
 #container{
     margin: 0 auto;
     text-align: center;
     position: relative;
-    width: 1260px x 700px;
+    width: 1200px x 700px;
     float:left;   
 }
-
-
-
-
-
 
 #prevDrinks {
     width: 600px;
