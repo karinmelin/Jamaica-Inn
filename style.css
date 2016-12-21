@@ -367,7 +367,11 @@ table{
     display: table; 
     position: absolute;
     top:230px;
+<<<<<<< HEAD
     left:760px;
+=======
+    right:20px;
+>>>>>>> origin/master
     text-align:center;
 }
 
@@ -621,6 +625,15 @@ table{
 
 .user_tables td{
     font-size:15px;
+}
+
+.user_tables tr:nth-child(even) {
+  background-color: green;
+}
+
+
+.user_tables tr:nth-child(odd) {
+  background-color: darkgreen;
 }
 
                     /* ------- Making the site responsive ------- */
