@@ -33,7 +33,7 @@ function loadAllUsers() {
         
         var json = JSON.parse(usr);
         var payload = json.payload;
-        console.log(payload);
+        //console.log(payload);
         
         var assets = payload[0].assets;
         var name = payload[0].first_name;
@@ -42,9 +42,10 @@ function loadAllUsers() {
         
     });
     
-    /* Looping through all users from API
-    and displaying their info under 'All users'
-    in 'Manage users'page */
+    
+    /* Looping through all users from API and displaying their info in a table 
+    under 'All users' in 'Manage users' page.
+    The same function is used for both 'Add user' and 'Edit user' */
 	api.fetchUsers(function(list) {
 
 		var json = JSON.parse(list);
@@ -57,52 +58,24 @@ function loadAllUsers() {
             var email = payload[i+13].email;
 			var phone = payload[i+13].phone;
             
+            var var_array = [username, first_name, last_name, email, phone];
+            var add_user_table = document.getElementById("add_user_tbl");
             var edit_user_table = document.getElementById("edit_user_tbl");
             
-            var tr = document.createElement('TR');
-            var username_td = document.createElement('TD');
-            var first_name_td = document.createElement('TD');
-            var last_name_td = document.createElement('TD');
-            var email_td = document.createElement('TD');
-			var phone_td = document.createElement('TD');
-            var edit_btn_td = document.createElement('TD');
-            var edit_btn = document.createElement('BUTTON');
+            /* Checks which page of 'Add user' or 'Edit user' the
+            user list should be loaded into */
+            if (edit_user_table != null) {
+                //console.log("edit_user_table inte null");
+                loadIntoTable(var_array, edit_user_table, i, "yes");
+            } else if (add_user_table != null) {
+                //console.log("add_user_table inte null");
+                loadIntoTable(var_array, add_user_table, i, "no");
+            }
             
-            edit_btn.setAttribute('type','submit');
-            edit_btn.innerHTML = 'Edit';
-            
-            var username_node = document.createTextNode(username);
-            var first_name_node = document.createTextNode(first_name);
-            var last_name_node = document.createTextNode(last_name);
-            var email_node = document.createTextNode(email);
-            var phone_node = document.createTextNode(phone);
-            
-            username_td.appendChild(username_node);
-            first_name_td.appendChild(first_name_node);
-            last_name_td.appendChild(last_name_node);
-            email_td.appendChild(email_node);
-            phone_td.appendChild(phone_node);
-            edit_btn_td.appendChild(edit_btn);
-            
-            tr.appendChild(username_td);
-            tr.appendChild(first_name_td);
-            tr.appendChild(last_name_td);
-            tr.appendChild(email_td);
-            tr.appendChild(phone_td);
-            tr.appendChild(edit_btn_td);
-            
-            edit_user_table.appendChild(tr);
-            
-			/*para = document.createElement("div");
-			
-			var node = document.createTextNode(username + ' ' + first_name + ' ' + last_name + ' ' + email  + ' ' + phone);
-			para.appendChild(node);
-
-			var userList = document.getElementById("users");
-			userList.appendChild(para);*/
         }
     });
 }
+
 /*Loads all users and their balance into admin_manage_balance.html */
 function loadAllUsersAndBalance() {
     checkLang();
@@ -136,19 +109,53 @@ function loadAllUsersAndBalance() {
             var username = payload[i+13].username;
 			var assets = payload[i+13].assets;
             
+            var var_array = [username, assets];
+            
             var user_balance_table = document.getElementById("user_balance_tbl");
             
-            var tr = document.createElement('TR');
-            var td1 = document.createElement('TD');
-            var td2 = document.createElement('TD');
-            var node1 = document.createTextNode(username);
-            var node2 = document.createTextNode(assets + ':-');
-            td1.appendChild(node1);
-            td2.appendChild(node2);
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            user_balance_table.appendChild(tr);
+            loadIntoTable(var_array, user_balance_table, i, "yes");
         }
     });
-		
+}
+
+/*
+function that takes variables from a list and a table 
+and append the variables together with an edit button 
+*/
+function loadIntoTable(var_array, var_table, i, add_edit_btn) {
+    
+    var var_tr = document.createElement('TR');
+    
+    for (var j = 0; j < var_array.length; j++) {
+        
+        var var_td = document.createElement('TD');
+        var var_textNode = document.createTextNode(var_array[j]);
+        
+        var_td.appendChild(var_textNode);
+        var_tr.appendChild(var_td);
+    }
+    
+    if (add_edit_btn == "yes") {
+        var edit_btn_td = document.createElement('TD');
+        var edit_btn = document.createElement('BUTTON');
+
+        edit_btn.setAttribute('type','submit');
+        edit_btn.setAttribute('onclick','loadIntoForm();')
+        edit_btn.setAttribute('id','edit_btn' + i);
+        edit_btn.innerHTML = 'Edit';
+
+        edit_btn_td.appendChild(edit_btn);
+        var_tr.appendChild(edit_btn_td);
+    }
+    
+    var_table.appendChild(var_tr);
+}
+
+/* Function that reads of the current rows values and load them
+into the form for editing */
+function loadIntoForm() {
+    
+    // script for loading the values in the tablerow into the form-inputs
+    // to edit the values and then be able to save them to the API
+    
 }

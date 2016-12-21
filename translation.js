@@ -28,25 +28,30 @@ function dictionary() {
         },
 */
         sv: {
-            // translatable elements for index.html
-            /*
-            */
+            /* Index page */
+            username_label_index: ' Användarnamn',
+            username_placeholder_index: 'Användarnamn',
+            password_label_index: ' Lösenord',
+            password_placeholder_index: 'Lösenord',
+            login_button: 'Logga in',
+            
+            /* ---- Header for all pages ----*/
+            /* nav links */
             all_beverages: 'Alla drycker',
             previously_bought: 'Tidigare köp',
             manage_users: 'Hantera användare',
             manage_beverages: 'Hantera drycker',
+            edit_users: 'Redigera användare',
+            edit_balance: 'Redigera användarsaldo',
+            edit_slots: 'Redigera tillgängliga drycker',
+            edit_stock_price: 'Redigera lager/pris',
+            /* User info in header */
             log_out: 'Logga ut',
             welcome_p: 'Välkommen  ',
             user_balance_p: 'Saldo:  ',
-            all_users_and_balance: 'Alla användare och deras saldo',
-            all_users: 'Alla användare',
-            edit_user_balance: 'Redigera användarsaldo',
-            edit_user: 'Redigera användare',
-            add_user: 'Lägg till användare',
-            username_p: 'Användarnamn',
-            usernameBalance: 'Användarnamn',
-            usernameBalance_p: 'Saldo',
-            purchase_p: 'För att köpa en dryck, dra och släpp en dryck i kundvagnen',
+            
+            /* All beverages page */
+            purchase_p: 'För att köpa en dryck, klicka på Buy-knappen eller dra och släpp en dryck i kundvagnen',
             beer_cat: 'Öl',
             cider_cat: 'Cider',
             wine_cat: 'Vin',
@@ -55,12 +60,36 @@ function dictionary() {
             totalamount: 'Totalt:',
             purchase_button: 'Köp',
             clear_button: 'Töm kundvagn',
+            
+            /* Previously bought/history page */
+            prev_bought_drinks: 'Tidigare köpta drycker',
+            drink_th: 'Dryck',
+            timestamp_th: 'Tidsstämpel',
+            price_th: 'Pris',
+            
+            /* Manage user - 'Add user' & 'Edit user' tableheaders */
+            username_th: 'Användarnamn',
+            first_name_th: 'Förnamn',
+            last_name_th: 'Efternamn',
+            email_th: 'Email',
+            phone_th: 'Telefonnr',
+            /* 'Edit balance' page tablehead */
+            quantity_th: 'Antal i lager',
+            /* 'Edit user and balance' page tablehead */
+            balance_th: 'Saldo',
+
+            all_users_and_balance: 'Alla användare och deras saldo',
+            all_users: 'Alla användare',
+            edit_user_balance: 'Redigera användarsaldo',
+            edit_user: 'Redigera användare',
+            add_user: 'Lägg till användare',
+            username_p: 'Användarnamn',
+            usernameBalance: 'Användarnamn',
+            usernameBalance_p: 'Saldo',
+            /*  */
             admin_history: 'Tidigare köp',
             add_users: 'Lägg till användare',
-            edit_users: 'Redigera användare',
-            edit_balance: 'Redigera användarsaldo',
-            edit_slots: 'Redigera tillgängliga drycker',
-            edit_stock_price: 'Redigera lager/pris',
+
             //Balance: 'Saldo:  ',
             beverage_choose: 'Välj vilka drycker som finns i automaten',
             save_button: 'Spara ändringar',
@@ -87,41 +116,73 @@ function dictionary() {
             pricetxt: 'Pris',
             pricePlaceholder: 'Välj nytt pris',
             savebeverage_button: 'Spara dryck',
+            savebalance_button: 'Spara nytt saldo',
             
             // translatable elements for allbeverages.html
         },
         en: {
-            // translatable elements for index.html
+            /* Index page */
+            username_label_index: ' Username',
+            username_placeholder_index: 'Username',
+            password_label_index: ' Password',
+            password_placeholder_index: 'Password',
+            login_button: 'Log in',
+            
+            /* ---- Header for all pages ----*/
+            /* nav links */
             all_beverages: 'All Beverages',
             previously_bought: 'Previously Bought',
             manage_users: 'Manage Users',
             manage_beverages: 'Manage Beverages',
+            add_users: 'Add User',
+            edit_users: 'Edit User',
+            edit_balance: 'Edit Balance',
+            edit_slots: 'Edit Slots',
+            edit_stock_price: 'Edit Stock/Price',
+            /* User info in header */
             log_out: 'Log out',
             welcome_p: 'Welcome  ',
             user_balance_p: 'Balance:  ',
-            all_users_and_balance: 'All users and their balance',
-            all_users: 'All users',
-            edit_user_balance: ' Edit User Balance',
-            edit_user: ' Edit user',
-            add_user: 'Add user',
-            username_p: 'Username',
-            usernameBalance: 'Username',
-            usernameBalance_p: 'Balance',
-            purchase_p: 'To purchase a beverage, drag and drop a drink into the shopping cart',
+            
+            /* All beverages page */
+            purchase_p: 'To purchase a beverage: click the Buy-button or drag and drop a drink into the shopping cart',
             beer_cat: 'Beer',
             cider_cat: 'Cider',
             wine_cat: 'Wine',
             non_cat: 'Non-Alcoholic',
             Heading_cart: 'Shopping cart',
             totalamount: 'Total:',
-            purchase_button: ' Purchase ',
-            clear_button: ' Clear ',
+            purchase_button: 'Purchase',
+            clear_button: 'Clear',
+            
+            /* Previously bought/history page */
+            prev_bought_drinks: 'Previosly bought drinks',
+            drink_th: 'Drink',
+            timestamp_th: 'Time bought',
+            price_th: 'Price',
+            
+            /* Manage user - 'Add user' & 'Edit user' tableheaders */
+            username_th: 'Username',
+            first_name_th: 'First Name',
+            last_name_th: 'Last Name',
+            email_th: 'Email',
+            phone_th: 'Phone number',
+            /* 'Edit balance' page tablehead */
+            quantity_th: 'Quantity in stock',
+            /* 'Edit user and balance' page tablehead */
+            balance_th: 'Balance',
+            
+            /*  */
+            all_users_and_balance: 'All users and their balance',
+            all_users: 'All users',
+            edit_user_balance: ' Edit user balance',
+            edit_user: ' Edit user',
+            add_user: 'Add user',
+            username_p: 'Username',
+            usernameBalance: 'Username',
+            usernameBalance_p: 'Balance',
             admin_history: 'Previously Bought',
-            add_users: 'Add Users',
-            edit_users: 'Edit Users',
-            edit_balance: 'Edit Balance',
-            edit_slots: 'Edit Slots',
-            edit_stock_price: 'Edit Stock/Price',
+            
             //Balance: 'Balance:  ',
             beverage_choose: 'Choose which beverages you want in the vending machine',
             save_button: ' Save changes ',
@@ -148,7 +209,8 @@ function dictionary() {
             quantityPlaceholder: 'Enter a new quantity',
             pricetxt: 'Price',
             pricePlaceholder: 'Enter a new price',
-            savebeverage_button: 'Save beverage'
+            savebeverage_button: 'Save beverage',
+            savebalance_button: 'Update user balance',
             
             // translatable elements for allbeverages.html
         }    
@@ -176,7 +238,7 @@ function translate() {
             else {
                 x = document.getElementById(textElem[j].id).innerHTML;
             }
-            console.log(textElem[j].id + ": '" + x + "'" + ",");
+            //console.log(textElem[j].id + ": '" + x + "'" + ","); //if find translations id:s uncomment this
         }
         else {
             if(textElem[j].nodeName === 'INPUT') {
@@ -196,7 +258,11 @@ function translate() {
 
 
 function langSelect() {
-    var x = document.getElementById('language_choice').value;
+    var y = document.getElementById("language_choice");
+    if (y == null) {
+        y = document.getElementById("language_choice_index");
+    }
+    var x = y.value;
     sessionStorage.setItem('sprak', x);
     translate();
 }

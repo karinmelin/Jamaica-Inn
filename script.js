@@ -196,13 +196,13 @@ function checkLogin() {
 		"count": "200",
 		"price": "45.00"
 	}, {
-		"namn": "Xide Non Alco",
-		"namn2": "Lemon Dragonfruit",
-		"sbl_price": "13.90",
+		"namn": "Einbecker Brauherren Alkoholfrei",
+		"namn2": "",
+		"sbl_price": "9.90",
 		"pub_price": "15",
-		"beer_id": "192003",
-		"count": "196",
-		"price": "13.90"
+		"beer_id": "191402",
+		"count": "193",
+		"price": "9.90"
 	}, {
 		"namn": "Samuel Adams",
 		"namn2": "Boston Lager",
@@ -244,6 +244,7 @@ function checkLogin() {
 
 /* function that makes the slots contain a maximum of 10 bottles */
 function setStock(data) {
+    console.log('inne i setStock');
     for (var i = 0; i < 20; i++) {
         var count = data[i].count;
             if (count > 10) {

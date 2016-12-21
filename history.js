@@ -1,3 +1,10 @@
+/* 
+Script for managing the 'Previosly bought' page
+both for admin and user page
+
+Author: Karin Melin 2016 
+*/
+
 /* check if page loaded */
 function docLoaded(fn) {
     if (document.readyState !== 'loading') {
@@ -37,16 +44,21 @@ function loadHistory() {
         
         for (var i = 0; i < payload.length-2; i++) {
             
-            var drink = payload[i+2].namn;
+            var drink = payload[i+2].namn + ' ' + payload[i+2].namn2;
             var timeStamp = payload[i+2].timestamp;
-            var price = payload[i+2].price;
+            var price = payload[i+2].price + ':-';
             
-            var para = document.createElement("p");
+            var var_array = [drink, timeStamp, price];
+            var history_table = document.getElementById("history_tbl");
+            
+            loadIntoTable(var_array, history_table, i, "no"); //function in users.js
+            
+            /*var para = document.createElement("p");
             var node = document.createTextNode(timeStamp + ' ' + drink + ' ' + price + ':-');
             para.appendChild(node);
             
             var prevDrink = document.getElementById("prevDrinks");
-            prevDrink.appendChild(para);
+            prevDrink.appendChild(para);*/
         }
         
     });

@@ -1,15 +1,21 @@
 <html>
     <head>
+<<<<<<< HEAD
       <link href="style.css" rel="stylesheet">
         <link href="style2.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale =1.0"> 
+=======
+        <meta charset='utf-8'>
+        <link href="style.css" rel="stylesheet">
+        <title>Jamaica inn</title>
+>>>>>>> origin/master
         <script src="api.js"></script>
         <script src="script.js"></script>
         <script src="beverages.js"></script>
         <script src="dragdrop.js"></script>
 		<script src="translation.js"></script>
         <script>
-            docLoaded(bevPageLoaded);
+            docLoaded(bevPageLoaded); //beverages.js
 			
         </script>
     </head>
@@ -27,8 +33,8 @@
                    <div class="dropdown_menu">
                        <button class="dropbtn transl" id="manage_users">Manage Users</button>
                        <div class="dropdown-content">
-                            <a href="admin_add_users.html" id="add_users" class="transl" >Add Users</a>
-                            <a href="admin_manage_users.html" id="edit_users" class="transl" >Edit Users</a>
+                            <a href="admin_add_users.html" id="add_users" class="transl" >Add User</a>
+                            <a href="admin_manage_users.html" id="edit_users" class="transl" >Edit User</a>
                             <a href="admin_manage_balance.html" id="edit_balance" class="transl" >Edit Balance</a>
                         </div>
                     </div>
@@ -61,7 +67,7 @@
             <div id= "table_all" >
                 <table id = "All beverages">
                     <div id = "category">
-                        <p class="transl" id="purchase_p">To purchase a beverage, drag and drop a drink into the shopping cart</p>
+                        <p class="transl" id="purchase_p">To purchase a beverage: click the 'Buy'-button or drag and drop a drink into the shopping cart</p>
                         <ul>
                         <li class="transl" id = "beer_cat">Beer</li>
                         <li class="transl" id = "cider_cat">Cider</li>
@@ -73,7 +79,7 @@
                         <td>
                            <div class="drink" id="drink1" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink1p"></p>
-                                <p id="drinktype1"></p>
+                                <p class="drinktype" id="drinktype1"></p>
                                 <div class = "price transl" id="price1">price</div>
                                 <div class = "amount transl" id="amount1"> amount </div>
                             </div>
@@ -81,7 +87,7 @@
                         <td>
                            <div class="drink" id="drink2" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink2p"></p>
-                                <p id="drinktype2"></p>
+                                <p class="drinktype" id="drinktype2"></p>
                                 <div class = "price transl" id="price2"> price </div>
                                 <div class = "amount transl" id="amount2"> amount </div>
                             </div>
@@ -89,7 +95,7 @@
                         <td>
                            <div class="drink" id="drink3" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink3p"></p>
-                                <p id="drinktype3"></p>
+                                <p class="drinktype" id="drinktype3"></p>
                                 <div class = "price transl" id="price3"> price </div>
                                 <div class = "amount transl" id="amount3"> amount </div>
                             </div>
@@ -97,7 +103,7 @@
                         <td>
                            <div class="drink" id="drink4" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink4p"></p>
-                                <p id="drinktype4"></p>
+                                <p class="drinktype" id="drinktype4"></p>
                                 <div class = "price transl" id="price4"> price </div>
                                 <div class = "amount transl" id="amount4"> amount </div>
                             </div>
@@ -107,7 +113,7 @@
                         <td>
                            <div class="drink" id="drink5" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink5p"></p>
-                                <p id="drinktype5"></p>
+                                <p class="drinktype" id="drinktype5"></p>
                                 <div class = "price transl" id="price5"> price </div>
                                 <div class = "amount transl" id="amount5"> amount </div>
                             </div>
@@ -115,7 +121,7 @@
                         <td>
                             <div class="drink" id="drink6" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink6p"></p>
-                                <p id="drinktype6"></p>
+                                <p class="drinktype" id="drinktype6"></p>
                                 <div class = "price transl" id="price6"> price </div>
                                 <div class = "amount transl" id="amount6"> amount </div>
                             </div>
@@ -123,7 +129,7 @@
                         <td>
                            <div class="drink" id="drink7" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink7p"></p>
-                                <p id="drinktype7"></p>
+                                <p class="drinktype" id="drinktype7"></p>
                                 <div class = "price transl" id="price7"> price </div>
                                 <div class = "amount transl" id="amount7"> amount </div>
                             </div>
@@ -131,7 +137,7 @@
                         <td>
                            <div class="drink" id="drink8" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink8p"></p>
-                                <p id="drinktype8"></p>
+                                <p class="drinktype" id="drinktype8"></p>
                                 <div class = "price transl" id="price8"> price </div>
                                 <div class = "amount transl" id="amount8"> amount </div>
                             </div>
@@ -141,7 +147,7 @@
                         <td>
                            <div class="drink" id="drink9" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink9p"></p>
-                                <p id="drinktype9"></p>
+                                <p class="drinktype" id="drinktype9"></p>
                                 <div class = "price transl" id="price9"> price </div>
                                 <div class = "amount transl" id="amount9"> amount </div>
                             </div>
@@ -149,7 +155,7 @@
                         <td>
                            <div class="drink" id="drink10" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink10p"></p>
-                                <p id="drinktype10"></p>
+                                <p class="drinktype" id="drinktype10"></p>
                                 <div class = "price transl" id="price10"> price </div>
                                 <div class = "amount transl" id="amount10"> amount </div>
                             </div>
@@ -157,7 +163,7 @@
                         <td>
                            <div class="drink" id="drink11" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink11p"></p>
-                                <p id="drinktype11"></p>
+                                <p class="drinktype" id="drinktype11"></p>
                                 <div class = "price transl" id="price11"> price </div>
                                 <div class = "amount transl" id="amount11"> amount </div>
                             </div>
@@ -165,7 +171,7 @@
                         <td>
                            <div class="drink" id="drink12" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink12p"></p>
-                                <p id="drinktype12"></p>
+                                <p class="drinktype" id="drinktype12"></p>
                                 <div class = "price transl" id="price12"> price </div>
                                 <div class = "amount transl" id="amount12"> amount </div>
                             </div>
@@ -175,7 +181,7 @@
                         <td>
                            <div class="drink" id="drink13" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink13p"></p>
-                                <p id="drinktype13"></p>
+                                <p class="drinktype" id="drinktype13"></p>
                                 <div class = "price transl" id="price13"> price </div>
                                 <div class = "amount transl" id="amount13"> amount </div>
                             </div>
@@ -183,7 +189,7 @@
                         <td>
                            <div class="drink" id="drink14" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink14p"></p>
-                                <p id="drinktype14"></p>
+                                <p class="drinktype" id="drinktype14"></p>
                                 <div class = "price transl" id="price14"> price </div>
                                 <div class = "amount transl" id="amount14"> amount </div>
                             </div>
@@ -191,15 +197,15 @@
                         <td>
                            <div class="drink" id="drink15" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink15p"></p>
-                                <p id="drinktype15"></p>
+                                <p class="drinktype" id="drinktype15"></p>
                                 <div class = "price transl" id="price15"> price </div>
                                 <div class = "amount transl" id="amount15"> amount </div>
                             </div>
                         </td>  
                         <td>
                            <div class="drink" id="drink16" draggable="true" ondragstart="drag(event)">
-                                <p id ="drink16p"></p>
-                                <p id="drinktype16"></p>
+                                <p id="drink16p"></p>
+                                <p class="drinktype" id="drinktype16"></p>
                                 <div class = "price transl" id="price16"> price </div>
                                 <div class = "amount transl" id="amount16"> amount </div>
                             </div>
@@ -209,7 +215,7 @@
                         <td>
                            <div class="drink" id="drink17" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink17p"></p>
-                                <p id="drinktype17"></p>
+                                <p class="drinktype" id="drinktype17"></p>
                                 <div class = "price transl" id="price17"> price </div>
                                 <div class = "amount transl" id="amount17"> amount </div>
                             </div>
@@ -217,7 +223,7 @@
                         <td>
                            <div class="drink" id="drink18" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink18p"></p>
-                                <p id="drinktype18"></p>
+                                <p class="drinktype" id="drinktype18"></p>
                                 <div class = "price transl" id="price18"> price </div>
                                 <div class = "amount transl" id="amount18"> amount </div>
                             </div>
@@ -225,7 +231,7 @@
                         <td>
                            <div class="drink" id="drink19" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink19p"></p>
-                                <p id="drinktype19"></p>
+                                <p class="drinktype" id="drinktype19"></p>
                                 <div class = "price transl" id="price19"> price </div>
                                 <div class = "amount transl" id="amount19"> amount </div>
                             </div>
@@ -233,7 +239,7 @@
                         <td>
                            <div class="drink" id="drink20" draggable="true" ondragstart="drag(event)">
                                 <p id ="drink20p"></p>
-                                <p id="drinktype20"></p>
+                                <p class="drinktype" id="drinktype20"></p>
                                 <div class = "price transl" id="price20"> price </div>
                                 <div class = "amount transl" id="amount20"> amount </div>
                             </div>

@@ -24,6 +24,33 @@ function bevPageLoaded() {
 function connectAPI() {
     document.getElementById("clear_button").addEventListener("click", clearCart);
     
+    /* adding buttons ans eventlistener to all slots
+    if double-clicking on div: adding the drink to the cart */
+    for (var i = 1; i < 21; i++) {
+        
+        var slot_div = document.getElementById('drink' + i),
+            buy_btn = document.createElement('BUTTON'),
+            drink_id = 'drink' + i;
+            drink_ptag = document.getElementById(drink_id);
+
+        buy_btn.setAttribute('onclick','clickedBuy(this.name);');
+        buy_btn.setAttribute('class','buy_btn transl');
+        buy_btn.setAttribute('name', i);
+        buy_btn.innerHTML = 'Buy';
+        
+        slot_div.appendChild(buy_btn);
+        
+        document.getElementById("drink" + i).addEventListener("dblclick", function(event) {
+            //console.log("dubbelklickat!")
+            var cart = document.getElementById('shop'),
+                drink_id = this.id,
+                drink_ptag = document.getElementById(drink_id);
+
+            addToCart(cart, drink_id, drink_ptag);
+        });
+        
+    }
+    
     /* create the connection object to the API */
 	var api = new APIConnect();
     
@@ -47,11 +74,12 @@ function connectAPI() {
         document.querySelector('#headerName').innerHTML = name;
     });
     
-    loadDrinks(api);
+    loadDrinks();
 }
 
 /* function that loads the drinks into the slots of the 'All beverages' */
-function loadDrinks(api) {
+function loadDrinks() {
+    var api = new APIConnect();
     
     /* fetching the drinks from the local storage */
     var drinkList = JSON.parse(localStorage.getItem("drinkList"));
@@ -79,8 +107,10 @@ function loadDrinks(api) {
         
         //console.log(data[i].count);
         
-        if (amount < 0) {
+        if (amount <= 0) {
             document.querySelector('#amount' + n).innerHTML = 'Refill me';
+            document.getElementById('drink'+ n).setAttribute('draggable', 'false');
+            document.getElementById("drink"+n).style.cursor = "not-allowed";
         } /*else if (amount > 10){
             document.querySelector('#amount' + n).innerHTML = 10 + ' units';
         } */else {
@@ -98,13 +128,26 @@ function checkAlcohol(api, beer_id, n) {
     
     api.fetchBevType(function(bev){   
 
-    var json = JSON.parse(bev);
-    var payload_type = json.payload;
-    var beer_type = payload_type[0].varugrupp;
-            
-    if (beer_type === 'Alkoholfritt, Övrigt'|| beer_type === 'Alkoholfritt, Öl' || beer_type === 'Alkoholfritt, Must') {
-        var node = document.querySelector('#drinktype' + n).innerHTML = 'non-alcoholic';
+        var json = JSON.parse(bev);
+        var payload_type = json.payload;
+        var beer_type = payload_type[0].varugrupp;
+
+        if (beer_type === 'Alkoholfritt, Övrigt'|| beer_type === 'Alkoholfritt, Öl' || beer_type === 'Alkoholfritt, Must') {
+            var node = document.querySelector('#drinktype' + n).innerHTML = 'non-alcoholic';
         }
                 
     }, beer_id);
+}
+
+/* When clicking on 'Buy' button for the drinks this
+function collects the data needed for the addToCart();
+that appends the choice to the cart. */
+function clickedBuy(btn_id) {
+    
+    var drink_id = "drink" + btn_id;
+    var drink_ptag = document.getElementById(drink_id);
+    var cart = document.getElementById('shop');
+    
+    addToCart(cart,drink_id,drink_ptag);
+    
 }

@@ -1,8 +1,8 @@
 <html>
     <head>
+        <meta charset='utf-8'>
         <link href="style.css" rel="stylesheet">
-        <link href="style2.css" rel="stylesheet">
-        <title>Jamaican inn</title>
+        <title>Jamaica inn</title>
         <script src="api.js"></script>
         <script src="dragdrop.js"></script>
         <script src="beverages.js"></script>
@@ -11,7 +11,7 @@
         <script src="script.js"></script>
         <script src="translation.js"></script>
         <script>
-            docLoaded(loadAllUsers);
+            docLoaded(loadAllUsers); //users.js
         </script>
     </head>
     
@@ -29,8 +29,8 @@
                    <div class="dropdown_menu">
                        <button class="dropbtn transl current2" id="manage_users">Manage Users</button>
                        <div class="dropdown-content">
-                            <a href="admin_add_users.html" id="add_users" class="transl" >Add Users</a>
-                            <a href="admin_manage_users.html" id="edit_users" class="transl" >Edit Users</a>
+                            <a href="admin_add_users.html" id="add_users" class="transl" >Add User</a>
+                            <a href="admin_manage_users.html" id="edit_users" class="transl" >Edit User</a>
                             <a href="admin_manage_balance.html" id="edit_balance" class="transl" >Edit Balance</a>
                         </div>
                     </div>
@@ -65,11 +65,11 @@
 				<!--<div class="transl" id = "users_category">Username Firstname Lastname Email Phone</div>-->
                 <table class="user_tables" id="edit_user_tbl">
                     <tr>
-                        <th>Username</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Phone number</th>
+                        <th class="transl" id="username_th">Username</th>
+                        <th class="transl" id="first_name_th">First Name</th>
+                        <th class="transl" id="last_name_th">Last Name</th>
+                        <th class="transl" id="email_th">Email</th>
+                        <th class="transl" id="phone_th">Phone number</th>
                     </tr>
                 </table>
                 <br>

@@ -1,8 +1,8 @@
 <html>
     <head>
+        <meta charset='utf-8'>
         <link href="style.css" rel="stylesheet">
-        <link href="style2.css" rel="stylesheet">
-        <title>Jamaican inn</title>
+        <title>Jamaica inn</title>
         <script src="api.js"></script>
         <script src="dragdrop.js"></script>
         <script src="beverages.js"></script>
@@ -11,7 +11,7 @@
 		<script src="view_all_beverages.js"></script>
         <script src="translation.js"></script>
         <script>
-            docLoaded(loadAllBeverages);
+            docLoaded(loadAllBeverages); //view_all_beverages.js
         </script>
     </head>
     
@@ -29,8 +29,8 @@
                    <div class="dropdown_menu">
                        <button class="dropbtn transl" id="manage_users">Manage Users</button>
                        <div class="dropdown-content">
-                            <a href="admin_add_users.html" id="add_users" class="transl" >Add Users</a>
-                            <a href="admin_manage_users.html" id="edit_users" class="transl" >Edit Users</a>
+                            <a href="admin_add_users.html" id="add_users" class="transl" >Add User</a>
+                            <a href="admin_manage_users.html" id="edit_users" class="transl" >Edit User</a>
                             <a href="admin_manage_balance.html" id="edit_balance" class="transl" >Edit Balance</a>
                         </div>
                     </div>
@@ -62,7 +62,14 @@
             <div id="view_beverages">
                 <h3 class="transl" id="beverageh3"> Beverages</h3> 
             
-                <div class="transl" id = "bev_category">Beverage Price Quantity</div>
+                <table class="user_tables" id="edit_stock_tbl">
+                    <tr>
+                        <th class="transl" id="drink_th">Beverage</th>
+                        <th class="transl" id="price_th">Price</th>
+                        <th class="transl" id="quantity_th">Quantity in stock</th>
+                    </tr>
+                </table>
+                <!--<div class="transl" id = "bev_category">Beverage Price Quantity</div>-->
                 <br>
             </div>
 			

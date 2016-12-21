@@ -5,7 +5,7 @@ html {
 }
 body{
     background-color: #0B231C;
-	font-family: 'Arial ',sans-serif;
+	font-family: 'Arial', 'Arial', sans-serif;
 
 }
 
@@ -30,7 +30,7 @@ body{
     color:white;
     font-family: 'Courier New';
     margin-left: 250px;
-      text-align: center;
+    text-align: center;
     
 }
 
@@ -38,8 +38,7 @@ body{
 #login{
     margin-left: auto;
     margin-right: auto;
-   
-    height: 200px;
+    height: 210px;
     width: 500px;
     border: 3px solid forestgreen;
     border-radius: 1em;
@@ -54,14 +53,15 @@ body{
     max-height: 468px;
     min-width: 1240px;
     min-height: 468px;
- padding-top: 300px;
+    padding-top: 300px;
    
 }
 
 label {
-  display: inline-block;
-  width: 140px;
-  text-align: right;
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+
 }
 
 
@@ -69,19 +69,46 @@ label {
     display: inline;
 }
 
-#loginform{
-    width:150px;
-}
+/*#loginform{
+    width:60px;
+}*/
 
 #login_button {
  position: absolute;
-    top: 135px;
-    right:100px;
-    
+    top: 145px;
+    right:70px;
     height:30px;
-    width:100px;
-    
-}                                   /*LOG IN SIDAN SLUT*/
+    width:100px; 
+    font-size: 14px;
+    background-color: gray;
+    cursor: pointer;
+}       
+
+#username_placeholder_index {
+    height: 30px;
+    font-size: 14px;
+}
+
+#password_placeholder_index {
+    height: 30px;
+    font-size: 14px;
+}
+
+.login_div {
+    margin: 5px;
+    width: 307px;
+}
+
+#latinquote {
+    //font-style: italic;
+    font-family: 'OCR A Std', 'Arial', cursive;
+    font-size: 14px;
+    margin-left: 200px;
+    margin-top: 30px;
+    color: lightgray;
+}
+
+            /*LOG IN SIDAN SLUT*/
 
 
 
@@ -124,6 +151,7 @@ a.button {
     appearance: button;
     text-decoration: none;
     color: initial;
+    cursor: pointer;
 }
 
 nav a.current  {
@@ -144,6 +172,7 @@ nav a {
 }
 nav a:hover {
     color: #21c559;
+    cursor: pointer;
 }
 nav ul{
     position: absolute;
@@ -165,6 +194,10 @@ header{
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    border-top: #ccc 3px solid;
+    border-right: #ccc 3px solid;
+    border-bottom: #777 3px solid;
+    border-left: #777 3px solid;
 	
 }
 
@@ -189,8 +222,12 @@ header{
     top:10px;
     right:180px;
     
-    
 }
+
+#headerName {
+    font-weight: bold;
+}
+
 #user_balance {
     color: #0B231C;
     position: absolute;
@@ -201,6 +238,9 @@ header{
     width: 200px;
 }
 
+#assets {
+    font-weight: bold;
+}
 
 
 #logout a{
@@ -212,8 +252,13 @@ header{
 #logout{
     position: absolute;
     top:10px;
-    right:10px;
-    
+    right:10px;   
+}
+
+#log_out:hover {
+    text-decoration: underline;
+    color: dimgray;
+    cursor: pointer;
 }
 
 #language_choice{
@@ -231,11 +276,21 @@ header{
 
 
 #container td {
-    border: 1px solid #0B231C;
-    border-radius: 2em;
+    /*border: 1px solid #0B231C;*/
+    border-radius: 1.5em;
     background-color: white;
     color:#0B231C;
-    text-align: center;  
+    text-align: center; 
+    box-shadow: 
+    0 1px 2px #fff, /*bottom external highlight*/
+    0 -1px 1px #666, /*top external shadow*/ 
+    inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+    box-shadow: 
+    1px 1px #939393,
+    2px 2px #939393,
+    3px 3px #939393;
+    cursor: move;
 }
 
 
@@ -281,26 +336,35 @@ header{
     margin:0;
 }
 
+.drinktype {
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 14px;
+}
+
 .price{
     height: 15px;
-    width: 80px;
+    width: 65px;
     font-weight: bold;
     background-color: white;
-
-    padding-top: 5px;
-
+    /*padding-top: 0px;*/
     display: inline-block;
-  
- 
-    
 }
+
 .amount{
     height: 15px;
-    width: 80px;
+    width: 65px;
     font-weight: bold;
     background-color: white;
     display:inline-block;
+}
 
+.buy_btn {
+    height: 20px;
+    font-weight: bold;
+    background-color: darkseagreen;
+    display:inline-block;
+    cursor: pointer;
 }
 
 #table_all{
@@ -317,7 +381,7 @@ table{
 }
 
 #shoppingarea{
-    margin-top: 100px;
+    margin-top: 90px;
     width:200px;
     height: 350px;
     float:LEFT;  
@@ -331,11 +395,16 @@ table{
     height: 300px; 
     overflow:auto;
     
+    border-top: #ccc 3px solid;
+    border-right: #ccc 3px solid;
+    border-left: #777 3px solid;
+    
 }
 .shopping_cart p{
    display: inline;
     font-size: 14px;
     text-align: left;
+    color: black;
     
 }
 
@@ -352,29 +421,49 @@ table{
     text-align: left;
     padding-left: 10px;
     
+    border-top: #ccc 3px solid;
+    border-right: #ccc 3px solid;
+    border-bottom: #777 3px solid;
+    border-left: #777 3px solid;
 }
 
 
 #purchase_button {
-        width:100px;
-        height:50px;
-        float:left;
-        background:#0B231C;         
-        color:white;
-        bottom:0;    
+    width:102px;
+    height:50px;
+    float:left;
+    //background:#0B231C;         
+    background-color: #009933;
+    color:white;
+    bottom:0;    
     display: inline;
-    }
-#clear_button {
-        width:100px;
-        height:50px;
-        background:darkred;         
-        color:white;
-        bottom:0;  
-        display: inline;
-    float:right
-    
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: inset 0 -3px 3px rgba(0,0,0,0.5), /*bottom internal shadow*/
+                inset 0 3px 3px rgba(255,255,255,1); /*top internal highlight*/
 }
 
+#clear_button {
+    width:102px;
+    height:50px;
+    background:darkred;         
+    color:white;
+    bottom:0;  
+    display: inline;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    box-shadow: inset 0 -3px 3px rgba(0,0,0,0.5), /*bottom internal shadow*/
+                inset 0 3px 3px rgba(255,255,255,1); /*top internal highlight*/
+}
+
+#purchase_button:hover {
+    background-color: limegreen;
+}
+
+#clear_button:hover {
+    background: red; 
+}
 
 #container{
     margin: 0 auto;
@@ -416,18 +505,15 @@ table{
 #beverage_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;       
         color:white;
       
 }
 #save_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;        
         color:white;
-  
-
-      
 }
 
 .dropdown_bev{
@@ -461,14 +547,14 @@ table{
 #createuser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
       
 }
 #edituser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
     
       
@@ -476,7 +562,7 @@ table{
 #saveuser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
 		margin-left: 1040px;
     
@@ -507,7 +593,7 @@ table{
 	  
 }
 
-#users_category {
+/* #users_category {
     font-size:24px;
     text-align: justify;
     padding-left: 10px;
@@ -518,7 +604,7 @@ table{
     content: "";
     display: inline-block;
     width: 100%;
-}
+}*/
 
 .adduser {
     width: 350px;
@@ -558,7 +644,7 @@ table{
     width: 100%; 
 }
 
-#bev_category {
+/* #bev_category {
     font-size:24px;
     text-align: justify;
     padding-left: 10px;
@@ -569,7 +655,7 @@ table{
     content: "";
     display: inline-block;
     width: 100%;
-}
+}*/
 
 #addbeverage {
     width: 350px;
@@ -594,15 +680,14 @@ table{
 #savebeverage_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
-  
 }
 
 #savebalance_button {
     width:200px;
     height:50px;
-    background:#0B231C;;         
+    background:#0B231C;         
     color: white;
     margin-left: 1040px;
     margin-top: 10px;
@@ -622,10 +707,10 @@ table{
 }
 
 .user_tables td{
-    font-size:14px;
+    font-size:15px;
 }
 
-/*Making the site responsive */
+                    /* ------- Making the site responsive ------- */
 
 @media screen and (max-width: 1239px){
     
@@ -635,9 +720,7 @@ table{
     margin-left: auto;
     margin-right: auto;
     
-   
 }
-    
     
 .dropbtn {
     font-size: 0.65em;
@@ -664,7 +747,7 @@ nav ul{
 
 }
 
-header{
+header {
     height: 30%;
     width: 100%;
     float: left; 
@@ -672,7 +755,7 @@ header{
     margin-right: 0px auto;	
 }
 
-#user_img{
+#user_img {
     position: absolute;
     left: 180px;
     top: 117px;
@@ -681,18 +764,19 @@ header{
     
 }
 
-#user_img img
-{
+#user_img img {
   max-width:100%; 
   max-height:100%;
   margin:auto;
 }
+    
 #welcome {
     position: absolute;
     left: 10px;
     top:50px;
     
 }
+    
 #user_balance {
     position: absolute;
     left:240px;
@@ -703,7 +787,6 @@ header{
 }
 
 
-
 #logout a{
     font-size: 14px;
 }
@@ -712,8 +795,8 @@ header{
     position: absolute;
     top:10px;
     right:10px;
+    }
     
-}
 
 #language_choice{
     position: absolute;
@@ -751,18 +834,18 @@ header{
 #createuser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
       
 }
 #edituser_button{
         width:200px;
         height:50px;
-        background:#0B231C;;         
+        background:#0B231C;         
         color:white;
     
-      
 }
+    
 #savebalance_button{
         width:150px;
         height:50px;
