@@ -6,7 +6,7 @@
         <script src="api.js"></script>
         <script src="dragdrop.js"></script>
         <script src="beverages.js"></script>
-		<script src="saveNewUser.js"></script>
+		<script src="manage_users.js"></script>
 		<script src="users.js"></script>
 		<script src="view_all_beverages.js"></script>
         <script src="translation.js"></script>
@@ -75,6 +75,7 @@
 			
             <div id= "addbeverage">
                 <h3 class="transl" id="edit_beverage">Edit Beverage</h3>
+				<p class="transl" id="edit_stock_instruction"> To edit a beverage, click the edit button next to your desired beverage and enter your new information. All fields must be filled out. </p>
                 <form name="addbeverageform">
                     <p class="transl" id="beveragetxt">Beverage</p> <input type="text" class="transl" id="beveragePlaceholder" required="required" placeholder="Enter the beverage">
                     
@@ -85,9 +86,15 @@
                 </form>
             </div>
             
-            <div id="buttonarea_beverage">
-                <button class="transl" id = "savebeverage_button" type="button" value="Add" onclick="EditBev();">Save beverage</button>
             
+                <button class="transl" id="savebeverage_button" type="button" value="Add" onclick="edit_beverage();">Save beverage</button>
+        
+        </div>
+            
+        <div id="confirmation_popup_display" style="display:none">
+            <div class="popup_confirmation">
+                <p class="transl" id="bev_updated_msg">Beverage updated!</p>
+                <button id="close_popup" type="button" value="OK" onclick="confirmation_hide();">OK</button>
             </div>
         </div>
             

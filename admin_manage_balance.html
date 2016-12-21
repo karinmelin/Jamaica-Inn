@@ -7,7 +7,7 @@
         <script src="api.js"></script>
         <script src="dragdrop.js"></script>
         <script src="beverages.js"></script>
-		<script src="saveNewUser.js"></script>
+		<script src="manage_users.js"></script>
 		<script src="users.js"></script>
         <script src="script.js"></script>
         <script>
@@ -58,7 +58,7 @@
 
         <br>
       
-        <div id = "container_user">
+        
             <div id="users">
                 <h3 class="transl" id="all_users_and_balance">All users and their balance</h3> 
                 <!--<div id = "users_balance_category">-->
@@ -74,6 +74,7 @@
 			
             <div class= "adduser">
                 <h3 class="transl" id="edit_user_balance"> Edit user balance</h3>
+				<p class="transl" id="edit_balance_instruction"> To edit the balance of a user, click the edit button next to your desired user and enter a new balance.<br />Both fields must be filled out.</p>
                 <form name="manage_balance_form">
 					<p class="transl" id="username_p">Username</p>
                     <input type="text" class="transl" id="usernameBalance" required="required" placeholder="Username">
@@ -83,12 +84,20 @@
             </div>
             
             <!--<div id="buttonarea_users">-->
-                <button id = "savebalance_button" class="uppdate_user_balance transl" type="button" value="Add" onclick="setPaymentAppend();">Update user balance</button>
+            <!-- Unfinished button. When clicked supposed to send info to API and update the balance of the chosen user -->
+                <button id = "saveuser_button" class="uppdate_user_balance transl" type="button" value="Add" onclick="edit_beverage();">Update user balance</button>
             <!--</div>-->
+        </div>
+            
+        <div id="confirmation_popup_display" style="display:none">
+            <div class="popup_confirmation">
+                <p class="transl" id="balance_edited_msg">Balance updated!</p>
+                <button id="close_popup" type="button" value="OK" onclick="confirmation_hide();">OK</button>
+            </div>
         </div>
                
                 
-        </div>
+       
     </body>
 
 </html>

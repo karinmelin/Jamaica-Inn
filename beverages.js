@@ -34,9 +34,9 @@ function connectAPI() {
             drink_ptag = document.getElementById(drink_id);
 
         buy_btn.setAttribute('onclick','clickedBuy(this.name);');
-        buy_btn.setAttribute('class','buy_btn transl');
+        buy_btn.setAttribute('class','buy_btn');
         buy_btn.setAttribute('name', i);
-        buy_btn.innerHTML = 'Buy';
+        buy_btn.innerHTML = 'Add';
         
         slot_div.appendChild(buy_btn);
         
@@ -108,9 +108,12 @@ function loadDrinks() {
         //console.log(data[i].count);
         
         if (amount <= 0) {
-            document.querySelector('#amount' + n).innerHTML = 'Refill me';
-            document.getElementById('drink'+ n).setAttribute('draggable', 'false');
-            document.getElementById("drink"+n).style.cursor = "not-allowed";
+            document.querySelector('#amount' + n).innerHTML = '0 units';
+            var drink_div = document.getElementById('drink' + n);
+            drink_div.setAttribute('draggable', 'false');
+            drink_div.style.cursor = "not-allowed";
+            drink_div.style.opacity = 0.3;
+            
         } /*else if (amount > 10){
             document.querySelector('#amount' + n).innerHTML = 10 + ' units';
         } */else {

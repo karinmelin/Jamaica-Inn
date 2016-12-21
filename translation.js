@@ -56,7 +56,7 @@ function dictionary() {
             cider_cat: 'Cider',
             wine_cat: 'Vin',
             non_cat: 'Alkoholfritt',
-            Heading_cart: 'Kundvagn',
+            heading_cart: 'Kundvagn',
             totalamount: 'Totalt:',
             purchase_button: 'Köp',
             clear_button: 'Töm kundvagn',
@@ -73,10 +73,15 @@ function dictionary() {
             last_name_th: 'Efternamn',
             email_th: 'Email',
             phone_th: 'Telefonnr',
+			add_user_instruction: 'Fyll i följande fält för att lägga till en ny användare. Alla fält måste fyllas i.',
+			edit_user_instruction: 'Klicka på edit-knappen bredvid din utvalda användare och ändra fälten som du vill uppdatera för att redigera en användare. Alla fält måste fyllas i och användarnamnet går inte att ändra.',
+			edit_balance_instruction: 'Klicka på edit-knappen bredvid din utvalda användare och ange ett nytt saldo för att redigera användarsaldot. Båda fälten måste fyllas i.',
+			edit_stock_instruction: 'Klicka på edit-knappen bredvid din utvalda dryck och ändra fälten som du vill uppdatera för att redigera en dryck. Alla fält måste fyllas i.',
             /* 'Edit balance' page tablehead */
             quantity_th: 'Antal i lager',
             /* 'Edit user and balance' page tablehead */
             balance_th: 'Saldo',
+            user_added_msg: 'Användare tillagd!',
 
             all_users_and_balance: 'Alla användare och deras saldo',
             all_users: 'Alla användare',
@@ -89,6 +94,9 @@ function dictionary() {
             /*  */
             admin_history: 'Tidigare köp',
             add_users: 'Lägg till användare',
+            user_edited_msg: 'Användare uppdaterad!',
+            balance_edited_msg: 'Saldo uppdaterat!',
+            bev_updated_msg: 'Dryck uppdaterad!',
 
             //Balance: 'Saldo:  ',
             beverage_choose: 'Välj vilka drycker som finns i automaten',
@@ -117,6 +125,7 @@ function dictionary() {
             pricePlaceholder: 'Välj nytt pris',
             savebeverage_button: 'Spara dryck',
             savebalance_button: 'Spara nytt saldo',
+			
             
             // translatable elements for allbeverages.html
         },
@@ -150,7 +159,7 @@ function dictionary() {
             cider_cat: 'Cider',
             wine_cat: 'Wine',
             non_cat: 'Non-Alcoholic',
-            Heading_cart: 'Shopping cart',
+            heading_cart: 'Shopping cart',
             totalamount: 'Total:',
             purchase_button: 'Purchase',
             clear_button: 'Clear',
@@ -167,10 +176,18 @@ function dictionary() {
             last_name_th: 'Last Name',
             email_th: 'Email',
             phone_th: 'Phone number',
+			add_user_instruction: 'To add a new user, enter the following details. All fields must be filled out.',
+			edit_user_instruction: 'To edit a user, click the edit button next to your desired user and change the fields that you want to update. All fields must be filled out and username can not be changed.',
+			edit_balance_instruction: 'To edit the balance of a user, click the edit button next to your desired user and enter a new balance.<br /> Both fields must be filled out.',
+			edit_stock_instruction: 'To edit a beverage, click the edit button next to your desired beverage and enter your new information. All fields must be filled out.',
             /* 'Edit balance' page tablehead */
             quantity_th: 'Quantity in stock',
             /* 'Edit user and balance' page tablehead */
             balance_th: 'Balance',
+            user_added_msg: 'User added!',
+            user_edited_msg: 'User updated!',
+            balance_edited_msg: 'Balance updated!',
+            bev_updated_msg: 'Beverage updated!',
             
             /*  */
             all_users_and_balance: 'All users and their balance',
@@ -225,7 +242,6 @@ function translate() {
     
     for(var j=0; j<textElem.length; j++) {
         var x = dict[textElem[j].id];
-        
         if(x === undefined) {
             if(textElem[j].nodeName === 'INPUT') {
                 if(textElem[j].getAttribute('placeholder')) {
