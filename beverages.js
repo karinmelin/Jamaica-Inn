@@ -98,7 +98,7 @@ function loadDrinks() {
             
         /* check with id against the API if non-alcoholic drink
         and adding a label if so */
-        checkAlcohol(api, drink_id, n);
+        /*checkAlcohol(api, drink_id, n);
             
         /* adding price and units for each beverage for display
         in each slot */
