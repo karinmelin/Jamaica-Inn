@@ -12,10 +12,8 @@ body{
 #wrapper{
     margin-left: auto;
     margin-right: auto;
-    max-width: 1024px;
-    max-height: 768px;
-    min-width: 1024px;
-    min-height: 768px;
+    width: 1024px;
+    height: 768px;
    
 }                                   /*LOG IN SIDAN START*/
 
@@ -104,9 +102,7 @@ label {
 header {
 	background-color:white;
     height: 150px;
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
+    width:  93%; 
     position: relative;
     border-top: #ccc 3px solid;
     border-right: #ccc 3px solid;
@@ -117,7 +113,7 @@ header {
 #user_img {
     position: absolute;
     right: 100px;
-    top: 50px;
+    top: 40px;
     height: 60px;
     width: 60px;
 }
@@ -126,26 +122,29 @@ header {
   max-width:100%; 
   max-height:100%;
   margin:auto;
-  display:block;
+  display:inline-flex;
     
 }
 
 #welcome {
-    color: #0B231C;
+    color: #0B231C; 
+    margin-top: 0px; 
+    top:2px;
+    right:140px;
     position: absolute;
-    top:5px;
-    right:140px; 
 }
 
 #headerName {
     font-weight: bold;
+    margin:auto; 
+    display: inline-flex; 
 }
 
 #user_balance {
     color: #0B231C;
     position: absolute;
-    right:-25px;
-    bottom:20px;
+    left:875px;
+    bottom:85px;
     font-size: 16px;
     height:40px;
     width: 200px;
@@ -368,7 +367,7 @@ table{
     display: table; 
     position: absolute;
     top:230px;
-    right:100px;
+    left:760px;
     text-align:center;
 }
 
@@ -626,7 +625,7 @@ table{
 
                     /* ------- Making the site responsive ------- */
 
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 400px){
     
 #wrapper{
     width: 100%; 
