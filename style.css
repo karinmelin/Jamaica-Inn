@@ -624,6 +624,15 @@ table{
     font-size:15px;
 }
 
+.user_tables tr:nth-child(even) {
+  background-color: green;
+}
+
+
+.user_tables tr:nth-child(odd) {
+  background-color: darkgreen;
+}
+
                     /* ------- Making the site responsive ------- */
 
 @media screen and (max-width: 1023px){
