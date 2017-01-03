@@ -632,7 +632,7 @@ table{
 
 @media screen and (max-width: 1023px){
  
-    #wrapper {
+    /*#wrapper {
         width: 100%; 
         height: 100%;
         margin-left: auto;
@@ -640,8 +640,8 @@ table{
     }
 
     header {
-        height: 30%;
-        width: 100%; 
+        height: 20%;
+        width: 35%; 
         margin-left: 0px auto;
         margin-right: 3px;	
     }
@@ -865,8 +865,208 @@ table{
 
     .user_tables td{
         font-size:15px;
-    }
+    }*/
 
  
+    
+    /*------------------ Karins fix ------------------ */
+    
+     /* HEADER */
+    
+    #wrapper {
+        width: 100%; 
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    header {
+        background-color:white;
+        height: 20%;
+        width:  35%; 
+        position: relative;
+        border-top: #ccc 3px solid;
+        border-right: #ccc 3px solid;
+        border-bottom: #777 3px solid;
+        border-left: #777 3px solid;
+    }
+    
+    #logo_img img{
+        position: relative;
+        height: 50%;
+        width: 50%;
+    }
+    
+    nav ul {
+        margin: 10px;
+        padding-left: 0px;
+    }
+
+    #user_img {
+        display: none;
+        /*position: relative;
+        bottom:50%;
+        right:-80%;
+        height: 20%;
+        width: 20%;*/
+    }
+
+    #user_img img {
+      max-width:100%; 
+      max-height:100%;
+      margin:auto;
+      display:inline-flex;
+
+    }
+
+    #welcome {
+        color: #0B231C; 
+        position: relative;
+        bottom: 60%;
+        right:-75%;
+        width: 20%;
+        font-size: 50%;
+
+    }
+
+    #headerName {
+        font-weight: bold;
+        margin:auto; 
+        display: inline-flex; 
+    }
+
+    #user_balance {
+        color: #0B231C;
+        position: relative;
+        bottom: 60%;
+        right:-75%;
+        font-size: 50%;
+        height:20%;
+        width: 30%;
+    }
+
+    #assets {
+        font-weight: bold;
+    }
+
+    #logout a {
+        color:#0B231C;
+        text-decoration: none;
+    }
+
+    #logout{
+        position: relative;
+        bottom: 50%;
+        right: -85%;  
+        width: 20%;
+        font-size: 70%;
+    }
+
+    #log_out:hover {
+        text-decoration: underline;
+        color: dimgray;
+        cursor: pointer;
+    }
+
+    #language_choice{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;   
+    }
+    #language_choice_index{
+        position: absolute;
+        right: 105px;
+        top:20px;   
+        width:100px;
+        height: 20px;
+    }
+    
+    nav ul {
+        padding-right: 0px;
+    }
+
+    /* ----------------- HEADER ENDS --------------- */
+
+
+
+    /* --------------- NAVIGATION -------------- */
+
+    /*nav select {
+        width: 50%;
+        height: 50%;
+    }*/
+    
+    .dropbtn {
+        background-color: white;
+        color: #0B231C;
+        font-size: 50%;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown_menu {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        z-index:2;
+    }
+
+    .dropdown-content a {
+        color: #0B231C;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 50%;
+    }
+
+    .dropdown_menu:hover .dropdown-content {
+        display: block;
+    }
+
+    a.button {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        text-decoration: none;
+        color: initial;
+        cursor: pointer;
+    }
+
+    nav a.current  {
+        color:#009933;
+    }
+
+    .current2 {
+        color:#009933;
+    }
+
+    nav a {
+        font-size: 50%;
+        color: #0B231C;
+        text-decoration: none;
+        padding: 0 0.5em 0 .5em;   
+
+    }
+    nav a:hover {
+        color: #21c559;
+        cursor: pointer;
+    }
+    nav ul{
+        position: absolute;
+        bottom: 0;
+        margin-left: 20px; /*ändra hur du vill*/
+
+    }
+
+    nav li{
+        display: inline;
+    }
+/*--------------- NAVIGATION ENDS ----------- */
     
 }

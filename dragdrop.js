@@ -56,6 +56,7 @@ function addToCart(cart, drink_id, drink_ptag) {
         }
         if(!itsHere) {
             var namenode = document.createTextNode(drink_name);
+            /*var hashtagnode = document.createTextNode('#');*/
             var amountnode = document.createTextNode(amount);
             var pricenode = document.createTextNode(price);
             var spacenode1 = document.createTextNode(" ");
@@ -91,6 +92,7 @@ function addToCart(cart, drink_id, drink_ptag) {
             btn2.setAttribute('onclick', strArg2);
             
             namepar.appendChild(namenode);
+            /*amntpar.appendChild(hashtagnode);*/
             amntpar.appendChild(amountnode);
             pricepar.appendChild(pricenode);
             space1.appendChild(spacenode1);
