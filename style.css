@@ -462,17 +462,17 @@ table{
 }
 
 #prevDrinks {
-    width: 990px;
+    width: 600px;
     height:500px;
     overflow: auto;
     background-color:darkgreen;
-    float:left;
     border-radius:2px;
     border: 10px solid green;
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
-	
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .dropdown_bev{
@@ -1069,4 +1069,86 @@ table{
     }
 /*--------------- NAVIGATION ENDS ----------- */
     
+/*------------ DISPLAYING EDIT PAGES ----------*/
+    
+    #users {
+        width: 30%;
+        height: 30%;
+        overflow: auto;
+        position: relative;
+        float:left;
+        //margin-top: 1%; 
+        margin-bottom: 2%; 
+        border-radius:2px;
+        border: 10px solid green;
+        text-align: justify;
+
+    }
+    
+    .adduser {
+        position: relative;
+        float: left;
+        width: 30%;
+        height: 30%;
+        clear: left;
+    }
+    
+    #saveuser_button {
+        position: relative;
+        float: left;
+        clear: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #container_view_beverages {
+        width: 30%;
+    }
+    
+    #view_beverages {
+        width: 30%;
+        height: 30%;
+        overflow: auto;
+        position: relative;
+        float:left;
+        //margin-top: 1%; 
+        margin-bottom: 2%; 
+        border-radius:2px;
+        border: 10px solid green;
+        text-align: justify;
+
+    }
+    
+    #addbeverage {
+        position: relative;
+        float: left;
+        width: 30%;
+        height: 30%;
+        clear: left;
+    }
+    
+    #savebeverage_button {
+        position: relative;
+        float: left;
+        clear: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #confirmation_popup_display {
+        position: relative;
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .popup_confirmation {
+        margin-left: 5px;
+        width: 80%;
+    }
+    
+    #prevDrinks {
+        float: left;
+        width: 30%;
+    }
 }
