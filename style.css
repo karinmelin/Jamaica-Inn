@@ -487,13 +487,13 @@ table{
 }
 
 #saveuser_button{
-        width:220px;
-        height:40px;
-  background:#0B231C;   color:white;
-		margin-left: 800px;
+    width:220px;
+    height:40px;
+    background:#0B231C;   
+    color:white;
+    margin-left: 800px;
     margin-top: 5px;
 }
-
 
 .popup_confirmation {
     width: 130px;
@@ -503,10 +503,16 @@ table{
     background-color: darkgreen;
     border-radius:2px;
     border: 5px solid green;
-    margin-left: 875px;
-    margin-top: -50px;
+    margin-left: 650px;
+    margin-top: -35px;
     padding-bottom: 5px;
 }
+
+/*#confirmation_popup_display {
+    position: relative;
+    float: left;
+    margin-right: 180px;
+}*/
 
 #user_added_msg {
     display: inline-block;
@@ -1145,6 +1151,7 @@ table{
     .popup_confirmation {
         margin-left: 5px;
         width: 80%;
+        margin-bottom: 30px;
     }
     
     #prevDrinks {

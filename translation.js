@@ -101,7 +101,7 @@ function dictionary() {
             //Balance: 'Saldo:  ',
             beverage_choose: 'Välj vilka drycker som finns i automaten',
             save_button: 'Spara ändringar',
-            to_purchase: 'För att köpa en dryck, dra och släpp en dryck i kundvagnen',
+            to_purchase: 'För att välja en dryck att köpa: dra och släpp en dryck i kundvagnen',
             users_category: 'Användarnamn Förnamn Efternamn Email Telefon',
             first_name: 'Förnamn',
             fname: 'Förnamn', //placeholder
@@ -154,7 +154,7 @@ function dictionary() {
             user_balance_p: 'Balance:  ',
             
             /* All beverages page */
-            purchase_p: 'To purchase a beverage: click the Buy-button or drag and drop a drink into the shopping cart',
+            purchase_p: 'To choose beverages to purchase: click the Buy-button or drag and drop a drink into the shopping cart',
             beer_cat: 'Beer',
             cider_cat: 'Cider',
             wine_cat: 'Wine',
