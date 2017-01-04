@@ -55,62 +55,7 @@ function addToCart(cart, drink_id, drink_ptag) {
             }
         }
         if(!itsHere) {
-            var namenode = document.createTextNode(drink_name);
-            var amountnode = document.createTextNode(amount);
-            var pricenode = document.createTextNode(price);
-            var spacenode1 = document.createTextNode(" ");
-            var spacenode2 = document.createTextNode(" ");
-            var priceendnode = document.createTextNode(":-");
-            
-            var addbtn = document.createTextNode("+");
-            var subbtn = document.createTextNode("-");
-            
-            var namepar = document.createElement("p");
-            var amntpar = document.createElement("p");
-            var pricepar = document.createElement("p");
-            var space1 = document.createElement("p");
-            var space2 = document.createElement("p");
-            var br1 = document.createElement("br");
-            var br2 = document.createElement("br");
-            var endpar = document.createElement("p");
-            
-            var btn1 = document.createElement("BUTTON");
-            var btn2 = document.createElement("BUTTON");
-            
-            namepar.setAttribute('class', 'drink_cart');
-            amntpar.setAttribute('class', 'amount_cart');
-            pricepar.setAttribute('class', 'price_cart');
-            
-            btn1.setAttribute('type', 'button');
-            btn1.setAttribute('class', 'addbtn');
-            var strArg1 = 'cartbtn("+", "' + drink_name + '")';
-            btn1.setAttribute('onclick', strArg1);
-            btn2.setAttribute('type', 'button');
-            btn2.setAttribute('class', 'subbtn');
-            var strArg2 = 'cartbtn("-", "' + drink_name + '")';
-            btn2.setAttribute('onclick', strArg2);
-            
-            namepar.appendChild(namenode);
-            amntpar.appendChild(amountnode);
-            pricepar.appendChild(pricenode);
-            space1.appendChild(spacenode1);
-            space2.appendChild(spacenode2);
-            endpar.appendChild(priceendnode);
-            
-            btn1.appendChild(addbtn);
-            btn2.appendChild(subbtn);
-            
-            cart.appendChild(namepar);
-            cart.appendChild(br1);
-            cart.appendChild(amntpar);
-            cart.appendChild(space1);
-            cart.appendChild(btn1);
-            cart.appendChild(btn2);
-            cart.appendChild(space2);
-            cart.appendChild(pricepar);
-            cart.appendChild(endpar);
-            cart.appendChild(br2);
-            
+            cartContent(cart, drink_name, amount, price);
         }
         var prices = cart.getElementsByClassName('price_cart');
         var sum = 0;
@@ -119,8 +64,118 @@ function addToCart(cart, drink_id, drink_ptag) {
         }
         var sum_round = Number((sum).toFixed(1));
         document.getElementById('totalamount').innerHTML = "Total: " + sum_round + ":-";
+        storeCart(cart);
     }
     console.log(drink_name);
+}
+
+function cartContent(cart, drink_name, amount, price) {
+    var namenode = document.createTextNode(drink_name);
+    var amountnode = document.createTextNode(amount);
+    var pricenode = document.createTextNode(price);
+    var sharpnode = document.createTextNode("#");
+    var spacenode1 = document.createTextNode(" ");
+    var spacenode2 = document.createTextNode(" ");
+    var priceendnode = document.createTextNode(":-");
+            
+    var addbtn = document.createTextNode("+");
+    var subbtn = document.createTextNode("-");
+            
+    var namepar = document.createElement("p");
+    var sharp = document.createElement("p")
+    var amntpar = document.createElement("p");
+    var pricepar = document.createElement("p");
+    var space1 = document.createElement("p");
+    var space2 = document.createElement("p");
+    var br1 = document.createElement("br");
+    var br2 = document.createElement("br");
+    var endpar = document.createElement("p");
+    
+    var hr = document.createElement("hr");
+    hr.setAttribute('class', 'cartDivision');
+            
+    var btn1 = document.createElement("BUTTON");
+    var btn2 = document.createElement("BUTTON");
+            
+    namepar.setAttribute('class', 'drink_cart');
+    amntpar.setAttribute('class', 'amount_cart');
+    pricepar.setAttribute('class', 'price_cart');
+            
+    btn1.setAttribute('type', 'button');
+    btn1.setAttribute('class', 'addbtn');
+    var strArg1 = 'cartbtn("+", "' + drink_name + '")';
+    btn1.setAttribute('onclick', strArg1);
+    btn2.setAttribute('type', 'button');
+    btn2.setAttribute('class', 'subbtn');
+    var strArg2 = 'cartbtn("-", "' + drink_name + '")';
+    btn2.setAttribute('onclick', strArg2);
+            
+    namepar.appendChild(namenode);
+    sharp.appendChild(sharpnode);
+    amntpar.appendChild(amountnode);
+    pricepar.appendChild(pricenode);
+    space1.appendChild(spacenode1);
+    space2.appendChild(spacenode2);
+    endpar.appendChild(priceendnode);
+            
+    btn1.appendChild(addbtn);
+    btn2.appendChild(subbtn);
+            
+    cart.appendChild(namepar);
+    cart.appendChild(br1);
+    cart.appendChild(sharp); //#
+    cart.appendChild(amntpar);
+    cart.appendChild(space1);
+    cart.appendChild(btn1);
+    cart.appendChild(btn2);
+    cart.appendChild(space2);
+    cart.appendChild(pricepar);
+    cart.appendChild(endpar);
+    cart.appendChild(br2);
+    cart.appendChild(hr);
+}
+
+function storeCart(cart) {
+    var drinks = cart.getElementsByClassName("drink_cart");
+    var amnts = cart.getElementsByClassName("amount_cart");
+    var prices = cart.getElementsByClassName("price_cart");
+    if(drinks.length != 0) {
+        var str = "{";
+        for(i=0; i<drinks.length; i++) {
+            str += '"drink' + i + '": "' + drinks[i].innerHTML + '", ';
+            str += '"amount' + i + '": "' + amnts[i].innerHTML + '", ';
+            str += '"price' + i + '": "' + prices[i].innerHTML + '", ';
+        }
+        str = str.slice(0, -2);
+        str += "}";
+        sessionStorage.setItem("cartContent", str);
+    }
+}
+
+function restoreCart() {
+    var str = sessionStorage.getItem("cartContent");
+    if(str) {
+        var inCart = JSON.parse(str); //, (key, value));
+        var cart = document.getElementById("shop");
+        var drink, amnt, price;
+        var i = 0;
+        do {
+            drink = inCart["drink" + i];
+            amnt = parseInt(inCart["amount" + i]);
+            price = parseFloat(inCart["price" + i]);
+            price = Number(price.toFixed(1));
+            cartContent(cart, drink, amnt, price);
+            i++;
+        } while(inCart["drink" + i]);
+        
+        var prices = cart.getElementsByClassName('price_cart');
+        var sum = 0;
+        for (i=0; i<prices.length; i++) {
+            sum += parseFloat(prices[i].innerHTML);
+        }
+        var sum_round = Number((sum).toFixed(1));
+        document.getElementById('totalamount').innerHTML = "Total: " + sum_round + ":-";
+    }
 }
 
 function allowDrop(allowdropevent) {
@@ -195,6 +250,7 @@ function cartbtn(btn, drink_name) {
             }
             var sum_round = Number((sum).toFixed(1));
             document.getElementById('totalamount').innerHTML = "Total: " + sum_round + ":-";
+            storeCart(cart);
             break;
         }
     }
@@ -205,6 +261,7 @@ function cartbtn(btn, drink_name) {
 function clearCart() {
     document.getElementById("shop").innerHTML = "";
     document.getElementById('totalamount').innerHTML = "Total:";
+    sessionStorage.setItem("cartContent", "");
 }
 
 /* Decreases the amount of the drinks in the locally stored drinklist.

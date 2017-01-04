@@ -450,6 +450,33 @@ table{
     background: red; 
 }
 
+.addbtn {
+    font-family: 'Courier New';
+    color:white;
+    background-color: #009933;
+}
+
+.addbtn:hover {
+    background-color: limegreen;
+}
+
+.subbtn {
+    font-family: 'Courier New';
+    color:white;
+    background:darkred;
+}
+
+.subbtn:hover {
+    background: red; 
+}
+
+.cartDivision {
+    border: 0;
+    height: 2px;
+    background: #009933;
+    background-image: linear-gradient(to right, #ffffff, #009933, #ffffff);
+}
+
 #prevDrinks {
     width: 990px;
     height:550px;

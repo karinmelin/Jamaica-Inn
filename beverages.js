@@ -18,6 +18,7 @@ function docLoaded(fn) {
 function bevPageLoaded() {
 	checkLang();
 	connectAPI();
+    restoreCart();
 }
 
 /* connects to the server and fetching the info needed for the beverages */
