@@ -1,5 +1,6 @@
 html{
     background-color: #0B231C;
+    font-family: 'Arial', 'Arial', sans-serif;
 }
 
 header{
@@ -149,6 +150,77 @@ table td,tr{
     cursor: pointer;
 }
 
+#welcome_p {
+    color: #0B231C; 
+    position: absolute;
+    right:150px;
+    width: 100px;
+    z-index: 5;
+    
+}
+
+#headerName {
+    font-weight: bold;
+    margin:auto; 
+    display: inline-flex; 
+}
+
+#user_balance {
+    color: #0B231C;
+    position: absolute;
+  right:150px;
+    top:70px;
+    font-size: 16px;
+    height:40px;
+    width: 100px;
+}
+
+#assets {
+    font-weight: bold;
+}
+
+
+#logout a {
+    color:#0B231C;
+    text-decoration: none;
+}
+
+#logout{
+    position: absolute;
+ right:10px;  
+    width: 70px;
+}
+
+#log_out:hover {
+    text-decoration: underline;
+    color: dimgray;
+    cursor: pointer;
+}
+
+#language_choice{
+    position: absolute;
+    right:10px;
+    top:160px;
+}
+#language_choice_index{
+    position: absolute;
+    right: 105px;
+    top:20px;   
+    width:100px;
+    height: 20px;
+}
+  #user_img img {
+      max-width:100px; 
+      max-height:100px;
+      margin:auto;
+      display:inline-flex;
+      position: absolute;
+      right:10px;
+      top:50px;
+
+    }
+
+
 
 
 @media only screen and (max-width: 700px){
@@ -187,6 +259,58 @@ table td,tr{
     display: block;
     font-size: 20px;
 }
+    
+    #welcome {
+display: none;
+    
+}
+
+#headerName {
+display: none; 
+}
+
+#user_balance {
+display: none;
+}
+
+#assets {
+    display: none;
+}
+
+
+#logout a {
+    color:#0B231C;
+    text-decoration: none;
+}
+
+#logout{
+    position: absolute;
+ right:10px;  
+    width: 70px;
+}
+
+#log_out:hover {
+    text-decoration: underline;
+    color: dimgray;
+    cursor: pointer;
+}
+
+#language_choice{
+    position: absolute;
+    right:10px;
+    top:160px;
+}
+#language_choice_index{
+    position: absolute;
+    right: 105px;
+    top:20px;   
+    width:100px;
+    height: 20px;
+}
+  #user_img img {
+   display: none;
+
+    }
     
     @media only screen and (max-width: 400px){
     div, header, nav{
