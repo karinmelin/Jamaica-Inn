@@ -21,9 +21,11 @@ header{
     border: 5px solid green;
 }
 
-#logo_img{
-    width:20px;
-    height: 20px;
+
+
+#logo_img img{
+    width:300px;
+    height: 100px;
     position: relative;
 }
 
@@ -41,7 +43,6 @@ nav a:hover {
 
 nav ul{
     position: absolute;
-    top: 100px;
     margin-left: 20px; /*ändra hur du vill*/
 
 }
@@ -154,8 +155,8 @@ table td,tr{
     color: #0B231C; 
     position: absolute;
     right:150px;
+    top:20px;
     width: 100px;
-    z-index: 5;
     
 }
 
@@ -169,7 +170,7 @@ table td,tr{
     color: #0B231C;
     position: absolute;
   right:150px;
-    top:70px;
+    top:60px;
     font-size: 16px;
     height:40px;
     width: 100px;
@@ -187,7 +188,8 @@ table td,tr{
 
 #logout{
     position: absolute;
- right:10px;  
+ right:10px; 
+    top:30;
     width: 70px;
 }
 
@@ -221,7 +223,59 @@ table td,tr{
     }
 
 
+@media only screen and (max-width: 800px){
+    
+     #welcome {
+display: none;
+    
+}
 
+#headerName {
+display: none; 
+}
+
+#user_balance {
+display: none;
+}
+
+#assets {
+    display: none;
+}
+
+
+#logout a {
+    color:#0B231C;
+    text-decoration: none;
+}
+
+#logout{
+    position: absolute;
+ right:10px;  
+    width: 70px;
+}
+
+#log_out:hover {
+    text-decoration: underline;
+    color: dimgray;
+    cursor: pointer;
+}
+
+#language_choice{
+    position: absolute;
+    right:10px;
+    top:160px;
+}
+#language_choice_index{
+    position: absolute;
+    right: 105px;
+    top:20px;   
+    width:100px;
+    height: 20px;
+}
+  #user_img img {
+   display: none;
+
+    }
 
 @media only screen and (max-width: 700px){
     div, header, nav{
@@ -325,5 +379,7 @@ display: none;
      #all_beverages, #admin_history{
         display: none;
     }
+
+    
         
  
